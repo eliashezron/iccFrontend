@@ -1,3 +1,57 @@
-h1{
-    color: white;
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+
+    .navcontainer{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo{
+            margin-right: 6rem;
+            justify-content: flex-start;
+            img{
+                width: 158px;
+                height: 64px;
+            }
+        }
+        .navlinks{
+            display: flex;
+            // justify-content: space-around;
+            align-items: center;  
+            flex-direction: row;
+            ul{
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                height:100%;
+                justify-content: center;
+                align-items: center;
+                a{
+                    text-decoration: none;
+                    padding: 0 20px 0 20px;
+                    font-size: 20px;
+                    color: white;
+                    font-family: 'Orbitron',sans-serif;
+                    &:hover{
+                        color:blue;
+                    }
+                }
+
+            }
+
+            .playButton{
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                img{
+                    height:40px;
+                    width:200px;
+                }
+            }
+        }
+    }
 }
