@@ -1,0 +1,8 @@
+export {default as NavBar} from "./navbar/navbar"
+export {default as Hero} from "./hero/hero"
+export {default as GamePlay} from "./gameplay/gameplay"
+export {default as Footer} from "./footer/footer"
+export {default as Team} from "./team/team"
+export {default as RoadMap} from "./roadmap/roadmap"
+export {default as Nft} from "./nft/nft"
+export {default as Coin} from "./coin/coin"
