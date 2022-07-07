@@ -1,11 +1,11 @@
 import React from "react"
 import "./roadmap.scss"
-import roadmap from "../../assets/roadmap.png"
+import coin from "../../assets/coinImage.png"
 export default function RoadMap() {
   return (
     <div className='main'>
       <div className='imgdiv'>
-        <img src={roadmap} alt='coreteam' />
+        <img src={coin} alt='roadMap' />
       </div>
     </div>
   )
