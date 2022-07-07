@@ -11,14 +11,15 @@
         flex-direction: row;
         max-width: 100%;
         flex: 1 1 auto;
+        height: 500px;
         .theorySection{
             display: flex;
             flex-direction: column;
             // width: 500px;
             .logoImage{
                 img{
-                    height: 250px;
-                    width:500px
+                    height: 200px;
+                    width:450px;
                 }
             }
             .textfield{
@@ -31,9 +32,10 @@
                     color: #f5f5f5;
                     font-family: 'Orbitron',sans-serif;
                     font-size: 18px;
+                    font-weight: 500;
                 }
                 p:nth-child(2){
-                    color: #00FFE0;;
+                    color: #00FFE0;
                 }
                 p:nth-child(3){
                     display: flex;
@@ -64,8 +66,8 @@
                 // justify-content: center;
                 // align-items: center;
                 img{
-                    height: 60px;
-                    width: 500px;
+                    height: 100px;
+                    width: 600px;
                 }
             }
         }
