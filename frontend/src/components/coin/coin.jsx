@@ -1,10 +1,9 @@
-import React from 'react';
-import './coin.scss';
+import React from "react"
 
-export default function Coin(){
-    return (
-        <div>
-        <h1>coin</h1>
-        </div>
-    )
+export default function Coin() {
+  return (
+    <div>
+      <div>Coin</div>
+    </div>
+  )
 }

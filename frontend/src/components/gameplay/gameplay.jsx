@@ -6,8 +6,8 @@ import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import watch from "../../assets/watch.svg"
 import watchhover from "../../assets/watchhover.svg"
-import next from "../../assets/next2.svg"
-import nexthover from "../../assets/nexthover.svg"
+import next from "../../assets/next.svg"
+import nexthover from "../../assets/hovernext.svg"
 import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
@@ -45,7 +45,7 @@ export default function GamePlay() {
         </div>
       </div>
       <div className='sectionB'>
-        <div className='watchButton'>
+        <div className='directionbuttonL'>
           <img
             src={previous}
             alt='playnow'
@@ -53,13 +53,13 @@ export default function GamePlay() {
             onMouseOut={(e) => (e.currentTarget.src = previous)}
           />
         </div>
-        <div className='watchButton'>
+        <div className='middlebuttons'>
           <img src={pinkrrectangle} alt='playnow' />
           <img src={bluerectangle} alt='playnow' />
         </div>
-        <div className='watchButton'>
+        <div className='directionbuttonR'>
           <img
-            src={watch}
+            src={next}
             alt='playnow'
             onMouseOver={(e) => (e.currentTarget.src = nexthover)}
             onMouseOut={(e) => (e.currentTarget.src = next)}

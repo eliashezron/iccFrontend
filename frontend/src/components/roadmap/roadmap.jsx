@@ -1,10 +1,12 @@
-import React from 'react';
-import './roadmap.scss';
-
-export default function RoadMap(){
-    return (
-        <div>
-        <h1>Roadmap</h1>
-        </div>
-    )
+import React from "react"
+import "./roadmap.scss"
+import roadmap from "../../assets/roadmap.png"
+export default function RoadMap() {
+  return (
+    <div className='main'>
+      <div className='imgdiv'>
+        <img src={roadmap} alt='coreteam' />
+      </div>
+    </div>
+  )
 }

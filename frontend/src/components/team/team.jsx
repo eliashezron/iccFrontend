@@ -1,10 +1,12 @@
-import React from 'react';
-import './team.scss';
-
-export default function Team(){
-    return (
-        <div>
-        <h1>team</h1>
-        </div>
-    )
+import React from "react"
+import "./team.scss"
+import coreTeam from "../../assets/coreTeam.png"
+export default function Team() {
+  return (
+    <div className='main'>
+      <div className='imgdiv'>
+        <img src={coreTeam} alt='coreteam' />
+      </div>
+    </div>
+  )
 }
