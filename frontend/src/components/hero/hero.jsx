@@ -9,6 +9,7 @@ import playnowhover from "../../assets/playnowhover.svg"
 
 export default function Hero(){
     return (
+        <div className='hero'>
         <div className='heroContainer'>
             <div className='theorySection'>
                 <div className='logoImage'>
@@ -32,10 +33,11 @@ export default function Hero(){
             <div className='gifSection'>
                 <img src={gifimage} alt="gifimage"/>
             </div>
+        </div>
             <div className='socialIcons'>
-            <img src={sidebar} alt="playnow"
-                onMouseOver={e => (e.currentTarget.src = sidebarhover)}
-                onMouseOut={e => (e.currentTarget.src = sidebar)}/>
+                <img src={sidebar} alt="playnow"
+                    onMouseOver={e => (e.currentTarget.src = sidebarhover)}
+                    onMouseOut={e => (e.currentTarget.src = sidebar)}/>
             </div>
         </div>
     )

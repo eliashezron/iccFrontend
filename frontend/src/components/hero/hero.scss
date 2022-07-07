@@ -1,0 +1,47 @@
+.hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .heroContainer{
+        top: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        max-width: 100%;
+        // padding: 0px 0px 0px 100px;
+        flex: 1 1 auto;
+        .theorySection{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            .logoImage{
+                img{
+                    height: 250px;
+                    width:500px
+                }
+            }
+            .text-field{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .gifSection{
+            display: flex;
+            height: 400px;
+            width: 500px;
+            padding: 0 20px;
+        }
+        
+    }
+    .socialIcons{
+        right: 0;
+        img{
+            height: 220px;
+            width: 90px;
+        }
+    }
+}

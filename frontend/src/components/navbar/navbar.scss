@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 4rem;
+    height: 20vh;
 
     .navcontainer{
         flex: 1;
@@ -20,7 +21,6 @@
         }
         .navlinks{
             display: flex;
-            // justify-content: space-around;
             align-items: center;  
             flex-direction: row;
             ul{
