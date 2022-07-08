@@ -94,5 +94,16 @@
             justify-content: space-evenly;
             align-items: center;
             flex: 1;
+            .directionalbuttonl,
+            .directionalbuttonr{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                img{
+                    height: 70px;
+                    width: 300px;
+                }
+            }
         }
     }
