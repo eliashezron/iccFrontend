@@ -1,7 +1,7 @@
 import React from "react"
 import "./gameplay.scss"
 import blueman from "../../assets/bueman.png"
-import runningman from "../../assets/runningman.png"
+import runningman from "../../assets/running.png"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import watch from "../../assets/watch.svg"

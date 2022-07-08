@@ -1,13 +1,11 @@
 .mainSection{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     width: 100vw;
     margin-top: 50%;
     .title{
-        font-size: 64px;
+        font-size: 48px;
         font-family: 'Orbitron',sans-serif;
         font-weight: 900;
         color: #FFF060;
@@ -18,8 +16,8 @@
         font-family: 'Orbitron',sans-serif;
         font-style: normal;
         font-weight: 900;
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 16px;
+        line-height: 24px;
         text-align: center;
         letter-spacing: -0.02em;
         color: #FFFFFF;
@@ -28,11 +26,12 @@
         display:flex;
         flex-direction: row;
         height: 700px;
-       justify-content: space-evenly;
+       justify-content: space-between;
         margin: 0% 0% 0% 0% !important;
         .running-man{
-            position: center center;
-            align-self: flex-end;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: -1%;
             img{
                 height: 450px;
                 width: auto;
@@ -62,7 +61,6 @@
                 text-align: center;
                 letter-spacing: -0.02em;
                 padding-top: 20px;
-
             }
             .words{
                 display: flex;
@@ -87,7 +85,6 @@
                     height: 70px;
                     width: 300px;
                 }
-               
             }
             }
         }
