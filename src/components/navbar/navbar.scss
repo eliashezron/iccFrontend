@@ -3,16 +3,16 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 4rem;
-    height: 20vh;
-
+    height: 20vh;   
+    background-color: url(/assets/topoverlay.svg) no-repeat; 
     .navcontainer{
         flex: 1;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         .logo{
-            margin-right: 6rem;
+            padding-right: 25%;
             justify-content: flex-start;
             img{
                 width: 158px;
@@ -36,7 +36,7 @@
                     font-size: 20px;
                     color: white;
                     font-family: 'Orbitron',sans-serif;
-                    font-weight: 700;
+                    font-weight: 900;
                     &:hover{
                         color:#00FFE0;
                     }

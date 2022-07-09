@@ -1,6 +1,5 @@
 import React from "react"
-import "../gameplay/gameplay.scss"
-
+import "./nft.scss"
 import nftCollection from "../../assets/nftCollection.png"
 import mintnow from "../../assets/mintnow.svg"
 import mintnowhover from "../../assets/mintnowhover.svg"
@@ -13,20 +12,23 @@ import previoushover from "../../assets/previoushover.svg"
 export default function Nft() {
   return (
     <div className='mainSection'>
-      <div className='title'>NFT GENESIS SERIES</div>
-      <div className='wording'>
-        <p>Play, Stake, Hold or just brag with our NFT Genesis series !</p>
-      </div>
-      <div className='running-man'>
-        <img
-          src={mintnow}
-          alt='playnow'
-          onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-          onMouseOut={(e) => (e.currentTarget.src = mintnow)}
-        />
+      <div className='relativediv'>
+        <div className='title'>NFT GENESIS SERIES</div>
+        <div className='wording'>
+          <p>Play, Stake, Hold or just brag with our NFT Genesis series !</p>
+        </div>
+
+        <div className='mint'>
+          <img
+            src={mintnow}
+            alt='playnow'
+            onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
+            onMouseOut={(e) => (e.currentTarget.src = mintnow)}
+          />
+        </div>
       </div>
       <div className='sectionA'>
-        <div className='running-man'>
+        <div className='nft'>
           <img src={nftCollection} alt='nftCollection' />
         </div>
       </div>

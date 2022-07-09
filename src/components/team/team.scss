@@ -1,14 +1,72 @@
 .main{
     display: flex;
+    // flex-direction: column;
     height: 100vh;
     width: 100vw;
-    justify-content: center;
-    align-items: center;
-    .imgdiv{
-        display: flex;
-        img{
-            height: 100%;
-            width: auto;
+    margin-top: 50%;
+
+        .title{
+            font-size: 64px;
+            line-height: 80px;
+            font-family: 'Orbitron',sans-serif;
+            font-weight: 900;
+            color: #FFF060;
+            text-align: center;
+            letter-spacing: -0.05em;
+            padding-bottom: 20px;
         }
-    }
+        .wording{
+            font-family: 'Orbitron',sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
+        .imgdiv{
+            padding-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .img{
+                display: flex;
+                align-items: center;
+                // padding: 0 -30px 0 -30px;  
+                    img{
+                        height: 350px;
+                        width: 280px;
+                    }
+            }
+            .one{
+                z-index: 1;
+            }
+            .two{
+                position: relative;
+                z-index: 2;
+                margin-left: -15px;
+            }.three{
+                position: relative;
+                z-index: 3;
+                margin-left: -15px;
+
+            }.four{
+                position: relative;
+                z-index: 4;
+                margin-left: -15px;
+            }.five{
+                position: relative;
+                z-index: 5;
+                margin-left: -15px;
+
+            }.six{
+                position: relative;
+                z-index: 6;
+                margin-left: -15px;
+                margin-right: -50px;
+            }
+        }
+    
 }

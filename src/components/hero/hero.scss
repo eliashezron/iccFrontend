@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    justify-content: center;
+    padding-top: 8%;
     .heroContainer{
         width: 100%;
-        top: 80vh;
+        // top: 80vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         flex-direction: row;
         max-width: 100%;
@@ -19,29 +20,30 @@
             padding-left: 20px;
             .logoImage{
                 img{
-                    height: fit-content;
-                    width:450px;
+                    height: 270px;
+                    width:650px;
                 }
             }
             .textfield{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 450px;
+                width: 650px;
                 p{
                     color: #f5f5f5;
                     font-family: 'Orbitron',sans-serif;
-                    font-size: 12px;
+                    font-size: 18px;
                     font-weight: 700;
+                    line-height: 20px;
                 }
                 p:nth-child(2){
+                    display: flex;
                     color: #00FFE0;
-                    justify-content: flex-start;
+                    align-items: flex-start;
+                    padding-top: 10px;
                 }
                 p:nth-child(3){
-                    display: flex;
-                    align-items: flex-start;
+                    // display: flex;
+                    // align-items: flex-start;
                     
                 }
                 .inputdv{
@@ -50,40 +52,52 @@
                     justify-content: flex-start;
                     flex-direction: column;
                     padding: 20px 0 10px 0;
-                    input::placeholder{
-                        color: #f5f5f5;
-                        font-family: 'Orbitron',sans-serif;
+                    input{
+                        height: 40px;
                         font-size: 14px;
-                        height: 20px;
-                        border-radius: 5px;
+                        border-radius: 25px;
                         line-height: 23px;
+                        background: url(/assets/Union.svg) no-repeat 625px;
+                        background-color: #d9d9d9;
                         border: none;
                         box-sizing: border-box;
                         outline: none;
+                    }
+                    input::placeholder{
+                        padding-left: 1%;
+                        color: #f5f5f5;
+                        font-family: 'Orbitron',sans-serif;
+                        font-size: 18px;
+                        border-radius: 5px;
+                        border: none;
+                        box-sizing: border-box;
                     }
                 }
             }
             .playButton{
                 img{
-                    height: max-content;
-                    width: 450px;
+                    height: 70px;
+                    width: 650px;
                 }
             }
         }
         .gifSection{
             display: flex;
+            padding-left: 40px;
             img{
-                height: 450px;
-                width: 700px;
+                height: 530px;
+                width: 930px;
             }
         }
         
     }
     .socialIcons{
+        display: flex;
+        align-items: center;
         float: right;
-        margin-right: -1%;
+        right: 0;
         img{
-            height: 220px;
+            height: 320px;
             width: 90px;
         }
     }

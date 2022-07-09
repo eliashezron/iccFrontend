@@ -26,7 +26,7 @@ export default function Hero() {
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
               <input
-                placeholder='BEP20
+                placeholder='BEP20|
                 0x8d672014fb107cb409dccd9042dda3b97313f4c3'
               ></input>
             </div>

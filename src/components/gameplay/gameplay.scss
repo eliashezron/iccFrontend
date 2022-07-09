@@ -4,8 +4,11 @@
     height: 100vh;
     width: 100vw;
     margin-top: 50%;
+    z-index: 10;
+    background: url(/assets/bgsvg.svg) no-repeat center center fixed  !important;
     .title{
-        font-size: 48px;
+        line-height: 80px;
+        font-size: 64px;
         font-family: 'Orbitron',sans-serif;
         font-weight: 900;
         color: #FFF060;
@@ -16,7 +19,7 @@
         font-family: 'Orbitron',sans-serif;
         font-style: normal;
         font-weight: 900;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 24px;
         text-align: center;
         letter-spacing: -0.02em;
@@ -25,26 +28,28 @@
     .sectionA{
         display:flex;
         flex-direction: row;
-        height: 700px;
-       justify-content: space-between;
-        margin: 0% 0% 0% 0% !important;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin: 0  0;
         .running-man{
+            display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-left: -1%;
             img{
-                height: 450px;
-                width: auto;
+                height: 630px;
+                width: 950px;
             }
         }
         .blueman{
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding-bottom: 10px;
+            background: url(/assets/bgblueman.svg) no-repeat;
             img{
-                height: 200px;
-                width: auto;
+                height: 250px;
+                width: 430px;
             }
             .freeplay{
                 display: flex;
@@ -54,7 +59,7 @@
                 font-family: 'Orbitron',sans-serif;
                 font-style: normal;
                 font-weight: 900;
-                font-size: 26px;
+                font-size: 36px;
                 line-height: 24px;
                 display: flex;
                 align-items: center;
@@ -69,8 +74,8 @@
                 font-family: 'Orbitron',sans-serif;
                 font-style: normal;
                 font-weight: 800;
-                font-size: 14px;
-                line-height: 16px;
+                font-size: 18px;
+                line-height: 24px;
                 text-align: center;
                 letter-spacing: -0.02em;
                 color: #0BFFF0;
@@ -83,7 +88,7 @@
                 cursor: pointer;
                 img{
                     height: 70px;
-                    width: 300px;
+                    width: 330px;
                 }
             }
             }
@@ -91,18 +96,30 @@
         .sectionB{
             display: flex;
             flex-direction:row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             flex: 1;
-            .directionalbuttonl,
-            .directionalbuttonr{
+            margin-top: -150px;
+            // position: absolute;
+            .directionalbuttonL,
+            .directionalbuttonR{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
                 img{
-                    height: 70px;
-                    width: 300px;
+                    height: 50px;
+                    width: 250px;
+                }
+            }
+            .middlebuttons{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                img{
+                    height: 26px;
+                    width: 150px;
+                    padding-right: 20px;
                 }
             }
         }

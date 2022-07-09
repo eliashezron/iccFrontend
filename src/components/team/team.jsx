@@ -9,7 +9,7 @@ import sufyan from "../../assets/SUFYAN.png"
 export default function Team() {
   return (
     <div className='main'>
-      <div className='title'>NFT GENESIS SERIES</div>
+      <div className='title'>CORE TEAM</div>
       <div className='wording'>
         <p>
           The team always plays an important role in the success of a project.
@@ -19,12 +19,24 @@ export default function Team() {
         </p>
       </div>
       <div className='imgdiv'>
-        <img src={liran} alt='coreteam' />
-        <img src={shahar} alt='coreteam' />
-        <img src={maksym} alt='coreteam' />
-        <img src={anhu} alt='coreteam' />
-        <img src={elias} alt='coreteam' />
-        <img src={sufyan} alt='coreteam' />
+        <div className='img one'>
+          <img src={liran} alt='coreteam' />
+        </div>
+        <div className='img  two'>
+          <img src={shahar} alt='coreteam' />
+        </div>
+        <div className='img three'>
+          <img src={maksym} alt='coreteam' />
+        </div>
+        <div className='img four'>
+          <img src={anhu} alt='coreteam' />
+        </div>
+        <div className='img five'>
+          <img src={elias} alt='coreteam' />
+        </div>
+        <div className='img six'>
+          <img src={sufyan} alt='coreteam' />
+        </div>
       </div>
     </div>
   )
