@@ -3,9 +3,13 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    margin-top: 50%;
     z-index: 10;
-    background: url(/assets/bgsvg.svg) no-repeat center center fixed  !important;
+    background: url(/assets/bgsvg.svg)!important;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
     .title{
         line-height: 80px;
         font-size: 64px;

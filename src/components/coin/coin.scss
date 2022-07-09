@@ -3,35 +3,60 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    margin-top: 50%;
-    .title{
-        font-size: 64px;
-        line-height: 80px;
-        font-family: 'Orbitron',sans-serif;
-        font-weight: 900;
-        color: #FFF060;
-        text-align: center;
-        letter-spacing: -0.05em;
-        text-transform: capitalize;
-    }
-    .wording{
-        font-family: 'Orbitron',sans-serif;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-        letter-spacing: -0.02em;
-        color: #FFFFFF;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:90vh;
+    .absolutediv{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30%;
+        position: absolute;
+        .title{
+            font-size: 64px;
+            line-height: 80px;
+            font-family: 'Orbitron',sans-serif;
+            font-weight: 900;
+            color: #FFF060;
+            text-align: center;
+            letter-spacing: -0.05em;
+            text-transform: capitalize;
+        }
+        .wording{
+            font-family: 'Orbitron',sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+        }
     }
     .imgdiv{
         display: flex;
+        flex: 1;
         justify-content: center;
         align-items: center;
         padding-right: 5%;
         img{
             height: 800px;
             width: auto;
+        }
+    }
+    .buybutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: -5%;
+        margin-top: 40%;
+        position: absolute;
+
+        img{
+            width: 350px;
+            height: 70px;
         }
     }
 }

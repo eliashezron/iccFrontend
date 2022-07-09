@@ -16,7 +16,7 @@
   scroll-behavior: smooth;
 }
 body {
-  background: url(backgroundImage.svg) no-repeat center center fixed;
+  background: url(backgroundImage.svg) repeat-y;
   width: 100%;
   overflow-x: hidden;
 }

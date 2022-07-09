@@ -9,14 +9,16 @@ import sufyan from "../../assets/SUFYAN.png"
 export default function Team() {
   return (
     <div className='main'>
-      <div className='title'>CORE TEAM</div>
-      <div className='wording'>
-        <p>
-          The team always plays an important role in the success of a project.
-          <br></br>
-          As a team, we have been working with each other for long time, with
-          everyone being highly experienced in their own <br></br> expertise.
-        </p>
+      <div className='absolutediv'>
+        <div className='title'>CORE TEAM</div>
+        <div className='wording'>
+          <p>
+            The team always plays an important role in the success of a project.
+            <br></br>
+            As a team, we have been working with each other for long time, with
+            everyone being highly experienced in their own <br></br> expertise.
+          </p>
+        </div>
       </div>
       <div className='imgdiv'>
         <div className='img one'>
