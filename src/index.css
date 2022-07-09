@@ -17,9 +17,23 @@
 }
 body {
   background: url(backgroundImage.svg) repeat-y;
-  width: 100%;
+  max-width: 1920px;
   overflow-x: hidden;
+
 }
-
-
+.overlay::before {    
+  z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20vh;
+  left: 0;
+  background: linear-gradient(0deg, transparent 0%, transparent 10%, rgba(0,0,0,0.7) 99%, rgba(0,0,0,0.7) 0%)
+}
     
+/* @media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+} */

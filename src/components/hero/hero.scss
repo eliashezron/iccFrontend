@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height:90vh;
+    // position: relative;
     .heroContainer{
         width: 100%;
         display: flex;
@@ -16,7 +17,7 @@
         flex-direction: row;
         max-width: 100%;
         flex: 1 1 auto;
-        height: 500px;
+        // height: 700px;
         .theorySection{
             display: flex;
             flex-direction: column;
@@ -82,6 +83,7 @@
         .gifSection{
             display: flex;
             padding-left: 40px;
+            padding-right: -40px;
             img{
                 height: 530px;
                 width: 930px;
@@ -94,6 +96,8 @@
         align-items: center;
         float: right;
         right: 0;
+        // padding-right: -15%;
+        // position: absolute;
         img{
             height: 320px;
             width: 90px;

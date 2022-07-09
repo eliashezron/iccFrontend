@@ -1,6 +1,6 @@
 import React from "react"
 import "./roadmap.scss"
-import roadmap from "../../assets/rmp.svg"
+import roadmap from "../../assets/roadmap.png"
 export default function RoadMap() {
   return (
     <div className='main'>
