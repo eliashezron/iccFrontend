@@ -4,7 +4,9 @@
     align-items: center;
     padding: 2rem 4rem;
     height: 15vh;   
-    // background: url(/assets/topoverlay.svg) no-repeat center center fixed !important; /* Set the fixed background overlay */
+    background: url(/assets/topoverlay.svg) no-repeat center center fixed !important; /* Set the fixed background overlay */
+    position: relative;
+    background-size: cover;
     .navcontainer{
         flex: 1;
         display: flex;
@@ -54,5 +56,10 @@
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 550px){
+    .navbar{
+        display: none;
     }
 }

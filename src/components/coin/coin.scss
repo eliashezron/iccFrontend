@@ -33,6 +33,7 @@
             text-align: center;
             letter-spacing: -0.02em;
             color: #FFFFFF;
+            padding-bottom: 10%;
         }
     }
     .imgdiv{
@@ -50,13 +51,49 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: -5%;
-        margin-top: 40%;
+        padding-top: -10%;
+        margin-top: 30%;
         position: absolute;
 
         img{
             width: 350px;
             height: 70px;
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .main{
+        .absolutediv{
+            // position: relative;
+            margin-bottom: 180%;
+            .title{
+                font-size: 36px;
+            }
+            .wording{
+                padding: 0 30px;
+                font-size: 18px;
+                white-space: normal;
+                // word-break: break-all;
+                overflow-wrap: break-word; 
+            }
+        }
+        .imgdiv{
+            padding-right: 0%;
+            img{
+                transform: rotate(360deg);
+                height: 480px;
+                width: auto;
+            }
+        }
+        .buybutton{
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 70%;
+            
+            img{
+                width: 400px;
+                height: 50px;
+            }
         }
     }
 }

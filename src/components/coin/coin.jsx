@@ -1,9 +1,11 @@
 import React from "react"
 import "./coin.scss"
 import coin from "../../assets/coinImage2.png"
+import mcoin from "../../assets/mcoin.png"
 import buyicc from "../../assets/buyicc.svg"
 import buyicchover from "../../assets/buyicchover.svg"
 export default function Coin() {
+  const windowWidth = window.innerWidth
   return (
     <div className='main'>
       <div className='absolutediv'>
@@ -17,7 +19,11 @@ export default function Coin() {
         </div>
       </div>
       <div className='imgdiv'>
-        <img src={coin} alt='roadMap' />
+        {windowWidth < 550 ? (
+          <img src={mcoin} alt='coin' />
+        ) : (
+          <img src={coin} alt='coin' />
+        )}
       </div>
       <div className='buybutton'>
         <img

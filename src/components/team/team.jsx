@@ -1,11 +1,11 @@
 import React from "react"
 import "./team.scss"
 import anhu from "../../assets/anhu.png"
-import elias from "../../assets/ELIAS.png"
-import shahar from "../../assets/KEDICAL.png"
-import maksym from "../../assets/MAKSYM.png"
-import liran from "../../assets/NIGHTWALKER.png"
-import sufyan from "../../assets/SUFYAN.png"
+import elias from "../../assets/elias.png"
+import shahar from "../../assets/shahar.png"
+import maksym from "../../assets/maksym.png"
+import liran from "../../assets/liran.png"
+import sufyan from "../../assets/sufyan.png"
 export default function Team() {
   return (
     <div className='main'>
@@ -23,21 +23,49 @@ export default function Team() {
       <div className='imgdiv'>
         <div className='img one'>
           <img src={liran} alt='coreteam' />
+          <div className='titl'>
+            <h1>NIGHTWALKER</h1>
+            <p>Founder</p>
+          </div>
         </div>
         <div className='img  two'>
           <img src={shahar} alt='coreteam' />
+          <div className='titl'>
+            <h1>KEDICAL</h1>
+            <p>
+              Project Manager <br></br>& Marketing
+            </p>
+          </div>
         </div>
         <div className='img three'>
           <img src={maksym} alt='coreteam' />
+          <div className='titl'>
+            <h1>DELTAWOLF</h1>
+            <p>Game Developer</p>
+          </div>
         </div>
         <div className='img four'>
           <img src={anhu} alt='coreteam' />
+          <div className='titl'>
+            <h1>ANH TU TRAN</h1>
+            <p>Art Director</p>
+          </div>
         </div>
         <div className='img five'>
           <img src={elias} alt='coreteam' />
+          <div className='titl'>
+            <h1>ELIAS</h1>
+            <p>
+              blockchain<br></br>Developer
+            </p>
+          </div>
         </div>
         <div className='img six'>
           <img src={sufyan} alt='coreteam' />
+          <div className='titl'>
+            <h1>SUFYAN</h1>
+            <p>ui/ux</p>
+          </div>
         </div>
       </div>
     </div>

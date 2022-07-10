@@ -6,13 +6,16 @@ import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import watch from "../../assets/watch.svg"
 import watchhover from "../../assets/watchhover.svg"
+import inext from "../../assets/ipreviousb.svg"
+import iprevious from "../../assets/iprevious.svg"
 import next from "../../assets/next.svg"
 import nexthover from "../../assets/hovernext.svg"
 import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
+  const windowWidth = window.innerWidth
   return (
-    <div className='mainSection'>
+    <>
       <div className='title'>GAMEPLAY</div>
       <div className='wording'>
         <p>
@@ -46,26 +49,34 @@ export default function GamePlay() {
       </div>
       <div className='sectionB'>
         <div className='directionbuttonL'>
-          <img
-            src={previous}
-            alt='playnow'
-            onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-            onMouseOut={(e) => (e.currentTarget.src = previous)}
-          />
+          {windowWidth < 550 ? (
+            <img src={iprevious} alt='playnow' />
+          ) : (
+            <img
+              src={previous}
+              alt='playnow'
+              onMouseOver={(e) => (e.currentTarget.src = previoushover)}
+              onMouseOut={(e) => (e.currentTarget.src = previous)}
+            />
+          )}
         </div>
         <div className='middlebuttons'>
           <img src={pinkrrectangle} alt='playnow' />
           <img src={bluerectangle} alt='playnow' />
         </div>
         <div className='directionbuttonR'>
-          <img
-            src={next}
-            alt='playnow'
-            onMouseOver={(e) => (e.currentTarget.src = nexthover)}
-            onMouseOut={(e) => (e.currentTarget.src = next)}
-          />
+          {windowWidth < 550 ? (
+            <img src={inext} alt='playnow' />
+          ) : (
+            <img
+              src={next}
+              alt='playnow'
+              onMouseOver={(e) => (e.currentTarget.src = nexthover)}
+              onMouseOut={(e) => (e.currentTarget.src = next)}
+            />
+          )}
         </div>
       </div>
-    </div>
+    </>
   )
 }

@@ -1,16 +1,7 @@
-.mainSection{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    z-index: 10;
-    background: url(/assets/bgsvg.svg)!important;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height:100vh;
     .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         line-height: 80px;
         font-size: 64px;
         font-family: 'Orbitron',sans-serif;
@@ -29,101 +20,149 @@
         letter-spacing: -0.02em;
         color: #FFFFFF;
     }
-    .sectionA{
-        display:flex;
-        flex-direction: row;
-        flex: 1;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        margin: 0  0;
-        .running-man{
+
+.sectionA{
+    display:flex;
+    // flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    // margin: 0  0;
+    .running-man{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        img{
+            height: 630px;
+            width: 950px;
+        }
+    }
+    .blueman{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+        padding-right: 10%;
+        // background: url(/assets/bgblueman.svg) no-repeat center!important;
+        
+        img{
+            height: 250px;
+            width: 430px;
+        }
+        .freeplay{
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
+            color: #0BFFF0;
+            font-family: 'Orbitron',sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -0.02em;
+            padding-top: 20px;
+        }
+        .words{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron',sans-serif;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #0BFFF0;
+            padding-bottom: 10px;
+        }
+        .watchButton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
             img{
-                height: 630px;
-                width: 950px;
+                height: 70px;
+                width: 330px;
             }
         }
-        .blueman{
+        }
+    }
+    .sectionB{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        align-items: center;
+        // flex: 1;
+        margin-top: -50px;
+        // position: absolute;
+        .directionalbuttonL,
+        .directionalbuttonR{
+            margin: 0 50px 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img{
+                height: 50px;
+                width: 250px;
+            }
+        }
+        .middlebuttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                height: 26px;
+                width: 150px;
+                padding-right: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 550px){
+        .title{
+            font-size: 36px;
+        }
+        .wording{
+            padding: 0 30px;
+            font-size: 18px;
+            white-space: normal;
+            // inline-size: 330px;
+            // word-break: break-all;
+        }
+        .sectionA{
             display: flex;
             flex-direction: column;
-            padding-bottom: 10px;
-            background: url(/assets/bgblueman.svg) no-repeat;
-            img{
-                height: 250px;
-                width: 430px;
-            }
-            .freeplay{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #0BFFF0;
-                font-family: 'Orbitron',sans-serif;
-                font-style: normal;
-                font-weight: 900;
-                font-size: 36px;
-                line-height: 24px;
-                display: flex;
-                align-items: center;
-                text-align: center;
-                letter-spacing: -0.02em;
-                padding-top: 20px;
-            }
-            .words{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: 'Orbitron',sans-serif;
-                font-style: normal;
-                font-weight: 800;
-                font-size: 18px;
-                line-height: 24px;
-                text-align: center;
-                letter-spacing: -0.02em;
-                color: #0BFFF0;
-                padding-bottom: 10px;
-            }
-            .watchButton{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
+            .running-man{
                 img{
-                    height: 70px;
-                    width: 330px;
+                    height: auto;
+                    width: 430px;
                 }
             }
+            .blueman{
+                img{
+                    display: none;
+                }
+                .freeplay{
+                    padding-top: 0px;
+                    padding-bottom: 10px;
+                }
+                .words{
+                    padding: 0px 20px 10px 20px;
+                }
             }
         }
         .sectionB{
-            display: flex;
-            flex-direction:row;
-            justify-content: space-between;
-            align-items: center;
-            flex: 1;
-            margin-top: -150px;
-            // position: absolute;
-            .directionalbuttonL,
-            .directionalbuttonR{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-                img{
-                    height: 50px;
-                    width: 250px;
-                }
-            }
+            margin-top: 0px;
+
             .middlebuttons{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
                 img{
-                    height: 26px;
-                    width: 150px;
-                    padding-right: 20px;
+                    height: 20px;
+                    width: 70px;
+                    padding-right: 10px;
                 }
             }
         }

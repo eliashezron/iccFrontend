@@ -8,6 +8,7 @@ import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
 
 export default function Hero() {
+  const windowWidth = window.innerWidth
   return (
     <div className='hero'>
       <div className='heroContainer'>
@@ -23,6 +24,11 @@ export default function Hero() {
               earn crypto with just your skills
             </p>
             <p>#IntergalacticCockroach #ICC #SpaceRace # P2E #NFT</p>
+            {windowWidth < 550 && (
+              <div className='gifSection'>
+                <img src={gifimage} alt='gifimage' />
+              </div>
+            )}
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
               <input
