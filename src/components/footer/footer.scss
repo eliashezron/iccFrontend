@@ -1,0 +1,140 @@
+.footer{
+    max-height: 30vh;
+    .seca{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .footerimg{
+            img{
+                height: 150px;
+                width: 460px;
+            }
+        }
+        .footerbuttons{
+            display:grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+            button{
+                line-height: 30px;
+                width: 230px;
+                height: auto;
+                font-family: 'Orbitron';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #0BFFF0;
+                background-color: transparent;
+                border-radius: 25px;
+                padding: 10px;
+                border-color: #0BFFF0;
+                border-bottom-width: 3px;
+                border-top: none;
+            }
+        }
+        .community{
+            .bgc{
+                background: url(/assets/bgc.png) no-repeat center!important;
+                border-radius: 25px;
+                height: auto;
+                width: auto;
+                padding: 10px;
+                margin-bottom: 10px;
+                p{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-family: 'Orbitron',sans-serif;
+                    font-weight: 900;
+                    color: #FFF060;
+                    text-align: center;
+                    letter-spacing: -0.05em;
+                    text-transform: capitalize;
+                    padding-bottom: 10px;
+                }
+                .communitybuttons{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    a{
+                        img{
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                line-height: 30px;
+                width: 230px;
+                height: auto;
+                font-family: 'Orbitron';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #0BFFF0;
+                background-color: transparent;
+                border-radius: 25px;
+                padding: 10px;
+                border-color: #0BFFF0;
+                border-bottom-width: 3px;
+                border-top: none;
+            }
+        }
+        
+    }
+    .secb{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 20px 20px 20px;
+        .playbutton{
+            img{
+                height: 80px;
+                width: 730px;
+            }
+        }
+
+    }
+    .secc{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 20px 20px 20px;      
+        
+        .h1{
+            font-family: 'Orbitron';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFF060;
+            bottom: 0px;
+        }
+        .h2{
+            img:nth-child(1){
+                padding-right: 15px;
+            }
+        }
+        // img:nth-child(1){
+        //     height: 30px;
+        //     width: 360px;
+        // }
+        // img:nth-child(2){
+        //     height: 80px;
+        //     width: 730px;
+        // }
+        
+
+    }
+}
