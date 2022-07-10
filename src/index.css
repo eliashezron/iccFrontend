@@ -16,8 +16,8 @@
   scroll-behavior: smooth;
 }
 body {
-  background: url(backgroundImage.svg) repeat-y;
-  max-width: 1920px;
+  background: url(./assets/backgroundImage.svg) repeat-y;
+  width: 100%;
   overflow-x: hidden;
 
 }
@@ -31,9 +31,18 @@ body {
   left: 0;
   background: linear-gradient(0deg, transparent 0%, transparent 10%, rgba(0,0,0,0.7) 99%, rgba(0,0,0,0.7) 0%)
 }
-    
-/* @media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}  
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
   }
-} */
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}

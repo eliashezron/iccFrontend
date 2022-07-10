@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
     height: 15vh;   
     background: url(/assets/topoverlay.svg) no-repeat center center fixed !important; /* Set the fixed background overlay */
     position: relative;
@@ -58,7 +58,35 @@
         }
     }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 1024px){
+    .navbar{
+        .navcontainer{
+            .logo{
+                padding-right: 0;
+                img{
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+            .navlinks{
+                .playButton{
+                    img{
+                        height:30px;
+                        width:150px;
+                    }
+                }
+            }
+        }
+        }
+    }
+
+@media screen and (max-width: 768px){
+    .navbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
     .navbar{
         display: none;
     }
