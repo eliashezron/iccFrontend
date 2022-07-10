@@ -1,11 +1,11 @@
 import React from "react"
 import "./team.scss"
-// import anhu from "../../assets/anhu.png"
-// import elias from "../../assets/elias.png"
-// import shahar from "../../assets/shahar.png"
-// import maksym from "../../assets/maksym.png"
-// import liran from "../../assets/liran.png"
-// import sufyan from "../../assets/sufyan.png"
+import anhu from "../../assets/anhu.png"
+import elias from "../../assets/elias.png"
+import shahar from "../../assets/shahar.png"
+import maksym from "../../assets/maksym.png"
+import liran from "../../assets/liran.png"
+import sufyan from "../../assets/sufyan.png"
 export default function Team() {
   return (
     <div className='main'>
@@ -20,7 +20,7 @@ export default function Team() {
           </p>
         </div>
       </div>
-      {/* <div className='imgdiv'>
+      <div className='imgdiv'>
         <div className='img one'>
           <img src={liran} alt='coreteam' />
           <div className='titl'>
@@ -67,7 +67,7 @@ export default function Team() {
             <p>ui/ux</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
