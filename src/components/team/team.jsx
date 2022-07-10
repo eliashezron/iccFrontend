@@ -20,7 +20,7 @@ export default function Team() {
           </p>
         </div>
       </div>
-      <div className='imgdiv'>
+      {/* <div className='imgdiv'>
         <div className='img one'>
           <img src={liran} alt='coreteam' />
           <div className='titl'>
@@ -67,7 +67,7 @@ export default function Team() {
             <p>ui/ux</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
