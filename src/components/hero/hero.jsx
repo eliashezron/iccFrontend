@@ -26,7 +26,10 @@ export default function Hero() {
             <p>#IntergalacticCockroach #ICC #SpaceRace # P2E #NFT</p>
             {windowWidth < 480 && (
               <div className='gifSection'>
-                <iframe src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'></iframe>
+                <iframe
+                  title='icc video'
+                  src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'
+                ></iframe>
               </div>
             )}
             <div className='inputdv'>
@@ -49,7 +52,10 @@ export default function Hero() {
         <div className='gifSection'>
           {windowWidth > 480 && (
             <div className='gifSection'>
-              <iframe src='https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0'></iframe>
+              <iframe
+                title='icc video'
+                src='https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0'
+              ></iframe>
             </div>
           )}
         </div>
