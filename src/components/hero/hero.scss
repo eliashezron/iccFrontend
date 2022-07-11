@@ -82,7 +82,9 @@
             display: flex;
             // padding-left: 20px;
             // padding-right: -40px;
-            img{
+            iframe{
+                border:none;
+                border-radius: 25px;
                 height: 640px;
                 width: 930px;
             }
