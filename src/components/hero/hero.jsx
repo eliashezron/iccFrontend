@@ -1,8 +1,5 @@
 import React from "react"
 import "./hero.scss"
-import sidebar from "../../assets/sidebar1.svg"
-import sidebarhover from "../../assets/sidebar1hover.svg"
-import gifimage from "../../assets/gifimage.png"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
