@@ -34,10 +34,10 @@
                 justify-content: space-evenly;
                 align-items: center;
                 button{
-                    height: 34px;
+                    // height: 34px;
                     width: 120px;
                     text-decoration: none;
-                    // padding: 10px;
+                    padding: 10px;
                     font-size: 30px;
                     color:#f5f5f5;
                     background-color: transparent;
@@ -51,7 +51,8 @@
                         border-color: #FBC5E2;
                         background:#FBC5E2;
                         border-style: block;
-                        transform: skew(-45deg , 0deg);
+                        // transform: skew(-45deg , 0deg);
+                        transform: translateX(10px);
                         text-transform: none;
                         border-radius: 0 20px 0 20px;
                         
