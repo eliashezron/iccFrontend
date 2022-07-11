@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "./navbar.scss"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnow.svg"
@@ -15,6 +15,7 @@ import playnowhover from "../../assets/playnowhover.svg"
 // import morehover from "../../assets/imorehover.svg"
 
 const Navbar = () => {
+  const [dropdown, setDropdown] = useState(false)
   return (
     <div className='navbar'>
       <div className='navcontainer'>
@@ -24,59 +25,19 @@ const Navbar = () => {
         <div className='navlinks'>
           <ul>
             <li>
-              <button>
-                Home
-                {/* <img
-                  src={home}
-                  alt='home'
-                  onMouseOver={(e) => (e.currentTarget.src = homehover)}
-                  onMouseOut={(e) => (e.currentTarget.src = home)}
-                /> */}
-              </button>
+              <button>Home</button>
             </li>
             <li>
-              <button>
-                nft
-                {/* <img
-                  src={nft}
-                  alt='nft'
-                  onMouseOver={(e) => (e.currentTarget.src = nfthover)}
-                  onMouseOut={(e) => (e.currentTarget.src = nft)}
-                /> */}
-              </button>
+              <button>nft</button>
             </li>
             <li>
-              <button>
-                earn
-                {/* <img
-                  src={earn}
-                  alt='earn'
-                  onMouseOver={(e) => (e.currentTarget.src = earnhover)}
-                  onMouseOut={(e) => (e.currentTarget.src = earn)}
-                /> */}
-              </button>
+              <button>earn</button>
             </li>
             <li>
-              <button>
-                trade
-                {/* <img
-                  src={trade}
-                  alt='trade'
-                  onMouseOver={(e) => (e.currentTarget.src = tradehover)}
-                  onMouseOut={(e) => (e.currentTarget.src = trade)}
-                /> */}
-              </button>
+              <button>trade</button>
             </li>
             <li>
-              <button>
-                More
-                {/* <img
-                  src={more}
-                  alt='more'
-                  onMouseOver={(e) => (e.currentTarget.src = morehover)}
-                  onMouseOut={(e) => (e.currentTarget.src = more)}
-                /> */}
-              </button>
+              <button>More</button>
             </li>
           </ul>
           <div className='playButton'>
