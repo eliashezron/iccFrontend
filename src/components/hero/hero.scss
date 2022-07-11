@@ -34,7 +34,7 @@
                     font-size: 18px;
                     font-weight: 900;
                     line-height: 20px;
-                    letter-spacing: -0.1em;
+                    // letter-spacing: -0.1em;
                 }
                 p:nth-child(2){
                     font-weight: 800;
@@ -81,8 +81,6 @@
         }
         .gifSection{
             display: flex;
-            // padding-left: 20px;
-            // padding-right: -40px;
             iframe{
                 border:none;
                 border-radius: 25px;
@@ -93,15 +91,31 @@
         
     }
     .socialIcons{
-        display: flex;
+        justify-content: center;
         align-items: center;
         float: right;
-        right: 0;
-        // padding-right: -15%;
-        // position: absolute;
-        img{
-            height: 320px;
-            width: 90px;
+        right: 0px;
+        width: auto;
+        border-radius: 35px 0 0 35px;
+        height: auto;
+        width: auto;
+        padding: 10px;
+        background: url(/assets/bgsidebar.svg) no-repeat center!important;
+        .communitybuttons{
+            float: right;
+            right: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            flex-direction: row;
+            justify-content: space-evenly;
+            height: 200px;
+            padding: 10px 0px 10px 5px;
+            a{
+                img{
+                    height: 50px;
+                    width: 50px;
+                }
+            }
         }
     }
 }

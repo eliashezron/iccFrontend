@@ -6,6 +6,9 @@ import gifimage from "../../assets/gifimage.png"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
+import opensea from "../../assets/opensea.png"
+import discord from "../../assets/discord.png"
+import twitter from "../../assets/twitter.png"
 
 export default function Hero() {
   const windowWidth = window.innerWidth
@@ -49,18 +52,23 @@ export default function Hero() {
         <div className='gifSection'>
           {windowWidth > 480 && (
             <div className='gifSection'>
-              <iframe src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'></iframe>
+              <iframe src='https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0'></iframe>
             </div>
           )}
         </div>
       </div>
       <div className='socialIcons'>
-        <img
-          src={sidebar}
-          alt='playnow'
-          onMouseOver={(e) => (e.currentTarget.src = sidebarhover)}
-          onMouseOut={(e) => (e.currentTarget.src = sidebar)}
-        />
+        <div className='communitybuttons'>
+          <a href='#home'>
+            <img src={opensea} alt='opensea' />
+          </a>
+          <a href='#home'>
+            <img src={discord} alt='discord' />
+          </a>
+          <a href='#home'>
+            <img src={twitter} alt='twitter' />
+          </a>
+        </div>
       </div>
     </div>
   )
