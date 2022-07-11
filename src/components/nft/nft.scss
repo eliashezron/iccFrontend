@@ -95,20 +95,21 @@
         .mainSection{
             .relativediv{
                 .title{
+                    padding-top: 5%;
                     font-size: 24px;
                     line-height: 28px;
                 }
                 .wording{
-                    font-size: 18px;
+                    font-size: 12px;
                     line-height: 20px;
-                    padding-top: 10px;
+                    padding-top: 5px;
                     white-space: normal;
                     // word-break: break-all;
                     overflow-wrap: break-word; 
                 }
             }
             .sectionA{
-                // margin-top: 20px;
+                padding-top: 2px;
                 .nft{
                     img{
                         height: 350px;
@@ -116,7 +117,7 @@
                 }
             }
             .sectionB{
-                margin-top: 20px;
+                margin-top: 0px;
     
                 .middlebuttons{
                     img{

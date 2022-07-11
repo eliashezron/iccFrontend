@@ -69,21 +69,23 @@
         .absolutediv{
             position: relative;
             margin-bottom: 0;
-            margin-top: 100%;
+            margin-top: 5%;
             .title{
                 font-size: 24px;
+                line-height: 28px;
             }
             .wording{
-                padding: 0 30px;
-                font-size: 18px;
-                line-height: 24px;
+                // padding: 0 30px;
+                font-size: 12px;
+                line-height: 14px;
                 white-space: normal;
                 // word-break: break-all;
                 overflow-wrap: break-word; 
             }
         }
         .imgdiv{
-            padding-right: 0%;
+            margin-top: -10%;
+            padding-right: 5%;
             img{
                 transform: rotate(360deg);
                 height: 350px;
