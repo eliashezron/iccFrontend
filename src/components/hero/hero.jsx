@@ -24,7 +24,7 @@ export default function Hero() {
               earn crypto with just your skills
             </p>
             <p>#IntergalacticCockroach #ICC #SpaceRace # P2E #NFT</p>
-            {windowWidth < 550 && (
+            {windowWidth < 480 && (
               <div className='gifSection'>
                 <img src={gifimage} alt='gifimage' />
               </div>
@@ -47,7 +47,11 @@ export default function Hero() {
           </div>
         </div>
         <div className='gifSection'>
-          <img src={gifimage} alt='gifimage' />
+          {windowWidth > 480 && (
+            <div className='gifSection'>
+              <img src={gifimage} alt='gifimage' />
+            </div>
+          )}
         </div>
       </div>
       <div className='socialIcons'>

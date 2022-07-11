@@ -1,5 +1,7 @@
 .footer{
     max-height: 30vh;
+    scroll-snap-align: start;
+    margin-top: 5%;
     .seca{
         display: flex;
         flex-direction: row;

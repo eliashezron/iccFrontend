@@ -9,8 +9,6 @@ import {
   Coin,
   GamePlay,
 } from "./components"
-// import backgroundImage from "./assets/backgroundImage.svg"
-// "homepage": "https://github.com/eliashezron/iccFrontend",
 
 function App() {
   return (
@@ -28,3 +26,5 @@ function App() {
 }
 
 export default App
+// import backgroundImage from "./assets/backgroundImage.svg"
+// "homepage": "https://github.com/eliashezron/iccFrontend",

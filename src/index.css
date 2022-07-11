@@ -16,20 +16,12 @@
   scroll-behavior: smooth;
 }
 body {
-  background: url(./assets/backgroundImage.svg) repeat-y;
+  background: url(./assets/backgroundImage.svg) repeat-y !important;
   width: 100%;
   overflow-x: hidden;
-
-}
-.overlay::before {    
-  z-index: 1;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 20vh;
-  left: 0;
-  background: linear-gradient(0deg, transparent 0%, transparent 10%, rgba(0,0,0,0.7) 99%, rgba(0,0,0,0.7) 0%)
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .scale-up-center {

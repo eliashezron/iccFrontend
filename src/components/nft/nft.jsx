@@ -37,7 +37,7 @@ export default function Nft() {
       </div>
       <div className='sectionB'>
         <div className='directionbuttonL'>
-          {windowWidth < 550 ? (
+          {windowWidth < 480 ? (
             <img src={iprevious} alt='playnow' />
           ) : (
             <img
@@ -53,7 +53,7 @@ export default function Nft() {
           <img src={bluerectangle} alt='playnow' />
         </div>
         <div className='directionbuttonR'>
-          {windowWidth < 550 ? (
+          {windowWidth < 480 ? (
             <img src={inext} alt='playnow' />
           ) : (
             <img

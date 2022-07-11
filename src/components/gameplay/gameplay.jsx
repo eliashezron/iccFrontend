@@ -15,7 +15,7 @@ import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
   const windowWidth = window.innerWidth
   return (
-    <>
+    <div className='bgb'>
       <div className='title'>GAMEPLAY</div>
       <div className='wording'>
         <p>
@@ -49,7 +49,7 @@ export default function GamePlay() {
       </div>
       <div className='sectionB'>
         <div className='directionbuttonL'>
-          {windowWidth < 550 ? (
+          {windowWidth < 480 ? (
             <img src={iprevious} alt='playnow' />
           ) : (
             <img
@@ -65,7 +65,7 @@ export default function GamePlay() {
           <img src={bluerectangle} alt='playnow' />
         </div>
         <div className='directionbuttonR'>
-          {windowWidth < 550 ? (
+          {windowWidth < 480 ? (
             <img src={inext} alt='playnow' />
           ) : (
             <img
@@ -77,6 +77,6 @@ export default function GamePlay() {
           )}
         </div>
       </div>
-    </>
+    </div>
   )
 }
