@@ -16,6 +16,7 @@
   scroll-behavior: smooth;
 }
 body {
+  height:100vh;
   background: url(./assets/backgroundImage.svg) repeat-y !important;
   width: 100%;
   overflow-x: hidden;
