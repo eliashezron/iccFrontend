@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import "./gameplay.scss"
 import blueman from "../../assets/bueman.png"
 import runningman from "../../assets/running.png"
+import blueman2 from "../../assets/blueman2.png"
+import runningman2 from "../../assets/runningman2.png"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import watch from "../../assets/watch.svg"
@@ -14,6 +16,20 @@ import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
   const windowWidth = window.innerWidth
+  const [slideIndex, setSlideIndex] = useState(0)
+  console.log(slideIndex)
+  const prevSlide = () => {
+    if (slideIndex === 1) {
+      setSlideIndex(0)
+    } else setSlideIndex(1)
+  }
+
+  const nextSlide = () => {
+    if (slideIndex === 1) {
+      setSlideIndex(0)
+    } else setSlideIndex(1)
+  }
+
   return (
     <div className='bgb'>
       <div className='title'>GAMEPLAY</div>
@@ -25,25 +41,56 @@ export default function GamePlay() {
         </p>
       </div>
       <div className='sectionA'>
-        <div className='running-man'>
-          <img src={runningman} alt='running-man' />
-        </div>
-        <div className='blueman'>
-          <img src={blueman} alt='blueman' />
-          <div className='freeplay'>FREE PLAY</div>
-          <div className='words'>
-            <p>
-              Win the race and be the last Cockroach standing.<br></br>Show your
-              skills, win 3 rounds and win prizes.
-            </p>
+        <div
+          key={slideIndex}
+          className={`slider ${slideIndex === 1 ? "active" : ""}`}
+        >
+          <div className='running-man'>
+            <img src={runningman} alt='running-man' />
           </div>
-          <div className='watchButton'>
-            <img
-              src={watch}
-              alt='playnow'
-              onMouseOver={(e) => (e.currentTarget.src = watchhover)}
-              onMouseOut={(e) => (e.currentTarget.src = watch)}
-            />
+          <div className='blueman'>
+            <img src={blueman} alt='blueman' />
+            <div className='freeplay'>FREE PLAY</div>
+            <div className='words'>
+              <p>
+                Win the race and be the last Cockroach standing.<br></br>Show
+                your skills, win 3 rounds and win prizes.
+              </p>
+            </div>
+            <div className='watchButton'>
+              <img
+                src={watch}
+                alt='playnow'
+                onMouseOver={(e) => (e.currentTarget.src = watchhover)}
+                onMouseOut={(e) => (e.currentTarget.src = watch)}
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          key={slideIndex === 0 ? 1 : 0}
+          className={`slider ${slideIndex === 1 ? "active" : ""}`}
+        >
+          <div className='running-man'>
+            <img src={runningman2} alt='running-man' />
+          </div>
+          <div className='blueman'>
+            <img src={blueman2} alt='blueman' />
+            <div className='freeplay'>PLAY AND EARN</div>
+            <div className='words'>
+              <p>
+                Win the race and be the last Cockroach standing.<br></br>Show
+                your skills, win 3 rounds and win prizes.
+              </p>
+            </div>
+            <div className='watchButton'>
+              <img
+                src={watch}
+                alt='playnow'
+                onMouseOver={(e) => (e.currentTarget.src = watchhover)}
+                onMouseOut={(e) => (e.currentTarget.src = watch)}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -53,6 +100,7 @@ export default function GamePlay() {
             <img src={iprevious} alt='playnow' />
           ) : (
             <img
+              onClick={prevSlide}
               src={previous}
               alt='playnow'
               onMouseOver={(e) => (e.currentTarget.src = previoushover)}
@@ -60,7 +108,7 @@ export default function GamePlay() {
             />
           )}
         </div>
-        <div className='middlebuttons'>
+        <div className={`middlebuttons ${slideIndex === 1 ? "active" : ""}`}>
           <img src={pinkrrectangle} alt='playnow' />
           <img src={bluerectangle} alt='playnow' />
         </div>
@@ -70,7 +118,8 @@ export default function GamePlay() {
           ) : (
             <img
               src={next}
-              alt='playnow'
+              alt='next'
+              onClick={nextSlide}
               onMouseOver={(e) => (e.currentTarget.src = nexthover)}
               onMouseOut={(e) => (e.currentTarget.src = next)}
             />

@@ -16,7 +16,10 @@ const Navbar = () => {
         <div className='navlinks'>
           <ul>
             {navItems.map((item) => (
-              <div className='dropdown' key={item.id}>
+              <div
+                className={`dropdown ${dropdown ? "active" : ""}`}
+                key={item.id}
+              >
                 <button
                   key={item.id}
                   onClick={() => setDropdown(true)}

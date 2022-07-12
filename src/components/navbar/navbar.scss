@@ -82,7 +82,7 @@
                             background:url(/assets/bgbutton.svg) no-repeat center center!important; /* Set the fixed background overlay */
                         }
                     }
-                    &:hover{
+                    &:hover.active{
                         .dropdown-content{
                         display: flex;
                         flex-direction: column;

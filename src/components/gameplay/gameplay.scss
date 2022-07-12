@@ -35,6 +35,27 @@
     align-items: center;
     position: relative;
     // margin: 0  0;
+    width: 200%;
+    overflow-x: hidden;
+
+    .slider{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        float: left;
+        width: 100%;
+
+        &.active{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            float: left;
+            transform: translateX(-100%);
+            left: 0;
+            opacity: 1;
+        }
     .running-man{
         display: flex;
         justify-content: flex-start;
@@ -95,7 +116,7 @@
                 width: 330px;
             }
         }
-        }
+        }}
     }
     .sectionB{
         display: flex;
@@ -103,7 +124,7 @@
         justify-content: space-around;
         align-items: center;
         // flex: 1;
-        margin-top: -50px;
+        // margin-top: -50px;
         // position: absolute;
         .directionalbuttonL,
         .directionalbuttonR{
@@ -125,6 +146,9 @@
                 height: 26px;
                 width: 150px;
                 padding-right: 20px;
+            }
+            &.active{
+                flex-direction: row-reverse;
             }
         }
     }
