@@ -44,8 +44,9 @@
         justify-content: space-between;
         align-items: center;
         float: left;
-        width: 100%;
-
+        width: 100%;  
+        // transition: ease-out 0.3s;
+        
         &.active{
             display: flex;
             flex-direction: row;
@@ -54,7 +55,16 @@
             float: left;
             transform: translateX(-100%);
             left: 0;
-            opacity: 1;
+            // opacity: 1;
+            .running-man,.blueman{
+                animation: fade 1s;
+                @keyframes fade{
+                    0% { opacity: 0.5; }
+                    50% { opacity: 0.7; }
+                    100% { opacity: 0.9; }
+                    
+                }
+            }
         }
     .running-man{
         display: flex;
@@ -142,17 +152,44 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            transition: 3s;
             img{
                 height: 26px;
                 width: 150px;
                 padding-right: 20px;
             }
-            &.active{
-                flex-direction: row-reverse;
+            img:nth-child(1){
+            transform: translateX(0px);
+            
             }
+            img:nth-child(2){
+                transform: translateX(0px);
+            }
+            &.active{
+                transition: ease-in-out 4s;
+                img:nth-child(1){
+                    // transform: translateX(120px);
+                    animation: movey 4s;
+                    @keyframes movey{
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(150px); }
+                    }
+                }
+                img:nth-child(2){
+                    // transform: translateX(-150px);
+                    animation: movex 4s ;
+                    @keyframes movex{
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-150px); }
+                    }
+                }
+                
+            }
+            }
+            
         }
     }
-}
+// }
     @media screen and (max-width: 480px){
     .bgb{
         margin-top: 50%;
@@ -206,4 +243,4 @@
             }
         }
     }
-}
+    }

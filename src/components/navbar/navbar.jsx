@@ -16,33 +16,23 @@ const Navbar = () => {
         <div className='navlinks'>
           <ul>
             {navItems.map((item) => (
-              <div
-                className={`dropdown ${dropdown ? "active" : ""}`}
-                key={item.id}
-              >
+              <div className={`dropdown ${dropdown && "active"}`} key={item.id}>
                 <button
                   key={item.id}
                   onClick={() => setDropdown(true)}
                   onMouseLeave={() => setDropdown(false)}
-                  className={`${dropdown ? "active" : ""}`}
+                  className={`${dropdown ? "active" : "button"}`}
                 >
                   {item.title}
                 </button>
-                {item.title === "Earn" ? (
-                  <div className='dropdown-content'>
-                    <a href={item.path}>pools</a>
-                    <a href={item.path}>Farm</a>
-                  </div>
-                ) : item.title === "Trade" ? (
-                  <div className='dropdown-content'>
-                    <a href={item.path}>liquidity</a>
-                    <a href={item.path}>exchange</a>
-                  </div>
-                ) : item.title === "More" ? (
-                  <div className='dropdown-content'>
-                    <a href={item.path}>WhitePaper</a>
-                  </div>
-                ) : null}
+                {item.subMenu &&
+                  item.subMenu.map((subItem, index) => (
+                    <div className='dropdown-content'>
+                      <a href={subItem.path} key={index}>
+                        {subItem.subtitle}
+                      </a>
+                    </div>
+                  ))}
               </div>
             ))}
           </ul>
