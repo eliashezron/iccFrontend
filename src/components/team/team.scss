@@ -36,12 +36,26 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            position: relative;
+            // width: 80%;
             .img{
                 display: flex;
                 flex-direction: column;
-                padding: 20px 0;
-                // padding: 0 -30px 0 -30px; 
+                justify-content: space-around;
+                align-items: center;
+                bottom: 0;
+                padding: 20% 0;
+                padding: 0 -30px 0 -30px; 
+                img{
+                    height: 275px;
+                    width: auto;
+                    justify-content: baseline;
+                }
                 .titl{
+                    display: flex;
+                    justify-content:baseline;
+                    flex-direction: column;
+                    align-items: center;
                     h1{
                         padding-top: 10%;
                         font-size: 24px;
@@ -65,10 +79,36 @@
                         text-transform: uppercase;
                    }
                 } 
-                    img{
-                        height: 310px;
-                        width: 280px;
-                    }
+            }
+            .one{
+                position: relative;
+                z-index: 10;
+                padding-left: 10%;
+            }
+            .two{
+                position: relative;
+                z-index: 9;
+                padding-left: -10px
+            }
+            .three{
+                position: relative;
+                z-index: 7;
+                padding-right: -10px;
+            }
+            .four{
+                position: relative;
+                z-index: 6;
+                padding-right: -10px;
+            }
+            .five{
+                position: relative;
+                z-index: 9;
+                padding-right: -10px;
+            }
+            .six{
+                position: relative;
+                z-index: 10;
+                padding-right: 10%;
             }
         }
     
@@ -89,6 +129,7 @@
             }
         }
         .imgdiv{
+         
             display: grid !important;
             grid-template-columns:auto auto;
             grid-template-rows: auto auto;

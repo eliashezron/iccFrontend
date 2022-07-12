@@ -1,11 +1,11 @@
 import React from "react"
 import "./team.scss"
-import anhu from "../../assets/anhu.png"
-import elias from "../../assets/elias.png"
-import shahar from "../../assets/shahar.png"
-import maksym from "../../assets/maksym.png"
-import liran from "../../assets/liran.png"
-import sufyan from "../../assets/sufyan.png"
+import anhu from "../../assets/png4.png"
+import elias from "../../assets/png5.png"
+import shahar from "../../assets/png2.png"
+import maksym from "../../assets/png3.png"
+import liran from "../../assets/png1.png"
+import sufyan from "../../assets/png6.png"
 export default function Team() {
   return (
     <div className='main'>

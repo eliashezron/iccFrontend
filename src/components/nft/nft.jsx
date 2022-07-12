@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 import "./nft.scss"
 import nftCollection from "../../assets/nftCollection.png"
+import nftCollection2 from "../../assets/nftCollection2.png"
 import mintnow from "../../assets/mintnow.svg"
 import mintnowhover from "../../assets/mintnowhover.svg"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
@@ -13,6 +14,19 @@ import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
 export default function Nft() {
   const windowWidth = window.innerWidth
+  const [slideIndex, setSlideIndex] = useState(0)
+  console.log(slideIndex)
+  const prevSlide = () => {
+    if (slideIndex === 1) {
+      setSlideIndex(0)
+    } else setSlideIndex(1)
+  }
+
+  const nextSlide = () => {
+    if (slideIndex === 1) {
+      setSlideIndex(0)
+    } else setSlideIndex(1)
+  }
   return (
     <div className='mainSection'>
       <div className='relativediv'>
@@ -31,8 +45,17 @@ export default function Nft() {
         </div>
       </div>
       <div className='sectionA'>
-        <div className='nft'>
+        <div
+          key={slideIndex}
+          className={`nft ${slideIndex === 1 ? "active" : ""}`}
+        >
           <img src={nftCollection} alt='nftCollection' />
+        </div>
+        <div
+          key={slideIndex === 0 ? 1 : 0}
+          className={`nft ${slideIndex === 1 ? "active" : ""}`}
+        >
+          <img src={nftCollection2} alt='nftCollection' />
         </div>
       </div>
       <div className='sectionB'>
@@ -43,12 +66,13 @@ export default function Nft() {
             <img
               src={previous}
               alt='playnow'
+              onClick={prevSlide}
               onMouseOver={(e) => (e.currentTarget.src = previoushover)}
               onMouseOut={(e) => (e.currentTarget.src = previous)}
             />
           )}
         </div>
-        <div className='middlebuttons'>
+        <div className={`middlebuttons ${slideIndex === 1 ? "active" : ""}`}>
           <img src={pinkrrectangle} alt='playnow' />
           <img src={bluerectangle} alt='playnow' />
         </div>
@@ -59,6 +83,7 @@ export default function Nft() {
             <img
               src={next}
               alt='playnow'
+              onClick={nextSlide}
               onMouseOver={(e) => (e.currentTarget.src = nexthover)}
               onMouseOut={(e) => (e.currentTarget.src = next)}
             />
