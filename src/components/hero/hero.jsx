@@ -6,6 +6,7 @@ import playnowhover from "../../assets/playnowlonghover.svg"
 import opensea from "../../assets/openseaicon.png"
 import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
+import copy from "../../assets/Union.svg"
 
 export default function Hero() {
   const windowWidth = window.innerWidth
@@ -34,10 +35,10 @@ export default function Hero() {
             )}
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
-              <input
-                placeholder='BEP20|
-                0x8d672014fb107cb409dccd9042dda3b97313f4c3'
-              ></input>
+              <div className='icccontract'>
+                <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p>
+                <img src={copy} alt='copy' />
+              </div>
             </div>
           </div>
           <div className='playButton'>
