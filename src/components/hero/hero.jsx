@@ -3,9 +3,9 @@ import "./hero.scss"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
-import opensea from "../../assets/opensea.png"
-import discord from "../../assets/discord.png"
-import twitter from "../../assets/twitter.png"
+import opensea from "../../assets/openseaicon.png"
+import discord from "../../assets/discordicon.png"
+import twitter from "../../assets/twittericon.png"
 
 export default function Hero() {
   const windowWidth = window.innerWidth

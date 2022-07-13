@@ -57,7 +57,7 @@
                         line-height: 23px;
                         background: url(/assets/Union.svg) no-repeat 625px;
                         background-color: transparent;
-                        border: none;
+                        border: 0.1px solid #363535;
                         box-sizing: border-box;
                         outline: none;
                     }
@@ -101,7 +101,7 @@
         height: auto;
         width: auto;
         padding: 10px;
-        background: url(/assets/bgsidebar.svg) no-repeat center!important;
+        background: url(/assets/bgsocialsidebar.svg) no-repeat center!important;
         .communitybuttons{
             float: right;
             right: 0;
@@ -117,6 +117,10 @@
                     width: 50px;
                 }
             }
+        }
+        &:hover{
+            background: url(/assets/bgsocialsidebarhover.svg) no-repeat center!important;
+
         }
     }
 }
