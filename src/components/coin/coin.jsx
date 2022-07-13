@@ -18,7 +18,7 @@ export default function Coin() {
           </p>
         </div>
       </div>
-      <div className='imgdiv'>
+      <div className='imgdivcoin'>
         {windowWidth < 480 ? (
           <img src={mcoin} alt='coin' />
         ) : (

@@ -38,12 +38,20 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            // width: 80%;
+            width: 80% !important;
+            // display: grid;
+            padding: 0 200px;
+            // grid-template-columns: 1fr;
             .img{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                row-gap: -10px;
+                display: grid;
+                column-gap: 120%;
+                // background-color: #4d4c47;
+                justify-content: center;
+                // position: block;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-around;
                 align-items: center;
                 bottom: 0;
                 padding: 0 -40%;
