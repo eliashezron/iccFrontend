@@ -25,14 +25,31 @@ const Navbar = () => {
                 >
                   {item.title}
                 </button>
-                {item.subMenu &&
-                  item.subMenu.map((subItem, index) => (
-                    <div className='dropdown-content'>
-                      <a href={subItem.path} key={index}>
-                        {subItem.subtitle}
-                      </a>
-                    </div>
-                  ))}
+                {item.title === "Earn" ? (
+                  <div className='dropdown-content'>
+                    <a href={item.path} key={item.id}>
+                      pools
+                    </a>
+                    <a href={item.path} key={item.id}>
+                      farms
+                    </a>
+                  </div>
+                ) : item.title === "Trade" ? (
+                  <div className='dropdown-content'>
+                    <a href={item.path} key={item.id}>
+                      Liquidity
+                    </a>
+                    <a href={item.path} key={item.id}>
+                      Exchange
+                    </a>
+                  </div>
+                ) : item.title === "More" ? (
+                  <div className='dropdown-content'>
+                    <a href={item.path} key={item.id}>
+                      WhitePaper
+                    </a>
+                  </div>
+                ) : null}
               </div>
             ))}
           </ul>

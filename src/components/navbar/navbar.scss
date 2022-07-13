@@ -5,6 +5,8 @@
     padding: 2rem 2rem;
     height: 160px;   
     scroll-snap-align: start;
+    // background: rgba(0,0,0,0.1);
+    // backdrop-filter: blur(0.8);
     // background: url(/assets/topoverlay.svg) no-repeat bottom!important; /* Set the fixed background overlay */
     position: relative;
     .navcontainer{
@@ -84,7 +86,7 @@
                             background:url(/assets/bgbutton.svg) no-repeat center center!important; /* Set the fixed background overlay */
                         }
                     }
-                    &:hover.active{
+                    &:hover{
                         .dropdown-content{
                         display: flex;
                         flex-direction: column;

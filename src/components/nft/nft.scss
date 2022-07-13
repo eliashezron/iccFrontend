@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     width: 100vw;
     background: url(/assets/bgsvg.svg) no-repeat;
     position: relative;
@@ -48,29 +49,30 @@
     .sectionA{
         display:flex;
         flex-direction: row;
-        height: 700px;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
         margin: 0% 0% 0% 0% !important;
         width: 200%;
         // padding-top: 30px;
         .nft{
-            display: flex;
-            justify-content: center;
+            display: grid;
+            justify-content: space-between;
             align-items: center;
-            width: 100%;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 2px;
+            row-gap: 2px;
             &.active{
-                display: flex;
-                flex-direction: row;
-                // justify-content: space-between;
-                align-items: center;
-                // float: left;
-                transform: translateX(-100%);
-                // left: 0;
-                // opacity: 1;
+                float: left;
+                transform: translateX(-120%);
+                left: 0;
             }
-            img{
-                height: 60vh;
-                width: auto;
+            .item{
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 305px;
+                    width: 305px;
+                }
             }
         }
         }

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./nft.scss"
-import nftCollection from "../../assets/nftCollection.png"
-import nftCollection2 from "../../assets/nftCollection2.png"
+// import nftCollection from "../../assets/nftCollection.png"
+// import nftCollection2 from "../../assets/nftCollection2.png"
 import mintnow from "../../assets/mintnow.svg"
 import mintnowhover from "../../assets/mintnowhover.svg"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
@@ -12,6 +12,8 @@ import next from "../../assets/next.svg"
 import nexthover from "../../assets/hovernext.svg"
 import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
+import { nftItems } from "../../data/nftIteams"
+import { nftItemsScroll } from "../../data/nftIteams"
 export default function Nft() {
   const windowWidth = window.innerWidth
   const [slideIndex, setSlideIndex] = useState(0)
@@ -49,13 +51,37 @@ export default function Nft() {
           key={slideIndex}
           className={`nft ${slideIndex === 1 ? "active" : ""}`}
         >
-          <img src={nftCollection} alt='nftCollection' />
+          {nftItems.map((item) => {
+            return (
+              <div key={item.id} className='item'>
+                <img
+                  src={item.image}
+                  alt='next'
+                  onClick={nextSlide}
+                  onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
+                  onMouseOut={(e) => (e.currentTarget.src = item.image)}
+                />
+              </div>
+            )
+          })}
         </div>
         <div
           key={slideIndex === 0 ? 1 : 0}
           className={`nft ${slideIndex === 1 ? "active" : ""}`}
         >
-          <img src={nftCollection2} alt='nftCollection' />
+          {nftItemsScroll.map((item) => {
+            return (
+              <div key={item.id} className='item'>
+                <img
+                  src={item.image}
+                  alt='next'
+                  onClick={nextSlide}
+                  onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
+                  onMouseOut={(e) => (e.currentTarget.src = item.image)}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
       <div className='sectionB'>
