@@ -37,7 +37,7 @@ export default function Hero() {
               <p>$ICC Contract Address</p>
               <div className='icccontract'>
                 <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p>
-                <img src={copy} alt='copy' />
+                <img src={copy} alt='copy'/>
               </div>
             </div>
           </div>
