@@ -1,12 +1,12 @@
 import React from "react"
 import "./hero.scss"
-import logo from "../../assets/logo.png"
+import logo from "../../assets/mainLogo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
 import opensea from "../../assets/openseaicon.png"
 import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
-import copy from "../../assets/Union.svg"
+import copy from "../../assets/iccaddress.png"
 
 export default function Hero() {
   const windowWidth = window.innerWidth
@@ -35,9 +35,9 @@ export default function Hero() {
             )}
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
-              <div className='icccontract'>
-                <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p>
-                <img src={copy} alt='copy'/>
+              <div className='icccontractx'>
+                {/* <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p> */}
+                <img src={copy} alt='copy' />
               </div>
             </div>
           </div>
@@ -67,10 +67,10 @@ export default function Hero() {
             <img src={opensea} alt='opensea' />
           </a>
           <a href='#home'>
-            <img src={discord} alt='discord' />
+            <img src={twitter} alt='discord' />
           </a>
           <a href='#home'>
-            <img src={twitter} alt='twitter' />
+            <img src={discord} alt='twitter' />
           </a>
         </div>
       </div>
