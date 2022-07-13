@@ -47,10 +47,7 @@ export default function Nft() {
         </div>
       </div>
       <div className="sectionA">
-        <div
-          key={slideIndex}
-          className={`nft ${slideIndex === 1 ? 'active' : ''}`}
-        >
+        <div className={`nft ${slideIndex === 0 && 'active'}`}>
           {nftItems.map((item) => {
             return (
               <div key={item.id} className="item">
@@ -65,10 +62,7 @@ export default function Nft() {
             );
           })}
         </div>
-        <div
-          key={slideIndex === 0 ? 1 : 0}
-          className={`nft ${slideIndex === 1 ? 'active' : ''}`}
-        >
+        <div className={`nft ${slideIndex === 1 && 'active'}`}>
           {nftItemsScroll.map((item) => {
             return (
               <div key={item.id} className="item">
