@@ -1,223 +1,238 @@
-.hero{
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  scroll-snap-stop: always;
+
+  .heroContainer {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: center;
-    height: calc(100vh - 160px);
-    scroll-snap-stop: always;
-
-    .heroContainer{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: row;
-        max-width: 100%;
-        flex: 1 1 auto;
-        // height: 700px;
-        .theorySection{
-            display: flex;
-            flex-direction: column;
-            padding-left: 20px;
-            .logoImage{
-                img{
-                    height: 230px;
-                    width:670px;
-                }
-            }
-            .textfield{
-                display: flex;
-                flex-direction: column;
-                width: 650px;
-                p{
-                    color: #f5f5f5;
-                    font-family: 'Orbitron',sans-serif;
-                    font-size: 18px;
-                    font-weight: 900;
-                    line-height: 20px;
-                    // letter-spacing: -0.1em;
-                }
-                p:nth-child(2){
-                    font-weight: 800;
-                    display: flex;
-                    color: #00FFE0;
-                    align-items: flex-start;
-                    padding-top: 50px;
-                }
-                .inputdv{
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    padding: 20px 0 10px 0;
-                    .icccontract{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        outline: black solid 1px;
-                        border-radius: 25px;
-                        padding: 5px 8px 5px 5px;
-                        margin-top: 10px;
-                       p{
-                            padding-left: 1%;
-                            color: #f5f5f5;
-                            font-family: 'Orbitron',sans-serif;
-                            font-size: 18px;
-                            border-radius: 5px;
-                            border: none;
-                            box-sizing: border-box;
-                        }
-                    }
-                }
-            }
-            .playButton{
-                cursor:pointer;
-                img{
-                    height: 80px;
-                    width: 660px;
-                }
-            }
+    flex-direction: row;
+    max-width: 100%;
+    flex: 1 1 auto;
+    // height: 700px;
+    .theorySection {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      .logoImage {
+        img {
+          height: 230px;
+          width: 670px;
         }
-        .gifSection{
-            display: flex;
-            iframe{
-                border:none;
-                border-radius: 25px;
-                height: 640px;
-                width: 930px;
-            }
-        }
-        
-    }
-    .socialIcons{
-        justify-content: center;
-        align-items: center;
-        float: right;
-        right: 0px;
-        width: auto;
-        border-radius: 35px 0 0 35px;
-        height: auto;
-        width: auto;
-        padding: 10px;
-        background: url(/assets/bgsocialsidebar.svg) no-repeat center!important;
-        .communitybuttons{
-            float: right;
-            right: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            flex-direction: row;
-            justify-content: space-evenly;
-            height: 200px;
-            padding: 10px 0px 10px 5px;
-            a{
-                img{
-                    height: 50px;
-                    width: 50px;
-                }
-            }
-        }
-        &:hover{
-            background: url(/assets/bgsocialsidebarhover.svg) no-repeat center!important;
-
-        }
-    }
-}
-@media screen and (max-width: 480px){
-    .hero{
-        padding-top: 10vh;
+      }
+      .textfield {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        scroll-snap-align: start;
-        .heroContainer{
+        width: 650px;
+        p {
+          color: #f5f5f5;
+          font-family: 'Orbitron', sans-serif;
+          font-size: 18px;
+          font-weight: 900;
+          line-height: 20px;
+          // letter-spacing: -0.1em;
+        }
+        p:nth-child(2) {
+          font-weight: 800;
+          display: flex;
+          color: #00ffe0;
+          align-items: flex-start;
+          padding-top: 50px;
+        }
+        .inputdv {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          flex-direction: column;
+          padding: 20px 0 10px 0;
+          .icccontract {
             display: flex;
-            flex-direction: column;
-            // position: relative;
-            .theorySection{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-left: 0;
-                .logoImage{
-                    img{
-                        height: 80px;
-                        width:320px;
-                    }
-                }
-                .textfield{
-                    display: flex;
-                    flex-direction: column;
-                    width: 320px;
-                    p{
-                        font-size: 12px;
-                        font-weight: 700;
-                        line-height: 14px;
-                    }
-                    p:nth-child(2){
-                        padding-top: 5px;
-                    }
-                    .gifSection{
-                        display: flex;
-                        padding: 2px 0;
-                        img{
-                            height: 160px;
-                            width: 320px;
-                        }
-                    }
-                    .inputdv{
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        flex-direction: column;
-                        padding: 5px 0 5px 0;
-                        input{
-                            height: 60px;
-                            font-size: 12px;
-                            border-radius: 25px;
-                            // line-height: 24px;
-                            background: url(/assets/Union.svg) no-repeat 330px;
-                            background-color: transparent;
-                            border: none;
-                            box-sizing: border-box;
-                            outline: none;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            overflow-wrap: break-word;
-                            // overflow-wrap: break-word;
-                            
-                        }
-                        input::placeholder{
-                            inline-size: 330px;
-                            word-break: break-all;
-                            white-space: normal;
-                            // // overflow-wrap: break-word;
-                            // overflow-wrap: break-word;
-                            color: #f5f5f5;
-                            font-family: 'Orbitron',sans-serif;
-                            font-size: 15px;
-                            border-radius: 5px;
-                            border: none;
-                            box-sizing: border-box;
-                        }
-                    }
-                }
-                .playButton{
-                    img{
-                        height: 30px;
-                        width: 320px;
-                    }
-                }
+            flex-direction: row;
+            justify-content: space-between;
+            outline: black solid 1px;
+            border-radius: 25px;
+            padding: 5px 8px 5px 5px;
+            margin-top: 10px;
+            p {
+              padding-left: 1%;
+              color: #f5f5f5;
+              font-family: 'Orbitron', sans-serif;
+              font-size: 18px;
+              border-radius: 5px;
+              border: none;
+              box-sizing: border-box;
             }
-            .gifSection{
-                display: none;
-            }
+          }
+        }
+      }
+      .playButton {
+        cursor: pointer;
+        img {
+          height: 80px;
+          width: 660px;
+        }
+      }
+    }
+    .gifSection {
+      display: flex;
+      iframe {
+        border: none;
+        border-radius: 25px;
+        height: 640px;
+        width: 930px;
+      }
+    }
+  }
+  .socialIcons {
+    justify-content: center;
+    align-items: center;
+    float: right;
+    right: 0px;
+    width: auto;
+    border-radius: 35px 0 0 35px;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    background: url(/assets/bgsocialsidebar.svg) no-repeat center !important;
+    .communitybuttons {
+      float: right;
+      right: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 200px;
+      padding: 10px 0px 10px 5px;
+      a {
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+    &:hover {
+      background: url(/assets/bgsocialsidebarhover.svg) no-repeat center !important;
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .mobile-iframe {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    display: flex;
+    padding-top: 0;
+    flex-direction: column;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    .mobile-nav {
+      background: url(/assets/bgc.png) no-repeat center !important;
+      border-radius: 35px;
+      height: 60px;
+      margin-bottom: 10px;
+      width: 90%;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+      justify-content: center;
+
+      img {
+        height: 40px;
+      }
+    }
+
+    .heroContainer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+
+      .theorySection {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        .logoImage {
+          img {
+            height: 100px;
+            width: 300px;
+          }
         }
 
-        .socialIcons{
-            display: none;
+        .textfield {
+          display: flex;
+          flex-direction: column;
+          width: 80%;
+          gap: 0.5rem;
+          p {
+            font-size: 13px;
+            letter-spacing: 0.03em;
+            font-weight: 700;
+            line-height: 15px;
+            text-align: center;
+          }
+          p:nth-child(2) {
+            padding-top: 5px;
+          }
+
+          .mobile-iframe {
+            display: block;
+            height: 40vh;
+          }
+
+          .inputdv {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 5px 0 5px 0;
+            .icccontract {
+              display: flex;
+              outline: black solid 1px;
+              border-radius: 25px;
+              padding: 5px 8px 5px 5px;
+              overflow: hidden;
+              word-wrap: break-word;
+              p {
+                text-align: start;
+                color: #f5f5f5;
+                font-size: 0.68rem;
+                width: 85%;
+                flex-wrap: wrap;
+              }
+            }
+          }
         }
+        .playButton {
+          img {
+            height: 25px;
+            width: 320px;
+          }
+        }
+      }
+      .gifSection {
+        display: none;
+      }
     }
+
+    .socialIcons {
+      display: none;
+    }
+  }
 }

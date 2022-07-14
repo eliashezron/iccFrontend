@@ -15,9 +15,7 @@ import previoushover from '../../assets/previoushover.svg';
 import { nftItems } from '../../data/nftIteams';
 import { nftItemsScroll } from '../../data/nftIteams';
 export default function Nft() {
-  const windowWidth = window.innerWidth;
   const [slideIndex, setSlideIndex] = useState(0);
-  console.log(slideIndex);
   const prevSlide = () => {
     if (slideIndex === 1) {
       setSlideIndex(0);
@@ -29,6 +27,20 @@ export default function Nft() {
       setSlideIndex(0);
     } else setSlideIndex(1);
   };
+  const x = window.matchMedia('(max-width: 480px)');
+
+  const [mobile, setMobile] = React.useState(x.matches);
+
+  React.useEffect(() => {
+    x.addEventListener('change', () => {
+      if (x.matches) {
+        setMobile(true);
+      } else {
+        setMobile(false);
+      }
+    });
+  }, [x]);
+
   return (
     <div className="mainSection">
       <div className="relativediv">
@@ -80,8 +92,8 @@ export default function Nft() {
       </div>
       <div className="sectionB">
         <div className="directionbuttonL">
-          {windowWidth < 480 ? (
-            <img src={iprevious} alt="playnow" />
+          {mobile ? (
+            <img src={iprevious} alt="playnow" onClick={prevSlide} />
           ) : (
             <img
               src={previous}
@@ -105,8 +117,8 @@ export default function Nft() {
           />
         </div>
         <div className="directionbuttonR">
-          {windowWidth < 480 ? (
-            <img src={inext} alt="playnow" />
+          {mobile ? (
+            <img src={inext} alt="playnow" onClick={nextSlide} />
           ) : (
             <img
               src={next}

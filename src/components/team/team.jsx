@@ -1,12 +1,12 @@
-import React from "react"
-import "./team.scss"
-import { teamItems } from "../../data/teamItems"
+import React from 'react';
+import './team.scss';
+import { teamItems } from '../../data/teamItems';
 export default function Team() {
   return (
-    <div className='main'>
-      <div className='absolutediv'>
-        <div className='title'>CORE TEAM</div>
-        <div className='wording'>
+    <div className="main">
+      <div className="absolutediv">
+        <div className="title">CORE TEAM</div>
+        <div className="wording">
           <p>
             The team always plays an important role in the success of a project.
             <br></br>
@@ -15,25 +15,25 @@ export default function Team() {
           </p>
         </div>
       </div>
-      <div className='imgdiv'>
+      <div className="teams">
         {teamItems.map((item) => {
           return (
-            <div key={item.id} className='img'>
+            <div key={item.id} className="img">
               <img
                 src={item.image}
-                alt='next'
+                alt="next"
                 onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
                 onMouseOut={(e) => (e.currentTarget.src = item.image)}
               />
-              <div className='titl'>
+              <div className="titl">
                 <h1>{item.name}</h1>
                 <p>{item.role}</p>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
 // testing deploy to github
