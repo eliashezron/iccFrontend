@@ -14,11 +14,11 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
-  background-position: 50% 0;
+  /* background-position: 50% 0;  */
 }
 body {
   height:100vh;
-  background: url(./assets/backgroundImage.svg) repeat-y !important;
+  background: url(./assets/backgroundImage.svg) repeat-y cover!important;
   width: 100%;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;

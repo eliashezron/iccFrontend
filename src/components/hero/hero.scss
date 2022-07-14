@@ -10,7 +10,7 @@
     .heroContainer{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         flex-direction: row;
         max-width: 100%;
@@ -70,7 +70,7 @@
         .gifSection{
             display: flex;
             iframe{
-                border:white solid 10px;
+                border:#FBC4E6 solid 10px;
                 border-radius: 25px;
                 height: 643px;
                 width: 936px;
