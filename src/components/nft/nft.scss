@@ -59,11 +59,8 @@
     .nft {
       position: absolute;
       display: grid;
-      justify-content: space-between;
-      align-items: center;
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: 2px;
-      row-gap: 2px;
+      gap: 2px;
       left: 50%;
       transition: all 550ms ease-in-out;
       transform: translateX(-50%);
