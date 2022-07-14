@@ -118,14 +118,8 @@ export default function Nft() {
           {mobile ? (
             <img src={inext} alt='playnow' onClick={nextSlide} />
           ) : (
-<<<<<<< HEAD
-            <img
-              src={next}
-              alt='playnow'
-=======
             <div
-              id="nft-next-button-desktop"
->>>>>>> 1d47d2de62b0f7e1b8362957496db7d35e2e7d5b
+              id='nft-next-button-desktop'
               onClick={nextSlide}
               // onMouseOver={(e) => (e.currentTarget.src = nexthover)}
               // onMouseOut={(e) => (e.currentTarget.src = next)}
