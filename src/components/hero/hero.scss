@@ -66,16 +66,17 @@
           .playButton{
               cursor:pointer;
               padding-top: 15px;
-              img{
-                  height: 80px;
-                  width: 666px;
-                  transition: all 0.3s ease-out;
+              #playh-button-desktop {
+                height: 80px;
+                width: 672px;
+                background-image: url(/assets/playnowlong.svg);
+                transition: all 500ms ease-in-out;
               }
-              &:hover{
-                  img{
-                      height: 80px;
-                      width: 666px;
-                  }
+          
+              #playh-button-desktop {
+                &:hover {
+                  background-image: url(/assets/playnowlonghover.svg);
+                }
               }
           }
       }

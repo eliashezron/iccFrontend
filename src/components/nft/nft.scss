@@ -95,14 +95,26 @@
     // ================================================================  button fade
     #nft-next-button-desktop {
       height: 50px;
-      width: 250px;
+      width: 255px;
       background-image: url(/assets/next.svg);
-      transition: all 300ms ease-in-out;
+      transition: all 500ms ease-in-out;
     }
 
     #nft-next-button-desktop {
       &:hover {
         background-image: url(/assets/hovernext.svg);
+      }
+    }
+    #nft-previous-button-desktop {
+      height: 50px;
+      width: 255px;
+      background-image: url(/assets/previous.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #nft-previous-button-desktop {
+      &:hover {
+        background-image: url(/assets/previoushover.svg);
       }
     }
 

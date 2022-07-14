@@ -20,7 +20,7 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => setDropdown(true)}
-                  onMouseOut={() => setDropdown(false)}
+                  onMouseLeave={() => setDropdown(false)}
                   className={`${dropdown ? "active" : "button"}`}
                 >
                   {item.title}
@@ -28,25 +28,25 @@ const Navbar = () => {
                 {item.title === "Earn" ? (
                   <div className='dropdown-content'>
                     <a href={item.path} key={item.id}>
-                      POOLS
+                      pools
                     </a>
                     <a href={item.path} key={item.id}>
-                      FARMS
+                      farms
                     </a>
                   </div>
                 ) : item.title === "Trade" ? (
                   <div className='dropdown-content'>
                     <a href={item.path} key={item.id}>
-                      LIQUIDITY
+                      Liquidity
                     </a>
                     <a href={item.path} key={item.id}>
-                      EXCHANGE
+                      Exchange
                     </a>
                   </div>
                 ) : item.title === "More" ? (
                   <div className='dropdown-content'>
                     <a href={item.path} key={item.id}>
-                      WHITEPAPER
+                      WhitePaper
                     </a>
                     <br />
                   </div>
@@ -55,12 +55,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className='playButton'>
-            <img
-              src={playnow}
-              alt='playnow'
-              onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = playnow)}
-            />
+            <div id='play-button-desktop' />
           </div>
         </div>
       </div>

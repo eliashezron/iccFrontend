@@ -93,12 +93,11 @@ export default function Nft() {
           {mobile ? (
             <img src={iprevious} alt='playnow' onClick={prevSlide} />
           ) : (
-            <img
-              src={previous}
-              alt='playnow'
+            <div
+              id='nft-previous-button-desktop'
               onClick={prevSlide}
-              onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-              onMouseOut={(e) => (e.currentTarget.src = previous)}
+              // onMouseOver={(e) => (e.currentTarget.src = nexthover)}
+              // onMouseOut={(e) => (e.currentTarget.src = next)}
             />
           )}
         </div>
