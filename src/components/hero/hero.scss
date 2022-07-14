@@ -93,10 +93,13 @@
         .communitybuttons{
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
             float: right;
-            height: 318px;
-            padding: 10px;
+            height: 272px;
+            width: 62px;
+            padding: 20px 0px;
+            // padding-right: 10px;
+
             a{
                 img{
                     height: 50px;
