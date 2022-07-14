@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./hero.scss"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
@@ -12,7 +12,15 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 
 export default function Hero() {
   const [copied, setCopied] = useState(false)
+
   const windowWidth = window.innerWidth
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false)
+      }, [6000])
+    }
+  }, [copied])
   return (
     <div className='hero'>
       <div className='heroContainer'>
@@ -36,8 +44,10 @@ export default function Hero() {
             ></iframe>
 
             <div className='inputdv'>
-              <p>$ICC Contract Address</p>
-              {copied && <p id='copyid'>Copied</p>}
+              <div className='inputdiv'>
+                <p>$ICC Contract Address</p>
+                {copied && <span id='copyid'>Copied</span>}
+              </div>
               <div className='icccontractx'>
                 {/* <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p> */}
                 <CopyToClipboard
