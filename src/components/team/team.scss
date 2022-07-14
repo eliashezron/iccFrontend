@@ -32,27 +32,20 @@
       color: #ffffff;
     }
   }
-  .imgdiv {
+  .imgdivteam{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     position: relative;
     width: 80% !important;
-    // display: grid;
     padding: 0 100px;
-    // grid-template-columns: 1fr;
     .img {
-      margin: 0 -25px; // ================================= use this to reduce the spacing
+      margin: 0 -30px; // ================================= use this to reduce the spacing
       row-gap: -10px;
       display: grid;
       column-gap: 120%;
-      // background-color: #4d4c47;
       justify-content: center;
-      // position: block;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: space-around;
       align-items: center;
       bottom: 0;
       padding: 0 -40%;
@@ -91,36 +84,7 @@
         }
       }
     }
-    .one {
-      position: relative;
-      z-index: 10;
-      padding-left: 10%;
-    }
-    .two {
-      position: relative;
-      z-index: 9;
-      padding-left: -10px;
-    }
-    .three {
-      position: relative;
-      z-index: 7;
-      padding-right: -10px;
-    }
-    .four {
-      position: relative;
-      z-index: 6;
-      padding-right: -10px;
-    }
-    .five {
-      position: relative;
-      z-index: 9;
-      padding-right: -10px;
-    }
-    .six {
-      position: relative;
-      z-index: 10;
-      padding-right: 10%;
-    }
+ 
   }
 }
 @media screen and (max-width: 480px) {

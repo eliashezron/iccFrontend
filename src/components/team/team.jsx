@@ -15,7 +15,7 @@ export default function Team() {
           </p>
         </div>
       </div>
-      <div className='imgdiv'>
+      <div className='imgdivteam'>
         {teamItems.map((item) => {
           return (
             <div key={item.id} className='img'>
