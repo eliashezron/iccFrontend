@@ -35,7 +35,7 @@
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: -60px;
     cursor: pointer;
     img {
@@ -139,25 +139,6 @@
       .blue-rectangle-translate {
         transform: translateX(-150px);
       }
-      // 12
-
-      //   &.active {
-      // transition: ease-in-out 1s;
-      // img:nth-child(1) {
-      //   animation: movey 3s forwards;
-      //   @keyframes movey{
-      //       0% { transform: translateX(0); }
-      //       100% { transform: translateX(150px); }
-      //   }
-      // }
-      // img:nth-child(2) {
-      //   animation: movex 3s forwards;
-      //   @keyframes movex{
-      //       0% { transform: translateX(0); }
-      //       100% { transform: translateX(-150px); }
-      //   }
-      // }
-      //   }
     }
   }
 }
