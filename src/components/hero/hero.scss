@@ -60,7 +60,23 @@
                   }
                   p{
                       padding-bottom: 5px;
+                   
                   }
+                  #copyid {&:focus{
+                    opacity: 0;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    animation: displays 2s forwards;
+                    @keyframes displays{
+                      from{
+                        opacity: 1;
+                      }
+                      to{
+                        opacity: 0;
+                      }
+                    }
+                      
+                    }}
               }
           }
           .playButton{

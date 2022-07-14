@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "./hero.scss"
 import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
@@ -8,8 +8,10 @@ import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
 import copy from "../../assets/iccaddress.png"
 import homeSvg from "../../assets/ihome.svg"
+import { CopyToClipboard } from "react-copy-to-clipboard"
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false)
   const windowWidth = window.innerWidth
   return (
     <div className='hero'>
@@ -35,9 +37,15 @@ export default function Hero() {
 
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
+              {copied && <p id='copyid'>Copied</p>}
               <div className='icccontractx'>
                 {/* <p>BEP20|0x8d672014fb107cb409dccd9042dda3b97313f4c3</p> */}
-                <img src={copy} alt='copy' />
+                <CopyToClipboard
+                  text='0x8d672014fb107cb409dccd9042dda3b97313f4c3'
+                  onCopy={() => setCopied(true)}
+                >
+                  <img src={copy} alt='copy' />
+                </CopyToClipboard>
               </div>
             </div>
           </div>
