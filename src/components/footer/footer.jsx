@@ -73,7 +73,7 @@ export default function Footer() {
         <div className="footerimg">
           <img src={logo} alt="logo" />
         </div>
-        <div className="footerbuttons">
+        <div className="button-grid">
           <button>Home</button>
           <button>Earn</button>
           <button>Trade</button>

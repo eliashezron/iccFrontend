@@ -3,6 +3,33 @@
   justify-content: space-between;
   padding: 0 5%;
   height: 70vh;
+  width: 100%;
+
+  #running-man-img {
+    background-image: url(/assets/runningman.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 500px;
+    width: 60%;
+    transition: all 400ms ease-in-out;
+    &.active {
+      background-image: url(/assets/runningman2.png);
+    }
+  }
+
+  #blueman-img {
+    background-image: url(/assets/bueman.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 300px;
+    width: 70%;
+    transition: all 400ms ease-in-out;
+    &.active {
+      background-image: url(/assets/blueman2.png);
+    }
+  }
 
   .blueman {
     .freeplay {
@@ -148,10 +175,16 @@
       padding: 0 5%;
       height: auto;
 
-      .running-man {
-        img {
-          width: 100%;
-          transition: all 550ms ease-in-out;
+      #running-man-img {
+        background-image: url(/assets/runningman.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 250px;
+        width: 100%;
+        transition: all 400ms ease-in-out;
+        &.active {
+          background-image: url(/assets/runningman2.png);
         }
       }
 

@@ -129,21 +129,15 @@ export default function Nft() {
           )}
         </div>
       </div>
-      {/* <div id="nft-mobile">
+      <div id="nft-mobile">
         {[...nftItems, nftItemsScroll].map((item, index) => {
           return (
             <div key={index} id="nft">
-              <img
-                src={item.image}
-                alt="next"
-                onClick={nextSlide}
-                onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
-                onMouseOut={(e) => (e.currentTarget.src = item.image)}
-              />
+              <img src={item.image} alt="next" />
             </div>
           );
         })}
-      </div> */}
+      </div>
     </div>
   );
 }

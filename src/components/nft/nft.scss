@@ -38,7 +38,9 @@
   .mint {
     display: flex;
     justify-content: center;
-    padding-left: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: end;
     margin-top: -60px;
     cursor: pointer;
     img {
@@ -154,13 +156,15 @@
 }
 
 @media screen and (min-width: 480px) {
-  .nft-mobile {
+  #nft-mobile {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
   .mainSection {
+    gap: 10px;
+    justify-content: center;
     .relativediv {
       .title {
         padding-top: 5%;
@@ -168,14 +172,27 @@
         line-height: 28px;
       }
       .wording {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 20px;
         padding-top: 5px;
         width: 90%;
         margin: 0 auto;
         white-space: normal;
-        // word-break: break-all;
         overflow-wrap: break-word;
+      }
+
+      .mint {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        margin-top: 0px;
+
+        img {
+          height: 35px;
+          margin: 10px 0;
+        }
       }
     }
     .sectionA {
@@ -221,6 +238,18 @@
           width: 30px;
           height: 30px;
         }
+      }
+    }
+    #nft-mobile {
+      width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto auto;
+      grid-auto-flow: column;
+      overflow-x: scroll;
+      img {
+        height: 200px;
+        aspect-ratio: 1/1;
       }
     }
   }

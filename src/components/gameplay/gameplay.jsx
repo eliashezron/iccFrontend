@@ -55,18 +55,9 @@ export default function GamePlay() {
       </div>
 
       <div className="upper-row">
-        <div className="running-man">
-          <img
-            src={slideIndex === 0 ? runningman : runningman2}
-            alt="running-man"
-          />
-        </div>
+        <div id="running-man-img" className={slideIndex === 0 && 'active'} />
         <div className="blueman">
-          <img
-            className={slideIndex === 0 && 'active'}
-            src={slideIndex === 0 ? blueman : blueman2}
-            alt="blueman"
-          />
+          <div id="blueman-img" className={slideIndex === 0 && 'active'} />
           <div className="freeplay">
             {slideIndex === 0 ? 'FREE PLAY' : 'PLAY AND EARN'}
           </div>

@@ -39,9 +39,7 @@
           position: relative;
           align-items: center;
           .dropdown-content {
-            transition: all ease-in-out 150ms;
             position: absolute;
-            opacity: 0;
             margin-top: 18px;
             display: flex;
             flex-direction: column;
@@ -52,14 +50,9 @@
             width: 120px;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            transform: translateY(-10px);
+            z-index: 1000;
+            transition: all ease-in-out 250ms;
             a {
-              // animation: back 2s forwards;
-              // @keyframes back {
-              //     from {transform: translateY(0px) scaleY(1); opacity: 1; }
-              //     to {transform: translateY(-200px) scaleY(0.9); opacity:0; }
-              //   }
               position: relative;
               display: flex;
               justify-content: center;
@@ -100,46 +93,22 @@
               background: url(/assets/bgbutton.svg) no-repeat center center !important; /* Set the fixed background overlay */
             }
           }
-          &:hover {
-            .dropdown-content {
-              // animation: drop .4s linear forwards;
-              //   height: auto;
-              line-height: 30px;
-              opacity: 100%;
-              transform: translateY(0);
-              pointer-events: all;
-              a {
-                &:hover {
-                  opacity: 1;
-                  width: 150px;
-                  background: url(/assets/submenuhover.svg) no-repeat center
-                    center !important; /* Set the fixed background overlay */
-                }
-              }
-            }
-            @keyframes drop {
-              0% {
-                transform: translateY(-200px) scaleY(0.9);
-                opacity: 0;
-              }
-              5% {
-                opacity: 0.7;
-              }
-              50% {
-                transform: translateY(-100px) scaleY(1);
-                opacity: 0.8;
-              }
-              65% {
-                transform: translateY(-60px) scaleY(1);
-                opacity: 0.9;
-              }
-              75% {
-                transform: translateY(-25px) scaleY(1);
-                opacity: 0.95;
-              }
-              100% {
-                transform: translateY(0px) scaleY(1);
+          &.invisible {
+            pointer-events: none;
+            transform: translateY(-10px);
+            opacity: 0%;
+          }
+          &.visible {
+            line-height: 30px;
+            opacity: 100%;
+            transform: translateY(0px);
+            pointer-events: all;
+            a {
+              &:hover {
                 opacity: 1;
+                width: 150px;
+                background: url(/assets/submenuhover.svg) no-repeat center
+                  center !important; /* Set the fixed background overlay */
               }
             }
           }

@@ -7,64 +7,110 @@ import { navItems } from '../../data/navItems';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
+
+  const [clickedMenuItem, setClickedMenuItem] = useState();
+
   return (
-    <div className="navbar">
-      <div className="navcontainer">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
-        <div className="navlinks">
-          <ul>
-            {navItems.map((item) => (
-              <div className={`dropdown ${dropdown && 'active'}`} key={item.id}>
-                <button
-                  key={item.id}
-                  onClick={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
-                  className={`${dropdown ? 'active' : 'button'}`}
+    <>
+      <div className="navbar">
+        <div className="navcontainer">
+          <div className="logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <div className="navlinks">
+            <ul>
+              {navItems.map((item, index) => (
+                <div
+                  id={index}
+                  onClick={() => {
+                    if (item.subMenu) {
+                      setClickedMenuItem(item.title);
+                    }
+                  }}
+                  className={`dropdown ${dropdown && 'active'}`}
+                  key={Math.random() * index}
                 >
-                  {item.title}
-                </button>
-                {item.title === 'Earn' ? (
-                  <div className="dropdown-content">
-                    <a href={item.path} key={item.id}>
-                      pools
-                    </a>
-                    <a href={item.path} key={item.id}>
-                      farms
-                    </a>
-                  </div>
-                ) : item.title === 'Trade' ? (
-                  <div className="dropdown-content">
-                    <a href={item.path} key={item.id}>
-                      Liquidity
-                    </a>
-                    <a href={item.path} key={item.id}>
-                      Exchange
-                    </a>
-                  </div>
-                ) : item.title === 'More' ? (
-                  <div className="dropdown-content">
-                    <a href={item.path} key={item.id}>
-                      WhitePaper
-                    </a>
-                    <br />
-                  </div>
-                ) : null}
-              </div>
-            ))}
-          </ul>
-          <div className="playButton">
-            <img
-              src={playnow}
-              alt="playnow"
-              onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = playnow)}
-            />
+                  <button
+                    onClick={() => setDropdown(true)}
+                    onMouseLeave={() => setDropdown(false)}
+                    className={`${dropdown ? 'active' : 'button'}`}
+                  >
+                    {item.title}
+                  </button>
+                  {item.title === 'Earn' ? (
+                    <div
+                      className={`dropdown-content ${
+                        clickedMenuItem === item.title ? 'visible' : 'invisible'
+                      }`}
+                    >
+                      <a href={item.path}>pools</a>
+                      <a href={item.path}>farms</a>
+                    </div>
+                  ) : item.title === 'Trade' ? (
+                    <div
+                      className={`dropdown-content ${
+                        clickedMenuItem === item.title ? 'visible' : 'invisible'
+                      }`}
+                    >
+                      <a
+                        href={item.path}
+                        key={Math.floor(Math.random() * index)}
+                      >
+                        Liquidity
+                      </a>
+                      <a
+                        href={item.path}
+                        key={Math.floor(Math.random() * index)}
+                      >
+                        Exchange
+                      </a>
+                    </div>
+                  ) : item.title === 'More' ? (
+                    <div
+                      className={`dropdown-content ${
+                        clickedMenuItem === item.title ? 'visible' : 'invisible'
+                      }`}
+                    >
+                      <a
+                        href={item.path}
+                        key={Math.floor(Math.random() * index)}
+                      >
+                        WhitePaper
+                      </a>
+                      <br />
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </ul>
+            <div className="playButton">
+              <img
+                src={playnow}
+                alt="playnow"
+                onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
+                onMouseOut={(e) => (e.currentTarget.src = playnow)}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div
+        id="back-drop"
+        style={{
+          position: 'fixed',
+          height: '100%',
+          width: '100%',
+          top: 0,
+          left: 0,
+          opacity: 0,
+          pointerEvents: clickedMenuItem ? 'all' : 'none',
+          zIndex: 0,
+        }}
+        onClick={() => {
+          setClickedMenuItem();
+        }}
+      />
+    </>
   );
 };
 
