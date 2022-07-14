@@ -20,7 +20,7 @@ const Navbar = () => {
                 <button
                   key={item.id}
                   onClick={() => setDropdown(true)}
-                  onMouseLeave={() => setDropdown(false)}
+                  onMouseOut={() => setDropdown(false)}
                   className={`${dropdown ? "active" : "button"}`}
                 >
                   {item.title}

@@ -85,12 +85,13 @@
             font-weight: 900;
             border: none;
             cursor: pointer;
-            transition: all ease-out 1s;; 
+            transition: all ease-out 1s;
+            
             &:hover {
               background: url(/assets/bgbutton.svg) no-repeat center center !important; /* Set the fixed background overlay */
             }
           }
-          &:hover {
+          &.active {
             .dropdown-content {
               line-height: 30px;
               opacity: 100%;
