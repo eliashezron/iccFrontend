@@ -97,6 +97,20 @@
         width: 250px;
       }
     }
+    // ================================================================  button fade
+    #nft-next-button-desktop {
+      height: 50px;
+      width: 250px;
+      background-image: url(/assets/next.svg);
+      transition: all 300ms ease-in-out;
+    }
+
+    #nft-next-button-desktop {
+      &:hover {
+        background-image: url(/assets/hovernext.svg);
+      }
+    }
+
     .middlebuttons {
       display: flex;
       align-items: center;
@@ -139,7 +153,13 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (min-width: 480px) {
+  .nft-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .mainSection {
     .relativediv {
       .title {
@@ -159,6 +179,7 @@
       }
     }
     .sectionA {
+      display: none;
       padding-top: 2px;
       .nft {
         img {
@@ -167,6 +188,7 @@
       }
     }
     .sectionB {
+      display: none;
       margin-top: 0px;
       overflow: hidden;
       width: 95%;
