@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import "./navbar.scss"
 import logo from "../../assets/logo.png"
-import playnow from "../../assets/playnow.svg"
-import playnowhover from "../../assets/playnowhover.svg"
+// import playnow from "../../assets/playnow.svg"
+// import playnowhover from "../../assets/playnowhover.svg"
 import { navItems } from "../../data/navItems"
 
 const Navbar = () => {

@@ -66,10 +66,15 @@
           .playButton{
               cursor:pointer;
               padding-top: 15px;
-              #playh-button-desktop {
+              img{
                 height: 80px;
                 width: 672px;
+              }
+              #playh-button-desktop {
+                height: 73px;
+                width: 730px;
                 background-image: url(/assets/playnowlong.svg);
+                background-position: center;
                 transition: all 500ms ease-in-out;
               }
           

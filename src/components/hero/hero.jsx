@@ -42,7 +42,13 @@ export default function Hero() {
             </div>
           </div>
           <div className='playButton'>
-            <div id='playh-button-desktop' />
+            {/* <div id='playh-button-desktop' /> */}
+            <img
+              src={playnow}
+              alt='playnow'
+              onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
+              onMouseOut={(e) => (e.currentTarget.src = playnow)}
+            />
           </div>
         </div>
         <div className='gifSection'>
