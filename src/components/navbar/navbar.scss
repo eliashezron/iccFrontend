@@ -12,11 +12,8 @@
     flex: 1;
     display: flex;
     justify-content: space-between;
-    // align-items: center;
 
     .logo {
-    // float: left;
-    // left: 76px;
       img {
         width: 158px;
         height: 64px;
@@ -88,15 +85,13 @@
             font-weight: 900;
             border: none;
             cursor: pointer;
-
+            transition: all ease-out 1s;; 
             &:hover {
               background: url(/assets/bgbutton.svg) no-repeat center center !important; /* Set the fixed background overlay */
             }
           }
           &:hover {
             .dropdown-content {
-              // animation: drop .4s linear forwards;
-              //   height: auto;
               line-height: 30px;
               opacity: 100%;
               transform: translateY(0);

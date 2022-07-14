@@ -61,7 +61,7 @@
       transition: all 550ms ease-in-out;
       transform: translateX(-50%);
       opacity: 0;
-      &.active {
+      &.active{
         opacity: 1;
       }
       .item {
