@@ -39,14 +39,15 @@
                     font-size: 18px;
                     font-weight: 900;
                     line-height: 20px;
-                    // letter-spacing: -0.1em;
+                    // letter-spacing: 0.1em;
                 }
                 p:nth-child(2){
                     font-weight: 800;
                     display: flex;
                     color: #00FFE0;
                     align-items: flex-start;
-                    padding-bottom: 55px;
+                    padding-bottom: 52px;
+                    padding-top: 13px;
                 }
                 .inputdv{
                     width: 100%;
@@ -71,7 +72,7 @@
             display: flex;
             iframe{
                 border:#FBC4E6 solid 10px;
-                border-radius: 25px;
+                border-radius: 50px;
                 height: 643px;
                 width: 936px;
             }
@@ -95,17 +96,18 @@
             flex-direction: column;
             justify-content: space-between;
             float: right;
-            height: 272px;
+            height: 242px;
             width: 62px;
             padding: 20px 0px;
+            margin-right: 12px;
             // padding-right: 10px;
 
-            a{
-                img{
-                    height: 50px;
-                    width: 50px;
-                }
-            }
+            // a{
+            //     img{
+            //         height: 50px;
+            //         width: 50px;
+            //     }
+            // }
         }
         &:hover{
             background: url(/assets/bgsocialsidebarhover.svg) no-repeat center!important;
