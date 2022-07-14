@@ -1,12 +1,13 @@
 import React from "react"
 import "./hero.scss"
-import logo from "../../assets/mainLogo.png"
+import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
 import opensea from "../../assets/openseaicon.png"
 import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
 import copy from "../../assets/iccaddress.png"
+import homeSvg from "../../assets/ihome.svg"
 
 export default function Hero() {
   const windowWidth = window.innerWidth
@@ -25,14 +26,13 @@ export default function Hero() {
               earn crypto with just your skills
             </p>
             <p>#IntergalacticCockroach #ICC #SpaceRace # P2E #NFT</p>
-            {windowWidth < 480 && (
-              <div className='gifSection'>
-                <iframe
-                  title='icc video'
-                  src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'
-                ></iframe>
-              </div>
-            )}
+
+            <iframe
+              className='mobile-iframe'
+              title='icc video'
+              src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'
+            ></iframe>
+
             <div className='inputdv'>
               <p>$ICC Contract Address</p>
               <div className='icccontractx'>
@@ -73,6 +73,9 @@ export default function Hero() {
             <img src={discord} alt='twitter' />
           </a>
         </div>
+      </div>
+      <div className='mobile-nav'>
+        <img src={homeSvg} alt='' />
       </div>
     </div>
   )

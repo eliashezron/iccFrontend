@@ -139,13 +139,15 @@
     .relativediv {
       .title {
         padding-top: 5%;
-        font-size: 24px;
+        font-size: 18px;
         line-height: 28px;
       }
       .wording {
         font-size: 12px;
         line-height: 20px;
         padding-top: 5px;
+        width: 90%;
+        margin: 0 auto;
         white-space: normal;
         // word-break: break-all;
         overflow-wrap: break-word;
@@ -161,12 +163,36 @@
     }
     .sectionB {
       margin-top: 0px;
+      overflow: hidden;
+      width: 95%;
+      margin: 0 auto;
 
       .middlebuttons {
         img {
           height: 20px;
-          width: 70px;
+          width: 50px;
           padding-right: 10px;
+        }
+
+        .pink-rectangle-translate {
+          transform: translateX(50px);
+        }
+
+        .blue-rectangle-translate {
+          transform: translateX(-50px);
+        }
+      }
+
+      .directionbuttonL {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      .directionbuttonR {
+        img {
+          width: 30px;
+          height: 30px;
         }
       }
     }

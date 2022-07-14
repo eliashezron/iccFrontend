@@ -1,108 +1,107 @@
-.main{
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: 100vw;
+  // margin-top: 20%;
+
+  position: relative;
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // min-height:90vh;
+  .absolutediv {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    width: 100vw;
-    margin-top: 20%;
-
-    position: relative;
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // min-height:90vh;
-    .absolutediv{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30%;
-        position: absolute;
-        .title{
-            font-size: 64px;
-            line-height: 80px;
-            font-family: 'Orbitron',sans-serif;
-            font-weight: 900;
-            color: #FFF060;
-            text-align: center;
-            letter-spacing: -0.05em;
-            text-transform: capitalize;
-        }
-        .wording{
-            font-family: 'Orbitron',sans-serif;
-            font-style: normal;
-            font-weight: 900;
-            font-size: 18px;
-            line-height: 24px;
-            text-align: center;
-            letter-spacing: -0.02em;
-            color: #FFFFFF;
-            padding-bottom: 10%;
-        }
+    margin-bottom: 30%;
+    // position: absolute;
+    .title {
+      font-size: 64px;
+      line-height: 80px;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      color: #fff060;
+      text-align: center;
+      letter-spacing: -0.05em;
+      text-transform: capitalize;
     }
-    .imgdiv{
-        // display: flex;
-        // flex: 1;
-        // justify-content: center;
-        // align-items: center;
-        left: 50%;
-        transform: translateX(-50%);
-        img{
-            height: 800px;
-            width: auto;
-        }
+    .wording {
+      font-family: 'Orbitron', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      padding-bottom: 10%;
     }
-    .buybutton{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: -10%;
-        margin-top: 30%;
-        position: absolute;
-        cursor: pointer;
-        img{
-            width: 350px;
-            height: 70px;
-        }
+  }
+  .imgdiv {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5%;
+    img {
+      height: 800px;
+      width: auto;
     }
+  }
+  .buybutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: -10%;
+    margin-top: 30%;
+    position: absolute;
+    cursor: pointer;
+    img {
+      width: 350px;
+      height: 70px;
+    }
+  }
 }
 @media screen and (max-width: 480px) {
-    .main{
-        .absolutediv{
-            position: relative;
-            margin-bottom: 0;
-            margin-top: 5%;
-            .title{
-                font-size: 24px;
-                line-height: 28px;
-            }
-            .wording{
-                // padding: 0 30px;
-                font-size: 12px;
-                line-height: 14px;
-                white-space: normal;
-                // word-break: break-all;
-                overflow-wrap: break-word; 
-            }
-        }
-        .imgdiv{
-            margin-top: -10%;
-            padding-right: 5%;
-            img{
-                transform: rotate(360deg);
-                height: 350px;
-                width: auto;
-            }
-        }
-        .buybutton{
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 250%;
-            
-            img{
-                width: 400px;
-                height: 50px;
-            }
-        }
+  .main {
+    gap: 1.5rem;
+    .absolutediv {
+      gap: 1.5rem;
+      position: unset;
+      margin: 0px;
+      .title {
+        font-size: 24px;
+        line-height: 0px;
+        // background-color: red;
+      }
+      .wording {
+        font-size: 13px;
+        line-height: 20px;
+        white-space: normal;
+        letter-spacing: 0.04em;
+        padding-bottom: 0px;
+      }
     }
+    .imgdivcoin {
+      img {
+        transform: rotate(360deg);
+        height: 450px;
+        width: auto;
+      }
+    }
+    .buybutton {
+      margin-left: 0;
+      margin-right: 0;
+      position: unset;
+      margin-top: 0;
+
+      img {
+        width: 400px;
+        height: 50px;
+      }
+    }
+  }
 }

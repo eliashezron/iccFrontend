@@ -15,7 +15,6 @@ import nexthover from "../../assets/hovernext.svg"
 import previous from "../../assets/previous.svg"
 import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
-  const windowWidth = window.innerWidth
   const [slideIndex, setSlideIndex] = useState(0)
   console.log(slideIndex)
   const prevSlide = () => {
@@ -30,6 +29,20 @@ export default function GamePlay() {
     } else setSlideIndex(1)
   }
 
+  const x = window.matchMedia("(max-width: 480px)")
+
+  const [mobile, setMobile] = React.useState(x.matches)
+
+  React.useEffect(() => {
+    x.addEventListener("change", () => {
+      if (x.matches) {
+        setMobile(true)
+      } else {
+        setMobile(false)
+      }
+    })
+  }, [x])
+
   return (
     <div className='bgb'>
       <div className='title'>GAMEPLAY</div>
@@ -40,64 +53,44 @@ export default function GamePlay() {
           To Earn & Free Play to win rewards.
         </p>
       </div>
-      <div className='sectionA'>
-        <div
-          key={slideIndex}
-          className={`slider ${slideIndex === 0 && "active"}`}
-        >
-          <div className='running-man'>
-            <img src={runningman} alt='running-man' />
-          </div>
-          <div className='blueman'>
-            <img src={blueman} alt='blueman' />
-            <div className='freeplay'>FREE PLAY</div>
-            <div className='words'>
-              <p>
-                Win the race and be the last Cockroach standing.<br></br>Show
-                your skills, win 3 rounds and win prizes.
-              </p>
-            </div>
-            <div className='watchButton'>
-              <img
-                src={watch}
-                alt='playnow'
-                onMouseOver={(e) => (e.currentTarget.src = watchhover)}
-                onMouseOut={(e) => (e.currentTarget.src = watch)}
-              />
-            </div>
-          </div>
+
+      <div className='upper-row'>
+        <div className='running-man'>
+          <img
+            src={slideIndex === 0 ? runningman : runningman2}
+            alt='running-man'
+          />
         </div>
-        <div
-          key={slideIndex === 0 ? 1 : 0}
-          className={`slider ${slideIndex === 1 && "active"}`}
-        >
-          <div className='running-man'>
-            <img src={runningman2} alt='running-man' />
+        <div className='blueman'>
+          <img
+            className={slideIndex === 0 && "active"}
+            src={slideIndex === 0 ? blueman : blueman2}
+            alt='blueman'
+          />
+          <div className='freeplay'>
+            {slideIndex === 0 ? "FREE PLAY" : "PLAY AND EARN"}
           </div>
-          <div className='blueman'>
-            <img src={blueman2} alt='blueman' />
-            <div className='freeplay'>PLAY AND EARN</div>
-            <div className='words'>
-              <p>
-                Win the race and be the last Cockroach standing.<br></br>Show
-                your skills, win 3 rounds and win prizes.
-              </p>
-            </div>
-            <div className='watchButton'>
-              <img
-                src={watch}
-                alt='playnow'
-                onMouseOver={(e) => (e.currentTarget.src = watchhover)}
-                onMouseOut={(e) => (e.currentTarget.src = watch)}
-              />
-            </div>
+          <div className='words'>
+            <p>
+              Win the race and be the last Cockroach standing.<br></br>Show your
+              skills, win 3 rounds and win prizes.
+            </p>
+          </div>
+          <div className='watchButton'>
+            <img
+              src={watch}
+              alt='playnow'
+              onMouseOver={(e) => (e.currentTarget.src = watchhover)}
+              onMouseOut={(e) => (e.currentTarget.src = watch)}
+            />
           </div>
         </div>
       </div>
+
       <div className='sectionB'>
         <div className='directionbuttonL'>
-          {windowWidth < 480 ? (
-            <img src={iprevious} alt='playnow' />
+          {mobile ? (
+            <img src={iprevious} alt='playnow' onClick={prevSlide} />
           ) : (
             <img
               onClick={prevSlide}
@@ -121,8 +114,8 @@ export default function GamePlay() {
           />
         </div>
         <div className='directionbuttonR'>
-          {windowWidth < 480 ? (
-            <img src={inext} alt='playnow' />
+          {mobile ? (
+            <img src={inext} alt='playnow' onClick={nextSlide} />
           ) : (
             <img
               src={next}
@@ -133,6 +126,14 @@ export default function GamePlay() {
             />
           )}
         </div>
+      </div>
+      <div id='watch-button-mobile'>
+        <img
+          src={watch}
+          alt='playnow'
+          onMouseOver={(e) => (e.currentTarget.src = watchhover)}
+          onMouseOut={(e) => (e.currentTarget.src = watch)}
+        />
       </div>
     </div>
   )
