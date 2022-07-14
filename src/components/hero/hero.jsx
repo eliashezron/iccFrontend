@@ -8,6 +8,12 @@ import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
 import copy from "../../assets/iccaddress.png"
 import homeSvg from "../../assets/ihome.svg"
+// import homehoverSvg from "../../assets/ihomehover.svg"
+// import earn from "../../assets/iearn.svg"
+// import earnhover from "../../assets/iearn.svg"
+// import coin from "../../assets/icoin.svg"
+// import more from "../../assets/imore.svg"
+// import morehover from "../../assets/imorehover.svg"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 
 export default function Hero() {
@@ -94,6 +100,9 @@ export default function Hero() {
         </div>
       </div>
       <div className='mobile-nav'>
+        <img src={homeSvg} alt='' />
+        <img src={homeSvg} alt='' />
+        <img src={homeSvg} alt='' />
         <img src={homeSvg} alt='' />
       </div>
     </div>
