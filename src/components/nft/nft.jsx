@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import "./nft.scss"
-import mintnow from "../../assets/mintnow.svg"
-import mintnowhover from "../../assets/mintnowhover.svg"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import inext from "../../assets/ipreviousb.svg"
@@ -44,12 +42,7 @@ export default function Nft() {
         </div>
 
         <div className='mint'>
-          <img
-            src={mintnow}
-            alt='playnow'
-            onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-            onMouseOut={(e) => (e.currentTarget.src = mintnow)}
-          />
+          <div id='mint-button-desktop'></div>
         </div>
       </div>
       <div className='sectionA'>

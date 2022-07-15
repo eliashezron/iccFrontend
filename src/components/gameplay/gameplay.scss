@@ -85,12 +85,12 @@
 }
 
 .bgb {
-  background: url(/assets/bgsvg.svg) no-repeat;
-  height: 100vh;
+  background: url(/assets/bggameplay.jpg) no-repeat center center;
+  background-size: cover;  height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  margin-top: 160px;
-  margin-bottom: 20%;
+  // margin-top: 160px;
+  // margin-bottom: 20%;
   position: relative;
   .title {
     display: flex;

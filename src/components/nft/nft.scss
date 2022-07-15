@@ -42,9 +42,16 @@
     justify-content: flex-end;
     margin-top: -60px;
     cursor: pointer;
-    img {
+    #mint-button-desktop {
       height: 70px;
       width: 338px;
+      background-image: url(/assets/mintnowthover.png);
+      transition: all 500ms ease-in;
+    }
+    #mint-button-desktop {
+      &:hover {
+        background-image: url(/assets/mintnowt.png);
+      }
     }
   }
   .sectionA {

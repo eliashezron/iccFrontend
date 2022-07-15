@@ -111,16 +111,18 @@
                 width: 672px;
               }
               #playh-button-desktop {
-                height: 73px;
-                width: 730px;
-                background-image: url(/assets/playnowlong.svg);
-                background-position: center;
+                height: 80px;
+                width: 672px;
+                background: url(/assets/b-playnowh.png);
+                background-size: fit-content;
+                // background-position: center;
                 transition: all 500ms ease-in-out;
               }
           
               #playh-button-desktop {
                 &:hover {
-                  background-image: url(/assets/playnowlonghover.svg);
+                  background: url(/assets/b-playnow.png);
+                  background-size: cover;
                 }
               }
           }
@@ -175,63 +177,75 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .herosection{
+    // background: url(/assets/bgmobile.png) no-repeat center center;
+    margin-top: 15%;
   .hero {
     display: flex;
     padding-top: 0;
     flex-direction: column;
     height: 100vh;
     scroll-snap-align: start;
+    padding-left: 0px;
+    padding-right: 0px;
 
     .mobile-nav {
       background: url(/assets/bgc.png) no-repeat center !important;
-      border-radius: 35px;
-      height: 60px;
-      margin-bottom: 10px;
-      width: 90%;
-      color: white;
+      border-radius: 15px;
+      height: 87px;
+      margin-bottom: 1px;
+      width: 92%;
+      // color: white;
       display: flex;
       flex-direction: row;
       align-items: center;
       padding: 10px;
-      justify-content: center;
-      gap: 2.5rem;
+      justify-content: space-around;
+      // gap: 2.5rem;
 
-      img {
-        height: 40px;
-        aspect-ratio: 1/1;
-      }
+      // img {
+      //   height: 40px;
+      //   aspect-ratio: 1/1;
+      // }
     }
 
     .heroContainer {
       display: flex;
       flex-direction: column;
       margin-top: 0;
+      padding-right: 0px;
 
       .theorySection {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 0.5rem;
         align-items: center;
         padding: 0;
         margin: 0;
 
         .logoImage {
-          img {
-            height: 100px;
-            width: 300px;
+          margin-top: 20px;
+          #heroImage {
+            height: 128px;
+            width: 326px;
           }
         }
 
         .textfield {
           display: flex;
           flex-direction: column;
-          width: 80%;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
           gap: 0.5rem;
+          padding: 0;
           p {
-            font-size: 13px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
-            line-height: 15px;
+            padding: 10px 49px 0px 49px;
+            font-size: 18px;
+            // letter-spacing: 0.03em;
+            font-weight: 900;
+            line-height: 20px;
             text-align: center;
           }
           p:nth-child(2) {
@@ -239,32 +253,39 @@
           }
 
           .mobile-iframe {
-            display: block;
-            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:#FBC4E6 solid 5px;
+            border-radius: 25px;
+            height: 212px;
+            width: 90%;
+            margin-top: -40px;
           }
 
           .inputdv {
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             flex-direction: column;
             padding: 5px 0 5px 0;
-            .icccontract {
+            .icccontractx{
+              // background-color: #00FFE0;
               display: flex;
-              outline: black solid 1px;
-              border-radius: 25px;
-              padding: 5px 8px 5px 5px;
-              overflow: hidden;
-              word-wrap: break-word;
-              p {
-                text-align: start;
-                color: #f5f5f5;
-                font-size: 0.68rem;
-                width: 85%;
-                flex-wrap: wrap;
-              }
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
             }
-          }
+            .inputdiv {
+              display: flex;
+              justify-content: space-around;
+            }
+            #copyid{
+              margin-right: 10px;
+              bottom: 0;
+            }
+         }
         }
         .playButton {
           img {
@@ -282,4 +303,5 @@
       display: none;
     }
   }
+}
 }

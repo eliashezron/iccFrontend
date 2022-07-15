@@ -7,14 +7,13 @@ import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
 import copy from "../../assets/iccaddress.png"
 import copyM from "../../assets/addressicc.png"
-import homeSvg from "../../assets/ihome.svg"
-// import homehoverSvg from "../../assets/ihomehover.svg"
-// import earn from "../../assets/iearn.svg"
-// import earnhover from "../../assets/iearn.svg"
-// import coin from "../../assets/icoin.svg"
-// import more from "../../assets/imore.svg"
-// import morehover from "../../assets/imorehover.svg"
-import { CopyToClipboard } from "react-copy-to-clipboard"
+import home from "../../assets/homeicon.png"
+import earn from "../../assets/earnicon.png"
+import trade from "../../assets/tradeicon.png"
+import more from "../../assets/moreicon.png"
+import nft from "../../assets/nfticon.png"
+import CopyToClipboard from "react-copy-to-clipboard"
+
 import NavBar from "../navbar/navbar"
 
 export default function Hero() {
@@ -112,10 +111,11 @@ export default function Hero() {
           </div>
         </div>
         <div className='mobile-nav'>
-          <img src={homeSvg} alt='' />
-          <img src={homeSvg} alt='' />
-          <img src={homeSvg} alt='' />
-          <img src={homeSvg} alt='' />
+          <img src={home} alt='' />
+          <img src={nft} alt='' />
+          <img src={earn} alt='' />
+          <img src={trade} alt='' />
+          <img src={more} alt='' />
         </div>
       </div>
     </div>
