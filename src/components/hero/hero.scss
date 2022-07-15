@@ -113,7 +113,7 @@
               #playh-button-desktop {
                 height: 80px;
                 width: 672px;
-                background: url(/assets/b-playnowh.png);
+                background: url(/assets/playnowidle.png);
                 background-size: fit-content;
                 // background-position: center;
                 transition: all 500ms ease-in-out;
@@ -121,7 +121,7 @@
           
               #playh-button-desktop {
                 &:hover {
-                  background: url(/assets/b-playnow.png);
+                  background: url(/assets/playnowidlehover.png);
                   background-size: cover;
                 }
               }
@@ -292,9 +292,20 @@
         }
         .playButton {
           margin-top: -10px;
-          img {
+          #playmobile-button-desktop {
             height: 52px;
-            width: 320px;
+            width: 382px;
+            background: url(/assets/playnowmobile.png);
+            background-size: fit-content;
+            // background-position: center;
+            transition: all 500ms ease-in-out;
+          }
+      
+          #playmobile-button-desktop {
+            &:hover {
+              background: url(/assets/playnowhovermobile.png);
+              background-size: cover;
+            }
           }
         }
       }
