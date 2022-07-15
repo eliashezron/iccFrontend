@@ -76,6 +76,9 @@ export default function Hero() {
       </div>
       <div className="mobile-nav">
         <img src={homeSvg} alt="" />
+        <img src={homeSvg} alt="" />
+        <img src={homeSvg} alt="" />
+        <img src={homeSvg} alt="" />
       </div>
     </div>
   );

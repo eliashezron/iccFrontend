@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 5%;
-  height: 70vh;
+  height: 62vh;
   width: 100%;
 
   #running-man-img {
@@ -10,7 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 500px;
+    height: 600px;
     width: 60%;
     transition: all 400ms ease-in-out;
     &.active {
@@ -21,10 +21,10 @@
   #blueman-img {
     background-image: url(/assets/bueman.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: contain;
     height: 300px;
-    width: 70%;
+    width: 80%;
     transition: all 400ms ease-in-out;
     &.active {
       background-image: url(/assets/blueman2.png);
@@ -40,13 +40,13 @@
       font-family: 'Orbitron', sans-serif;
       font-style: normal;
       font-weight: 900;
-      font-size: 36px;
+      font-size: 30px;
       line-height: 24px;
       display: flex;
       align-items: center;
       text-align: center;
       letter-spacing: -0.02em;
-      padding: 20px 0px;
+      margin-top: 30px;
     }
     .words {
       display: flex;
@@ -55,12 +55,12 @@
       font-family: 'Orbitron', sans-serif;
       font-style: normal;
       font-weight: 800;
-      font-size: 18px;
+      font-size: 15px;
       line-height: 24px;
       text-align: center;
       letter-spacing: -0.02em;
       color: #0bfff0;
-      padding-bottom: 10px;
+      padding: 10px 0;
     }
     .watchButton {
       display: flex;
