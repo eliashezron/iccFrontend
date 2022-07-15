@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import "./hero.scss"
-import logo from "../../assets/logo.png"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
 import opensea from "../../assets/openseaicon.png"
@@ -36,7 +35,7 @@ export default function Hero() {
         <div className='heroContainer'>
           <div className='theorySection'>
             <div className='logoImage'>
-              <img src={logo} alt='logo' />
+              <div id='heroImage'></div>
             </div>
             <div className='textfield'>
               <p>

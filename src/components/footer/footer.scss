@@ -15,10 +15,19 @@
     flex-direction: row;
     height: auto;
     .footerimg {
-      img {
-        height: 180px;
-        width: 490px;
+      #footerlogo{
+        height: 188px;
+        width: 468px;
+        background: url(/assets/logo.png);
+        background-size: cover;
+        transition: all 500ms ease-in-out;
       }
+      #footerlogo {
+        &:hover {
+          background: url(/assets/footerlogoicon.png);
+          background-size: cover;
+        }
+    }
     }
     .button-grid {
       display: grid;
@@ -73,13 +82,6 @@
           flex-direction: row;
           justify-content: space-around;
           padding: 8px;
-          // margin-bottom: 15px;
-          // a {
-          //   img {
-          //     height: 50px;
-          //     width: 50px;
-          //  
-          // }
         }
       }
       button {
@@ -125,6 +127,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0px 97px 121px 103px;
 
     #col-one {
       flex: 2;
@@ -133,6 +136,7 @@
       align-items: flex-start;
 
       h1 {
+        margin-top: 13px;
         font-family: 'Orbitron';
         font-style: normal;
         font-weight: 900;
@@ -152,19 +156,30 @@
       align-items: flex-end;
       gap: 10px;
     }
-    // .h2 {
-    //   img:nth-child(1) {
-    //     padding-right: 15px;
-    //   }
-    // }
-    // img:nth-child(1){
-    //     height: 30px;
-    //     width: 360px;
-    // }
-    // img:nth-child(2){
-    //     height: 80px;
-    //     width: 730px;
-    // }
+    #mint-button-desktop {
+      height: 53px;
+      margin-bottom: 13px;
+      width: 257px;
+      background-image: url(/assets/mintnow.svg);
+      transition: all 500ms ease-in-out;
+    }
+    #mint-button-desktop {
+      &:hover {
+        background-image: url(/assets/mintnowhover.svg);
+      }
+    }
+    #buy-button-desktop {
+      height: 53px;
+      width: 257px;
+      background-image: url(/assets/buyicca.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #buy-button-desktop {
+      &:hover {
+        background-image: url(/assets/buyiccahover.svg);
+      }
+    }
   }
 }
 @media screen and (min-width: 480px) {

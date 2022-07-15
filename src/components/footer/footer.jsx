@@ -71,7 +71,7 @@ export default function Footer() {
       {/* ========================================================== */}
       <div className='upper-row'>
         <div className='footerimg'>
-          <img src={logo} alt='logo' />
+          <div id='footerlogo'></div>
         </div>
         <div className='button-grid'>
           <button>Home</button>
@@ -116,19 +116,8 @@ export default function Footer() {
         <div id='col-two'>
           <img id='icc-price' src={iccprice} alt='icc price' />
           <div>
-            <img
-              src={mintnow}
-              alt='playnow'
-              onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = mintnow)}
-            />
-            <img
-              id='buy-icc'
-              src={buyicca}
-              alt='buyicca'
-              onMouseOver={(e) => (e.currentTarget.src = buyiccahover)}
-              onMouseOut={(e) => (e.currentTarget.src = buyicca)}
-            />
+            <div id='mint-button-desktop'></div>
+            <div id='buy-button-desktop'></div>
           </div>
         </div>
       </div>

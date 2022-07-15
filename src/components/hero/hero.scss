@@ -31,10 +31,19 @@
           height: 643px;
           padding-right: 35px;
           .logoImage{
-              img{
-                  height: 269px;
-                  width:672px;
+            #heroImage{
+              height: 269px;
+              width: 672px;
+              background: url(/assets/logo.png);
+              background-size: cover;
+              transition: all 500ms ease-in-out;
+            }
+            #heroImage {
+              &:hover {
+                background: url(/assets/footerlogoicon.png);
+                background-size: cover;
               }
+          }
           }
           .textfield{
               display: flex;
