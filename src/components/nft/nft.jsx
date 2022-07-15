@@ -36,7 +36,7 @@ export default function Nft() {
   }, [x])
 
   return (
-    <div className='mainSection'>
+    <div className='mainsection'>
       <div className='relativediv'>
         <div className='title'>NFT GENESIS SERIES</div>
         <div className='wording'>

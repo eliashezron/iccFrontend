@@ -5,7 +5,7 @@ import mrmp from "../../assets/mrmp.png"
 export default function RoadMap() {
   const windowWidth = window.innerWidth
   return (
-    <div className='main'>
+    <div className='mainr'>
       {windowWidth < 550 ? (
         <>
           <div className='title road-map-title'>ROAD MAP</div>

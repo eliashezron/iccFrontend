@@ -3,19 +3,12 @@
   flex-direction: column;
   height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100vw;
   background: url(/assets/bgcoin.jpg) no-repeat center;
   background-size: cover;
-
-  // margin-top: 20%;
-
   position: relative;
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // min-height:90vh;
+  justify-content: center;
+  align-items: center;
   .absolutediv {
     display: flex;
     flex-direction: column;
