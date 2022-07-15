@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./navbar.scss"
 import logo from "../../assets/logo.png"
 import { navItems } from "../../data/navItems"
@@ -7,6 +7,14 @@ const Navbar = () => {
   const [dropdown, setDropdown] = useState(false)
 
   const [clickedMenuItem, setClickedMenuItem] = useState()
+
+  useEffect(() => {
+    if (dropdown) {
+      setTimeout(() => {
+        setDropdown(false)
+      }, [60])
+    }
+  }, [dropdown])
 
   return (
     <>
