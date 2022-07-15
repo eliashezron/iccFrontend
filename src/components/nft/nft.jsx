@@ -8,8 +8,6 @@ import pinkrrectangle from '../../assets/pinkrectangle.svg';
 import bluerectangle from '../../assets/bluerectangle.svg';
 import inext from '../../assets/ipreviousb.svg';
 import iprevious from '../../assets/iprevious.svg';
-import next from '../../assets/next.svg';
-import nexthover from '../../assets/hovernext.svg';
 import previous from '../../assets/previous.svg';
 import previoushover from '../../assets/previoushover.svg';
 import { nftItems } from '../../data/nftIteams';

@@ -23,7 +23,7 @@ const Navbar = () => {
               {navItems.map((item, index) => (
                 <div
                   id={index}
-                  onClick={(e) => {
+                  onClick={() => {
                     if (item.subMenu) {
                       setClickedMenuItem(item.title);
                     }
@@ -32,41 +32,39 @@ const Navbar = () => {
                   key={Math.random() * index}
                 >
                   <button>{item.title}</button>
-                  {item.subMenu && (
-                    <AnimatePresence>
-                      {clickedMenuItem === item.title && (
-                        <motion.div
-                          key={item.title}
-                          initial={{
-                            opacity: 0,
-                            y: '-15px',
-                            pointerEvents: 'none',
-                          }}
-                          animate={{
-                            pointerEvents: 'all',
-                            y: '0px',
-                            opacity: 1,
-                          }}
-                          exit={{
-                            pointerEvents: 'none',
-                            y: '-15px',
-                            opacity: 0,
-                          }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <div className="dropdown-content">
-                            {item?.subMenu?.map((subMenuItem, index) => {
-                              return (
-                                <a href={subMenuItem.path} key={index}>
-                                  {subMenuItem.subtitle}
-                                </a>
-                              );
-                            })}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  )}
+                  <AnimatePresence>
+                    {clickedMenuItem === item.title && (
+                      <motion.div
+                        key={item.title}
+                        initial={{
+                          opacity: 0,
+                          y: '-15px',
+                          pointerEvents: 'none',
+                        }}
+                        animate={{
+                          pointerEvents: 'all',
+                          y: '0px',
+                          opacity: 1,
+                        }}
+                        exit={{
+                          pointerEvents: 'none',
+                          y: '-15px',
+                          opacity: 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <div className="dropdown-content">
+                          {item?.subMenu?.map((subMenuItem, index) => {
+                            return (
+                              <a href={subMenuItem.path} key={index}>
+                                {subMenuItem.subtitle}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </ul>
