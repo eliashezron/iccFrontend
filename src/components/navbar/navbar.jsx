@@ -6,8 +6,6 @@ import playnowhover from '../../assets/playnowhover.svg';
 import { navItems } from '../../data/navItems';
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false);
-
   const [clickedMenuItem, setClickedMenuItem] = useState();
 
   return (
@@ -27,23 +25,19 @@ const Navbar = () => {
                       setClickedMenuItem(item.title);
                     }
                   }}
-                  className={`dropdown ${dropdown && 'active'}`}
+                  onMouseOut={() => {
+                    setClickedMenuItem();
+                  }}
+                  className="dropdown"
                   key={Math.random() * index}
                 >
-                  <button
-                    // onClick={() => setDropdown(true)}
-                    // onMouseLeave={() => setDropdown(false)}
-                    className={`${dropdown ? 'active' : 'button'}`}
-                  >
-                    {item.title}
-                  </button>
+                  <button>{item.title}</button>
                   {item.title === 'Earn' ? (
                     <div
                       className={`dropdown-content ${
                         clickedMenuItem === item.title &&
                         'dropdown-content-visible'
                       }`}
-                      visible={clickedMenuItem === item.title}
                     >
                       <a href={item.path}>pools</a>
                       <a href={item.path}>farms</a>
@@ -98,22 +92,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div
-        id="back-drop"
-        style={{
-          position: 'fixed',
-          height: '100%',
-          width: '100%',
-          top: 0,
-          left: 0,
-          opacity: 0,
-          pointerEvents: clickedMenuItem ? 'all' : 'none',
-          zIndex: 0,
-        }}
-        onClick={() => {
-          setClickedMenuItem();
-        }}
-      />
     </>
   );
 };
