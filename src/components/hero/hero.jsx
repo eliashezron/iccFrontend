@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import "./hero.scss"
 import playnow from "../../assets/playnowlong.svg"
 import playnowhover from "../../assets/playnowlonghover.svg"
+import playnowmobile from "../../assets/playnowmobile.png"
+import playnowmobilehover from "../../assets/playnowhovermobile.png"
 import opensea from "../../assets/openseaicon.png"
 import discord from "../../assets/discordicon.png"
 import twitter from "../../assets/twittericon.png"
@@ -78,12 +80,23 @@ export default function Hero() {
             </div>
             <div className='playButton'>
               {/* <div id='playh-button-desktop' /> */}
-              <img
-                src={playnow}
-                alt='playnow'
-                onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-                onMouseOut={(e) => (e.currentTarget.src = playnow)}
-              />
+              {windowWidth < 480 ? (
+                <img
+                  src={playnowmobile}
+                  alt='playnow'
+                  onMouseOver={(e) =>
+                    (e.currentTarget.src = playnowmobilehover)
+                  }
+                  onMouseOut={(e) => (e.currentTarget.src = playnowmobile)}
+                />
+              ) : (
+                <img
+                  src={playnow}
+                  alt='playnow'
+                  onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
+                  onMouseOut={(e) => (e.currentTarget.src = playnow)}
+                />
+              )}
             </div>
           </div>
           <div className='gifSection'>

@@ -6,6 +6,8 @@ import inext from "../../assets/ipreviousb.svg"
 import iprevious from "../../assets/iprevious.svg"
 import { nftItems } from "../../data/nftIteams"
 import { nftItemsScroll } from "../../data/nftIteams"
+import mintmobile from "../../assets/mintmobile.png"
+import mintmobilehover from "../../assets/mintmobilehover.png"
 export default function Nft() {
   const [slideIndex, setSlideIndex] = useState(0)
   const prevSlide = () => {
@@ -42,7 +44,16 @@ export default function Nft() {
         </div>
 
         <div className='mint'>
-          <div id='mint-button-desktop'></div>
+          {mobile ? (
+            <img
+              src={mintmobile}
+              alt='playnow'
+              onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
+              onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
+            />
+          ) : (
+            <div id='mint-button-desktop'></div>
+          )}
         </div>
       </div>
       <div className='sectionA'>
@@ -125,7 +136,7 @@ export default function Nft() {
         {[...nftItems, nftItemsScroll].map((item, index) => {
           return (
             <div key={index} id='nft'>
-              <img src={item.image} alt='next' />
+              {index <= 9 ? <img src={item.image} alt='' /> : null}
             </div>
           )
         })}

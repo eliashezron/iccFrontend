@@ -4,6 +4,8 @@ import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import watch from "../../assets/watch.svg"
 import watchhover from "../../assets/watchhover.svg"
+import watchmobile from "../../assets/watchmobile.png"
+import watchmobilehover from "../../assets/watchmobilehover.png"
 import inext from "../../assets/ipreviousb.svg"
 import iprevious from "../../assets/iprevious.svg"
 export default function GamePlay() {
@@ -110,10 +112,10 @@ export default function GamePlay() {
       </div>
       <div id='watch-button-mobile'>
         <img
-          src={watch}
+          src={watchmobile}
           alt='playnow'
-          onMouseOver={(e) => (e.currentTarget.src = watchhover)}
-          onMouseOut={(e) => (e.currentTarget.src = watch)}
+          onMouseOver={(e) => (e.currentTarget.src = watchmobilehover)}
+          onMouseOut={(e) => (e.currentTarget.src = watchmobile)}
         />
       </div>
     </div>

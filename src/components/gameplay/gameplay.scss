@@ -2,21 +2,31 @@
   background: url(/assets/bggameplay.jpg) no-repeat center center;
   background-size: cover;
   height: 100vh;
+  width: 100%;
 }
 
 .upper-row {
   display: flex;
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 0;
   height: 62vh;
   width: 100%;
+  left: 0;
+  margin-bottom: -100px;
+  // float:left;
   #running-man-img {
     background-image: url(/assets/runningman.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
+    float: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-size: contain;
-    height: 600px;
-    width: 60%;
+    height: 630px;
+    width: 966px;
+    transition-delay: none;
     transition: all 400ms ease-in-out;
     &.active {
       background-image: url(/assets/runningman2.png);
@@ -28,8 +38,12 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-    height: 300px;
-    width: 80%;
+    height: 250px;
+    width: 430px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // margin-right: 250px;
     transition: all 400ms ease-in-out;
     &.active {
       background-image: url(/assets/blueman2.png);
@@ -37,6 +51,7 @@
   }
 
   .blueman {
+    margin-right: 250px;
     .freeplay {
       display: flex;
       align-items: center;
@@ -91,6 +106,7 @@
   scroll-snap-stop: always;
   // margin-top: 160px;
   // margin-bottom: 20%;
+  padding-top: 210px;
   position: relative;
   .title {
     display: flex;
@@ -102,7 +118,7 @@
     font-weight: 900;
     color: #fff060;
     text-align: center;
-    letter-spacing: -0.05em;
+    // letter-spacing: -0.05em;
   }
   .wording {
     font-family: 'Orbitron', sans-serif;
@@ -113,6 +129,7 @@
     text-align: center;
     letter-spacing: -0.02em;
     color: #ffffff;
+    padding-bottom: 15px;
   }
 
   .sectionB {
@@ -120,9 +137,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    // flex: 1;
-    // margin-top: -20px;
-    // position: absolute;
+
     #nft-next-button-desktop {
       height: 50px;
       width: 255px;
@@ -175,13 +190,15 @@
     justify-content: center;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
     .title {
       font-size: 24px;
       line-height: 36px;
     }
     .wording {
       padding: 0 15px;
-      font-size: 13px;
+      font-size: 18px;
+      line-height: 22px;
       white-space: normal;
       letter-spacing: 0.035em;
     }
@@ -198,7 +215,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 250px;
+        height: 260px;
         width: 100%;
         transition: all 400ms ease-in-out;
         &.active {
@@ -228,10 +245,10 @@
       }
     }
     .sectionB {
-      margin-top: 0px;
+      margin-top: 240px;
       overflow: hidden;
       width: 95%;
-      margin: 0 auto;
+      // margin: 0 auto;
 
       .middlebuttons {
         img {
