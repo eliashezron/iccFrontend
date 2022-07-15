@@ -2,8 +2,6 @@ import React from "react"
 import "./coin.scss"
 import coin from "../../assets/coinimagepng.png"
 import mcoin from "../../assets/mcoin.png"
-import buyicc from "../../assets/buyicc.svg"
-import buyicchover from "../../assets/buyicchover.svg"
 export default function Coin() {
   const windowWidth = window.innerWidth
   return (
@@ -26,12 +24,7 @@ export default function Coin() {
         )}
       </div>
       <div className='buybutton'>
-        <img
-          src={buyicc}
-          alt='playnow'
-          onMouseOver={(e) => (e.currentTarget.src = buyicchover)}
-          onMouseOut={(e) => (e.currentTarget.src = buyicc)}
-        />
+        <div id='buyicc-button-desktop' />
       </div>
     </div>
   )

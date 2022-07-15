@@ -123,16 +123,28 @@
     // flex: 1;
     // margin-top: -20px;
     // position: absolute;
-    .directionbuttonL,
-    .directionbuttonR {
-      margin: 0 50px 0 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      img {
-        height: 50px;
-        width: 250px;
+    #nft-next-button-desktop {
+      height: 50px;
+      width: 255px;
+      background-image: url(/assets/next.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #nft-next-button-desktop {
+      &:hover {
+        background-image: url(/assets/hovernext.svg);
+      }
+    }
+    #nft-previous-button-desktop {
+      height: 50px;
+      width: 255px;
+      background-image: url(/assets/previous.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #nft-previous-button-desktop {
+      &:hover {
+        background-image: url(/assets/previoushover.svg);
       }
     }
     .middlebuttons {

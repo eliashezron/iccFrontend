@@ -138,6 +138,7 @@
       height: 318px;
       width: 90px;
       background: url(/assets/bgsocialsidebar.svg) no-repeat center!important;
+      transition: all 500ms ease-in-out;
       .communitybuttons{
           display: flex;
           flex-direction: column;

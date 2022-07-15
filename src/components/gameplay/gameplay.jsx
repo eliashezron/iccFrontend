@@ -6,10 +6,6 @@ import watch from "../../assets/watch.svg"
 import watchhover from "../../assets/watchhover.svg"
 import inext from "../../assets/ipreviousb.svg"
 import iprevious from "../../assets/iprevious.svg"
-import next from "../../assets/next.svg"
-import nexthover from "../../assets/hovernext.svg"
-import previous from "../../assets/previous.svg"
-import previoushover from "../../assets/previoushover.svg"
 export default function GamePlay() {
   const [slideIndex, setSlideIndex] = useState(0)
   console.log(slideIndex)
@@ -79,12 +75,11 @@ export default function GamePlay() {
           {mobile ? (
             <img src={iprevious} alt='playnow' onClick={prevSlide} />
           ) : (
-            <img
+            <div
+              id='nft-previous-button-desktop'
               onClick={prevSlide}
-              src={previous}
-              alt='playnow'
-              onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-              onMouseOut={(e) => (e.currentTarget.src = previous)}
+              // onMouseOver={(e) => (e.currentTarget.src = nexthover)}
+              // onMouseOut={(e) => (e.currentTarget.src = next)}
             />
           )}
         </div>
@@ -104,12 +99,11 @@ export default function GamePlay() {
           {mobile ? (
             <img src={inext} alt='playnow' onClick={nextSlide} />
           ) : (
-            <img
-              src={next}
-              alt='next'
+            <div
+              id='nft-next-button-desktop'
               onClick={nextSlide}
-              onMouseOver={(e) => (e.currentTarget.src = nexthover)}
-              onMouseOut={(e) => (e.currentTarget.src = next)}
+              // onMouseOver={(e) => (e.currentTarget.src = nexthover)}
+              // onMouseOut={(e) => (e.currentTarget.src = next)}
             />
           )}
         </div>

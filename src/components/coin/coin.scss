@@ -51,13 +51,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: -10%;
-    margin-top: 30%;
+    // padding-top: -10%;
+    margin-top: 40%;
     position: absolute;
     cursor: pointer;
-    img {
-      width: 350px;
-      height: 70px;
+    #buyicc-button-desktop {
+      height: 64px;
+      width: 337px;
+      background-image: url(/assets/buyicc.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #buyicc-button-desktop {
+      &:hover {
+        background-image: url(/assets/buyicchover.svg);
+      }
     }
   }
 }
