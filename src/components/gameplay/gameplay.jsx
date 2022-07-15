@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import './gameplay.scss';
-import blueman from '../../assets/bueman.png';
-import runningman from '../../assets/running.png';
-import blueman2 from '../../assets/blueman2.png';
-import runningman2 from '../../assets/runningman2.png';
 import pinkrrectangle from '../../assets/pinkrectangle.svg';
 import bluerectangle from '../../assets/bluerectangle.svg';
 import watch from '../../assets/watch.svg';
@@ -55,9 +51,12 @@ export default function GamePlay() {
       </div>
 
       <div className="upper-row">
-        <div id="running-man-img" className={slideIndex === 0 && 'active'} />
+        <div
+          id="running-man-img"
+          className={slideIndex === 0 ? 'active' : ''}
+        />
         <div className="blueman">
-          <div id="blueman-img" className={slideIndex === 0 && 'active'} />
+          <div id="blueman-img" className={slideIndex === 0 ? 'active' : ''} />
           <div className="freeplay">
             {slideIndex === 0 ? 'FREE PLAY' : 'PLAY AND EARN'}
           </div>
@@ -96,12 +95,12 @@ export default function GamePlay() {
           <img
             src={pinkrrectangle}
             alt="playnow"
-            className={slideIndex === 1 && 'pink-rectangle-translate'}
+            className={slideIndex === 1 ? 'pink-rectangle-translate' : ''}
           />
           <img
             src={bluerectangle}
             alt="playnow"
-            className={slideIndex === 1 && 'blue-rectangle-translate'}
+            className={slideIndex === 1 ? 'blue-rectangle-translate' : ''}
           />
         </div>
         <div className="directionbuttonR">

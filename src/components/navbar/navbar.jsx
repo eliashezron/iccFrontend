@@ -4,9 +4,12 @@ import logo from '../../assets/logo.png';
 import playnow from '../../assets/playnow.svg';
 import playnowhover from '../../assets/playnowhover.svg';
 import { navItems } from '../../data/navItems';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
-  const [clickedMenuItem, setClickedMenuItem] = useState();
+  const [clickedMenuItem, setClickedMenuItem] = useState('1');
+
+  React.useEffect(() => {}, []);
 
   return (
     <>
@@ -20,64 +23,50 @@ const Navbar = () => {
               {navItems.map((item, index) => (
                 <div
                   id={index}
-                  onClick={() => {
+                  onClick={(e) => {
                     if (item.subMenu) {
                       setClickedMenuItem(item.title);
                     }
-                  }}
-                  onMouseOut={() => {
-                    setClickedMenuItem();
                   }}
                   className="dropdown"
                   key={Math.random() * index}
                 >
                   <button>{item.title}</button>
-                  {item.title === 'Earn' ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        'dropdown-content-visible'
-                      }`}
-                    >
-                      <a href={item.path}>pools</a>
-                      <a href={item.path}>farms</a>
-                    </div>
-                  ) : item.title === 'Trade' ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        'dropdown-content-visible'
-                      }`}
-                    >
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
-                      >
-                        Liquidity
-                      </a>
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
-                      >
-                        Exchange
-                      </a>
-                    </div>
-                  ) : item.title === 'More' ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        'dropdown-content-visible'
-                      }`}
-                    >
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
-                      >
-                        WhitePaper
-                      </a>
-                      <br />
-                    </div>
-                  ) : null}
+                  {item.subMenu && (
+                    <AnimatePresence>
+                      {clickedMenuItem === item.title && (
+                        <motion.div
+                          key={item.title}
+                          initial={{
+                            opacity: 0,
+                            y: '-15px',
+                            pointerEvents: 'none',
+                          }}
+                          animate={{
+                            pointerEvents: 'all',
+                            y: '0px',
+                            opacity: 1,
+                          }}
+                          exit={{
+                            pointerEvents: 'none',
+                            y: '-15px',
+                            opacity: 0,
+                          }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="dropdown-content">
+                            {item?.subMenu?.map((subMenuItem, index) => {
+                              return (
+                                <a href={subMenuItem.path} key={index}>
+                                  {subMenuItem.subtitle}
+                                </a>
+                              );
+                            })}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  )}
                 </div>
               ))}
             </ul>
@@ -92,6 +81,21 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          height: '100%',
+          width: '100%',
+          opacity: 0,
+          pointerEvents: clickedMenuItem ? 'all' : 'none',
+          zIndex: 0,
+        }}
+        onMouseOver={() => {
+          setClickedMenuItem();
+        }}
+      />
     </>
   );
 };
