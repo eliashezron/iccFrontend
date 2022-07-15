@@ -1,10 +1,15 @@
+.bgb{
+  background: url(/assets/bggameplay.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
 .upper-row {
   display: flex;
   justify-content: space-between;
   padding: 0 5%;
   height: 70vh;
   width: 100%;
-
   #running-man-img {
     background-image: url(/assets/runningman.png);
     background-repeat: no-repeat;

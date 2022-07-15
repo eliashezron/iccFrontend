@@ -4,7 +4,10 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   width: 100vw;
-  margin-top: 20%;
+  // margin-top: 20%;
+  background: url(/assets/bgteam.jpg) no-repeat center;
+  background-size: cover;
+
 
   .absolutediv {
     display: flex;
@@ -39,9 +42,11 @@
     align-items: center;
     position: relative;
     width: 80% !important;
+    // display: grid;
     padding: 0 100px;
+    // grid-template-columns: 1fr;
     .img {
-      margin: 0 -30px; // ================================= use this to reduce the spacing
+      margin: 0 -25px; // ================================= use this to reduce the spacing
       row-gap: -10px;
       display: grid;
       column-gap: 120%;
@@ -89,7 +94,36 @@
         }
       }
     }
- 
+    .one {
+      position: relative;
+      z-index: 10;
+      padding-left: 10%;
+    }
+    .two {
+      position: relative;
+      z-index: 9;
+      padding-left: -10px;
+    }
+    .three {
+      position: relative;
+      z-index: 7;
+      padding-right: -10px;
+    }
+    .four {
+      position: relative;
+      z-index: 6;
+      padding-right: -10px;
+    }
+    .five {
+      position: relative;
+      z-index: 9;
+      padding-right: -10px;
+    }
+    .six {
+      position: relative;
+      z-index: 10;
+      padding-right: 10%;
+    }
   }
 }
 @media screen and (max-width: 480px) {

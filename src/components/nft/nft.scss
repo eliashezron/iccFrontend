@@ -4,12 +4,16 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   width: 100vw;
-  background: url(/assets/bgsvg.svg) no-repeat;
+  background: url(/assets/bgnft.jpg) no-repeat center center;
+  background-size: cover;
+  background-image: url(/assets/bgsvg.svg) no-repeat;
   position: relative;
   flex-direction: column;
-  margin-top: 5%;
+  // margin-top: 5%;s
   .relativediv {
     position: relative;
+    margin-top: 150px;
+    padding-bottom: 35px;
     .title {
       font-size: 64px;
       line-height: 80px;
@@ -40,15 +44,16 @@
     cursor: pointer;
     img {
       height: 70px;
-      width: 250px;
+      width: 338px;
     }
   }
   .sectionA {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0% 0% 0% 0% !important;
-    padding: 30px -200px 0 200px;
+    // margin: 0% 0% 0% 0% !important;
+    padding-bottom: 25px;
+    // padding: 0px -200px 0 200px;
     position: relative;
     height: 80vh;
     .nft {
@@ -81,6 +86,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 90px;
     flex: 1;
 
     .directionbuttonL,
@@ -154,6 +160,7 @@
     gap: 10px;
     justify-content: center;
     .relativediv {
+      margin-top: 0px;
       .title {
         padding-top: 5%;
         font-size: 18px;

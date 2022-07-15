@@ -1,17 +1,11 @@
 import React, { useState } from "react"
 import "./nft.scss"
-// import nftCollection from "../../assets/nftCollection.png"
-// import nftCollection2 from "../../assets/nftCollection2.png"
 import mintnow from "../../assets/mintnow.svg"
 import mintnowhover from "../../assets/mintnowhover.svg"
 import pinkrrectangle from "../../assets/pinkrectangle.svg"
 import bluerectangle from "../../assets/bluerectangle.svg"
 import inext from "../../assets/ipreviousb.svg"
 import iprevious from "../../assets/iprevious.svg"
-// import next from "../../assets/next.svg"
-// import nexthover from "../../assets/hovernext.svg"
-// import previous from "../../assets/previous.svg"
-// import previoushover from "../../assets/previoushover.svg"
 import { nftItems } from "../../data/nftIteams"
 import { nftItemsScroll } from "../../data/nftIteams"
 export default function Nft() {
@@ -126,13 +120,13 @@ export default function Nft() {
           )}
         </div>
       </div>
-      <div id="nft-mobile">
+      <div id='nft-mobile'>
         {[...nftItems, nftItemsScroll].map((item, index) => {
           return (
-            <div key={index} id="nft">
-              <img src={item.image} alt="next" />
+            <div key={index} id='nft'>
+              <img src={item.image} alt='next' />
             </div>
-          );
+          )
         })}
       </div>
     </div>
