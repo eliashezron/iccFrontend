@@ -194,9 +194,11 @@
       align-items: center;
       padding: 10px;
       justify-content: center;
+      gap: 2.5rem;
 
       img {
         height: 40px;
+        aspect-ratio: 1/1;
       }
     }
 

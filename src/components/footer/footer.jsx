@@ -40,15 +40,23 @@ export default function Footer() {
             onMouseOut={(e) => (e.currentTarget.src = mintnow)}
           />
           <div className='btn-grid'>
-            <button>Home</button>
-            <button>Earn</button>
-            <button>Trade</button>
+            <div>
+              <button>Home</button>
+              <button>Earn</button>
+            </div>
             <button>WhitePaper</button>
-            <button>Farms</button>
-            <button>Exchange</button>
-            <button>Nfts</button>
-            <button>Pools</button>
-            <button>Liquidity</button>
+            <div>
+              <button>Trade</button>
+              <button>Earn</button>
+            </div>
+            <div>
+              <button>Exchange</button>
+              <button>Farms</button>
+            </div>
+            <div>
+              <button>Liquidity</button>
+              <button>Pools</button>
+            </div>
             <button>Contact</button>
           </div>
           <img id='icc-price' src={iccprice} alt='icc price' />

@@ -53,14 +53,22 @@ export default function Nft() {
         </div>
       </div>
       <div className='sectionA'>
-        <div className={`nft ${slideIndex === 0 && "active"}`}>
+        <div
+          className={`nft ${slideIndex === 0 && "active"}`}
+          onMouseOver={(e) => {
+            console.log(e)
+          }}
+        >
           {nftItems.map((item) => {
             return (
               <div key={item.id} className='item'>
                 <img
                   src={item.image}
-                  alt='nftimage'
-                  onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
+                  alt='next'
+                  onClick={nextSlide}
+                  onMouseOver={(e) => {
+                    e.currentTarget.src = item.hoverImage
+                  }}
                   onMouseOut={(e) => (e.currentTarget.src = item.image)}
                 />
               </div>

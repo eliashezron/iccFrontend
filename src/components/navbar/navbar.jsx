@@ -29,8 +29,8 @@ const Navbar = () => {
                   key={Math.random() * index}
                 >
                   <button
-                    onClick={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
+                    // onClick={() => setDropdown(true)}
+                    // onMouseLeave={() => setDropdown(false)}
                     className={`${dropdown ? "active" : "button"}`}
                   >
                     {item.title}
@@ -38,8 +38,10 @@ const Navbar = () => {
                   {item.title === "Earn" ? (
                     <div
                       className={`dropdown-content ${
-                        clickedMenuItem === item.title ? "visible" : "invisible"
+                        clickedMenuItem === item.title &&
+                        "dropdown-content-visible"
                       }`}
+                      visible={clickedMenuItem === item.title}
                     >
                       <a href={item.path}>pools</a>
                       <a href={item.path}>farms</a>
@@ -47,7 +49,8 @@ const Navbar = () => {
                   ) : item.title === "Trade" ? (
                     <div
                       className={`dropdown-content ${
-                        clickedMenuItem === item.title ? "visible" : "invisible"
+                        clickedMenuItem === item.title &&
+                        "dropdown-content-visible"
                       }`}
                     >
                       <a
@@ -66,7 +69,8 @@ const Navbar = () => {
                   ) : item.title === "More" ? (
                     <div
                       className={`dropdown-content ${
-                        clickedMenuItem === item.title ? "visible" : "invisible"
+                        clickedMenuItem === item.title &&
+                        "dropdown-content-visible"
                       }`}
                     >
                       <a
