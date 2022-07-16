@@ -57,8 +57,23 @@ export default function GamePlay() {
         />
         <div className="blueman">
           <div id="blueman-img" className={slideIndex === 0 ? 'active' : ''} />
+
           <div className="freeplay">
-            {slideIndex === 0 ? 'FREE PLAY' : 'PLAY AND EARN'}
+            <div
+              style={{
+                opacity: slideIndex === 0 ? 1 : 0,
+              }}
+            >
+              FREE PLAY
+            </div>
+
+            <div
+              style={{
+                opacity: slideIndex === 1 ? 1 : 0,
+              }}
+            >
+              PLAY AND EARN
+            </div>
           </div>
           <div className="words">
             <p>
