@@ -6,8 +6,8 @@ import inext from '../../assets/ipreviousb.svg';
 import iprevious from '../../assets/iprevious.svg';
 import { nftItems } from '../../data/nftIteams';
 import { nftItemsScroll } from '../../data/nftIteams';
-import mintmobile from '../../assets/mintmobile.png';
-import mintmobilehover from '../../assets/mintmobilehover.png';
+// import mintmobile from '../../assets/mintmobile.png';
+// import mintmobilehover from '../../assets/mintmobilehover.png';
 
 import SwipeableViews from 'react-swipeable-views';
 
