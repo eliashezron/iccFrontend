@@ -1,10 +1,10 @@
 section#road-map {
   background-image: url(/assets/bgroadmap.jpg);
   div.container {
-    div {
+    div#road-map-img-desktop {
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       width: 80%;
       height: 80%;
     }
@@ -23,6 +23,13 @@ section#road-map {
   div.container {
     div#road-map-img-desktop {
       display: none;
+    }
+    div#road-map-img-mobile {
+      width: 100%;
+      height: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
   }
 }
