@@ -3,16 +3,12 @@
   flex-direction: column;
   height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   width: 100vw;
-  // margin-top: 20%;
-
+  background: url(/assets/bgcoin.jpg) no-repeat center;
+  background-size: cover;
   position: relative;
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // min-height:90vh;
+  justify-content: center;
+  align-items: center;
   .absolutediv {
     display: flex;
     flex-direction: column;
@@ -55,13 +51,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: -10%;
-    margin-top: 30%;
+    // padding-top: -10%;
+    margin-top: 40%;
     position: absolute;
     cursor: pointer;
-    img {
-      width: 350px;
-      height: 70px;
+    #buyicc-button-desktop {
+      height: 64px;
+      width: 337px;
+      background-image: url(/assets/buyicc.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #buyicc-button-desktop {
+      &:hover {
+        background-image: url(/assets/buyicchover.svg);
+      }
     }
   }
 }

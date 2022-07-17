@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './navbar.scss';
 import logo from '../../assets/logo.png';
-import playnow from '../../assets/playnow.svg';
-import playnowhover from '../../assets/playnowhover.svg';
 import { navItems } from '../../data/navItems';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -69,12 +67,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="playButton">
-              <img
-                src={playnow}
-                alt="playnow"
-                onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-                onMouseOut={(e) => (e.currentTarget.src = playnow)}
-              />
+              <div id="play-button-desktop"></div>
             </div>
           </div>
         </div>

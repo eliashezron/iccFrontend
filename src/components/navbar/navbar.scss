@@ -1,23 +1,21 @@
+
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 2rem;
-  height: 160px;
+  height: 163px;
+  padding: 59px 60px 40px 76px;
   scroll-snap-align: start;
-  // background: rgba(0,0,0,0.1);
-  // backdrop-filter: blur(0.8);
-  background: url(/assets/dimbar.svg) no-repeat center !important; /* Set the fixed background overlay */
+  background: url(/assets/dimbar.svg) no-repeat!important; /* Set the fixed background overlay */
   position: relative;
+  width: 100%;
   .navcontainer {
     flex: 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     .logo {
-      padding-right: 20%;
-      padding-left: 3%;
       justify-content: flex-start;
       img {
         width: 158px;
@@ -69,7 +67,7 @@
               font-weight: 900;
               border: none;
               cursor: pointer;
-              text-transform: capitalize;
+              text-transform: uppercase;
               color: white;
               &:hover {
                 background: url(/assets/submenuhover.svg) no-repeat center
@@ -94,9 +92,21 @@
             font-weight: 900;
             border: none;
             cursor: pointer;
-
+            background: none;
+            transition: all 1000ms ease-in-out;
+            
             &:hover {
+              animation: fadeIn 5s ease-in-out;
+              @keyframes fadeIn {
+                0% {
+                  opacity: 0.5;
+                }
+                100% {
+                  opacity: 1;
+                }
+              }
               background: url(/assets/bgbutton.svg) no-repeat center center !important; /* Set the fixed background overlay */
+              } 
             }
           }
         }
@@ -107,14 +117,22 @@
         justify-content: flex-end;
         align-items: center;
         cursor: pointer;
-        img {
+        #play-button-desktop {
           height: 64px;
-          width: 330px;
+          width: 338px;
+          background-image: url(/assets/playnow.svg);
+          transition: all 500ms ease-in-out;
+        }
+    
+        #play-button-desktop {
+          &:hover {
+            background-image: url(/assets/playnowhover.svg);
+          }
         }
       }
     }
   }
-}
+// }
 @media screen and (max-width: 1024px) {
   .navbar {
     .navcontainer {

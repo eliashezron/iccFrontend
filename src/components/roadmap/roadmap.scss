@@ -1,19 +1,17 @@
-.main {
+.mainr{
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-attachment: fixed;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
   height: 100vh;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
-  // margin: 0 0;
-  // margin-top: 50%;
+  // scroll-snap-stop: always;
+  background: url(/assets/bgroadmap.jpg) no-repeat;
+  background-size: cover;
 }
 @media screen and (max-width: 550px) {
-  .main {
+  .mainr{
+    display: flex;
+    flex-direction: column;
     img {
       margin-right: 5%;
       height: 630px;

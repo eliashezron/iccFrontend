@@ -12,6 +12,11 @@ import previous from '../../assets/previous.svg';
 import previoushover from '../../assets/previoushover.svg';
 import { nftItems } from '../../data/nftIteams';
 import { nftItemsScroll } from '../../data/nftIteams';
+import { nftItems } from '../../data/nftIteams';
+import { nftItemsScroll } from '../../data/nftIteams';
+import mintmobile from '../../assets/mintmobile.png';
+import mintmobilehover from '../../assets/mintmobilehover.png';
+
 export default function Nft() {
   const [slideIndex, setSlideIndex] = useState(0);
   const prevSlide = () => {
@@ -40,7 +45,7 @@ export default function Nft() {
   }, [x]);
 
   return (
-    <div className="mainSection">
+    <div className="mainsection">
       <div className="relativediv">
         <div className="title">NFT GENESIS SERIES</div>
         <div className="wording">
@@ -48,12 +53,16 @@ export default function Nft() {
         </div>
 
         <div className="mint">
-          <img
-            src={mintnow}
-            alt="playnow"
-            onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-            onMouseOut={(e) => (e.currentTarget.src = mintnow)}
-          />
+          {mobile ? (
+            <img
+              src={mintmobile}
+              alt="playnow"
+              onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
+              onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
+            />
+          ) : (
+            <div id="mint-button-desktop"></div>
+          )}
         </div>
       </div>
       <div className="sectionA">
@@ -85,8 +94,7 @@ export default function Nft() {
               <div key={item.id} className="item">
                 <img
                   src={item.image}
-                  alt="next"
-                  onClick={nextSlide}
+                  alt="nftimage"
                   onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
                   onMouseOut={(e) => (e.currentTarget.src = item.image)}
                 />
@@ -100,12 +108,11 @@ export default function Nft() {
           {mobile ? (
             <img src={iprevious} alt="playnow" onClick={prevSlide} />
           ) : (
-            <img
-              src={previous}
-              alt="playnow"
+            <div
+              id="nft-previous-button-desktop"
               onClick={prevSlide}
-              onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-              onMouseOut={(e) => (e.currentTarget.src = previous)}
+              // onMouseOver={(e) => (e.currentTarget.src = nexthover)}
+              // onMouseOut={(e) => (e.currentTarget.src = next)}
             />
           )}
         </div>
@@ -138,7 +145,7 @@ export default function Nft() {
         {[...nftItems, nftItemsScroll].map((item, index) => {
           return (
             <div key={index} id="nft">
-              <img src={item.image} alt="next" />
+              {index <= 9 ? <img src={item.image} alt="" /> : null}
             </div>
           );
         })}

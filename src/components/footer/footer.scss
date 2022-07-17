@@ -3,28 +3,39 @@
   flex-direction: column;
   gap: 4rem;
   scroll-snap-align: start;
-  margin-top: 5%;
-  width: 95%;
-  margin: 0 auto;
-  padding-bottom: 1%;
-  margin-top: 5rem;
+  width: 100%;
+  margin: 0px auto;
+  // padding-bottom: 1%;
+  // margin-top: 5rem;
+  background: url(/assets/bgfooter.jpg)no-repeat top;
+  background-size: cover;
   .upper-row {
     display: flex;
     flex-direction: row;
     height: auto;
     .footerimg {
-      img {
-        height: 180px;
-        width: 490px;
+      #footerlogo{
+        height: 188px;
+        width: 468px;
+        background: url(/assets/logo.png);
+        background-size: cover;
+        transition: all 500ms ease-in-out;
       }
+      #footerlogo {
+        &:hover {
+          background: url(/assets/footerlogoicon.png);
+          background-size: cover;
+        }
+    }
     }
     .button-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-
+      padding-right: 50px;
+      border-right: #0bfff0 solid 1px;
       button {
-        width: 200px;
+        width: 240px;
         height: 50px;
         font-family: 'Orbitron';
         font-weight: 900;
@@ -44,13 +55,14 @@
       flex-direction: column;
       align-items: center;
       gap: 1.2rem;
+      // margin-left: -50px;
       .bgc {
         background: url(/assets/bgc.png) no-repeat center !important;
         border-radius: 25px;
-        height: auto;
-        width: auto;
-        padding: 10px;
-        margin-bottom: 10px;
+        height: 134px;
+        width: 400px;
+        // padding: 20px;
+        // margin-bottom: 10px;
         background-clip: text;
         -webkit-background-clip: text;
         p {
@@ -61,28 +73,25 @@
           color: #fff060;
           text-align: center;
           letter-spacing: -0.05em;
-          text-transform: capitalize;
-          padding-bottom: 10px;
+          text-transform: Uppercase;
+          padding-top: 12px;
         }
         .communitybuttons {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
-          a {
-            img {
-              height: 50px;
-              width: 50px;
-            }
-          }
+          justify-content: space-around;
+          padding: 8px;
         }
       }
       button {
+        width: 240px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-self: center;
         line-height: 30px;
-        width: 190px;
-        height: auto;
+        // width: 190px;
+        // height: auto;
         font-family: 'Orbitron';
         font-style: normal;
         font-weight: 900;
@@ -117,6 +126,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0px 97px 121px 103px;
 
     #col-one {
       flex: 2;
@@ -125,6 +135,7 @@
       align-items: flex-start;
 
       h1 {
+        margin-top: 13px;
         font-family: 'Orbitron';
         font-style: normal;
         font-weight: 900;
@@ -144,19 +155,30 @@
       align-items: flex-end;
       gap: 10px;
     }
-    // .h2 {
-    //   img:nth-child(1) {
-    //     padding-right: 15px;
-    //   }
-    // }
-    // img:nth-child(1){
-    //     height: 30px;
-    //     width: 360px;
-    // }
-    // img:nth-child(2){
-    //     height: 80px;
-    //     width: 730px;
-    // }
+    #mint-button-desktop {
+      height: 53px;
+      margin-bottom: 13px;
+      width: 257px;
+      background-image: url(/assets/mintnow.svg);
+      transition: all 500ms ease-in-out;
+    }
+    #mint-button-desktop {
+      &:hover {
+        background-image: url(/assets/mintnowhover.svg);
+      }
+    }
+    #buy-button-desktop {
+      height: 53px;
+      width: 257px;
+      background-image: url(/assets/buyicca.svg);
+      transition: all 500ms ease-in-out;
+    }
+
+    #buy-button-desktop {
+      &:hover {
+        background-image: url(/assets/buyiccahover.svg);
+      }
+    }
   }
 }
 @media screen and (min-width: 480px) {

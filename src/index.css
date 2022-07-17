@@ -23,10 +23,11 @@
 body {
   height: 100vh;
   background: url(./assets/backgroundImage.svg) repeat-y !important;
+  /* background: url(./assets/backgroundImage.svg) repeat-y !important;ss */
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  height: 100vh;
   overflow-y: scroll;
 }
 

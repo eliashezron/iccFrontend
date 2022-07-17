@@ -1,124 +1,174 @@
-.hero {
+.herosection{
+  background: url(/assets/bghome.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  // padding:0 7%;
+.hero{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 160px);
+  height: calc(100vh - 163px);
   scroll-snap-stop: always;
+  padding-left: 150px;
+  .heroContainer{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      max-width: 100%;
+      flex: 1 1 auto;
+      padding-right: 20px;
+      // height: 700px;
+      .theorySection{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          height: 643px;
+          padding-right: 35px;
+          .logoImage{
+            #heroImage{
+              height: 269px;
+              width: 672px;
+              background: url(/assets/logo.png);
+              background-size: cover;
+              transition: all 500ms ease-in-out;
+            }
+            #heroImage {
+              &:hover {
+                background: url(/assets/footerlogoicon.png);
+                background-size: cover;
+              }
+          }
+          }
+          .textfield{
+              display: flex;
+              flex-direction: column;
+              width: 666px;
+              padding-top: 52px;
+              p{
+                  color: #f5f5f5;
+                  font-family: 'Orbitron',sans-serif;
+                  font-size: 18px;
+                  font-weight: 900;
+                  line-height: 20px;
+                  // letter-spacing: 0.1em;
+              }
+              p:nth-child(2){
+                  font-weight: 800;
+                  display: flex;
+                  color: #00FFE0;
+                  align-items: flex-start;
+                  padding-bottom: 52px;
+                  padding-top: 13px;
+              }
+              .inputdv{
+                  width: 100%;
+                  display: flex;
+                  justify-content: flex-start;
+                  flex-direction: column;
+                  .inputdiv{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 5px;
+                  }
+                  img{
+                      cursor: pointer;
+                  }
+                  #copyid {
+                    color: #f5f5f5;
+                    font-family: 'Orbitron',sans-serif;
+                    font-size: 18px;
+                    font-weight: 900;
+                    line-height: 20px;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                    animation: displays 7s forwards;
+                    @keyframes displays{
+                      0%{
+                        opacity: 1;
+                      }
+                      70%{
+                        opacity: 0.8;
+                      }
+                      100%{
 
-  .heroContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    max-width: 100%;
-    flex: 1 1 auto;
-    // height: 700px;
-    .theorySection {
+                        opacity: 0;
+                      }
+                      
+                    }}
+              }
+          }
+          .playButton{
+              cursor:pointer;
+              padding-top: 15px;
+              img{
+                height: 80px;
+                width: 672px;
+              }
+              #playh-button-desktop {
+                height: 80px;
+                width: 672px;
+                background: url(/assets/playnowidle.png);
+                background-size: fit-content;
+                // background-position: center;
+                transition: all 500ms ease-in-out;
+              }
+          
+              #playh-button-desktop {
+                &:hover {
+                  background: url(/assets/playnowidlehover.png);
+                  background-size: cover;
+                }
+              }
+          }
+      }
+      .gifSection{
+          display: flex;
+          iframe{
+              border:#FBC4E6 solid 10px;
+              border-radius: 50px;
+              height: 643px;
+              width: 936px;
+          }
+      }
+      
+  }
+  .socialIcons{
+    // position: absolute;
       display: flex;
       flex-direction: column;
-      padding-left: 20px;
-      .logoImage {
-        img {
-          height: 230px;
-          width: 670px;
-        }
-      }
-      .textfield {
-        display: flex;
-        flex-direction: column;
-        width: 650px;
-        p {
-          color: #f5f5f5;
-          font-family: 'Orbitron', sans-serif;
-          font-size: 18px;
-          font-weight: 900;
-          line-height: 20px;
-          // letter-spacing: -0.1em;
-        }
-        p:nth-child(2) {
-          font-weight: 800;
-          display: flex;
-          color: #00ffe0;
-          align-items: flex-start;
-          padding-top: 50px;
-        }
-        .inputdv {
-          width: 100%;
-          display: flex;
-          justify-content: flex-start;
-          flex-direction: column;
-          padding: 20px 0 10px 0;
-          .icccontract {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            outline: black solid 1px;
-            border-radius: 25px;
-            padding: 5px 8px 5px 5px;
-            margin-top: 10px;
-            p {
-              padding-left: 1%;
-              color: #f5f5f5;
-              font-family: 'Orbitron', sans-serif;
-              font-size: 18px;
-              border-radius: 5px;
-              border: none;
-              box-sizing: border-box;
-            }
-          }
-        }
-      }
-      .playButton {
-        cursor: pointer;
-        img {
-          height: 80px;
-          width: 660px;
-        }
-      }
-    }
-    .gifSection {
-      display: flex;
-      iframe {
-        border: none;
-        border-radius: 25px;
-        height: 640px;
-        width: 930px;
-      }
-    }
-  }
-  .socialIcons {
-    justify-content: center;
-    align-items: center;
-    float: right;
-    right: 0px;
-    width: auto;
-    border-radius: 35px 0 0 35px;
-    height: auto;
-    width: auto;
-    padding: 10px;
-    background: url(/assets/bgsocialsidebar.svg) no-repeat center !important;
-    .communitybuttons {
+      justify-content: center;
+      align-items: center;
       float: right;
-      right: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      flex-direction: row;
-      justify-content: space-evenly;
-      height: 200px;
-      padding: 10px 0px 10px 5px;
-      a {
-        img {
-          height: 50px;
-          width: 50px;
-        }
+      // margin-right: -150px;
+      right: 0 !important;
+      width: auto;
+      height: 318px;
+      width: 90px;
+      background: url(/assets/bgsocialsidebar.svg) no-repeat center!important;
+      transition: all 500ms ease-in-out;
+      .communitybuttons{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          float: right;
+          height: 242px;
+          width: 62px;
+          padding: 20px 10px;
+          margin-right: 12px;
       }
-    }
-    &:hover {
-      background: url(/assets/bgsocialsidebarhover.svg) no-repeat center !important;
-    }
+      &:hover{
+          background: url(/assets/bgsocialsidebarhover.svg) no-repeat center!important;
+
+      }
   }
+}
 }
 @media screen and (min-width: 480px) {
   .mobile-iframe {
@@ -130,63 +180,78 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .herosection{
+    // background: url(/assets/bgmobile.png) no-repeat center center;
+    margin-top: 15%;
   .hero {
     display: flex;
     padding-top: 0;
     flex-direction: column;
     height: 100vh;
     scroll-snap-align: start;
+    padding-left: 0px;
+    padding-right: 0px;
 
     .mobile-nav {
       background: url(/assets/bgc.png) no-repeat center !important;
-      border-radius: 35px;
-      height: 60px;
-      margin-bottom: 10px;
-      width: 90%;
-      color: white;
+      border-radius: 15px;
+      height: 87px;
+      // margin-bottom: 1px;
+      width: 92%;
+      // color: white;
       display: flex;
       flex-direction: row;
       align-items: center;
       padding: 10px;
-      justify-content: center;
-      gap: 2.5rem;
+      justify-content: space-around;
+      position:fixed;
+      bottom: 0;
+      margin-top: 10px;
+      // gap: 2.5rem;
 
-      img {
-        height: 40px;
-        aspect-ratio: 1/1;
-      }
+      // img {
+      //   height: 40px;
+      //   aspect-ratio: 1/1;
+      // }
     }
 
     .heroContainer {
       display: flex;
       flex-direction: column;
       margin-top: 0;
+      padding-right: 0px;
 
       .theorySection {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 0.5rem;
         align-items: center;
         padding: 0;
         margin: 0;
 
         .logoImage {
-          img {
-            height: 100px;
-            width: 300px;
+          margin-top: 20px;
+          #heroImage {
+            height: 128px;
+            width: 326px;
           }
         }
 
         .textfield {
           display: flex;
           flex-direction: column;
-          width: 80%;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
           gap: 0.5rem;
+          padding: 0;
           p {
-            font-size: 13px;
-            letter-spacing: 0.03em;
-            font-weight: 700;
-            line-height: 15px;
+            padding: 10px 49px 0px 49px;
+            font-size: 18px;
+            // letter-spacing: 0.03em;
+            font-weight: 900;
+            line-height: 20px;
             text-align: center;
           }
           p:nth-child(2) {
@@ -194,37 +259,56 @@
           }
 
           .mobile-iframe {
-            display: block;
-            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border:#FBC4E6 solid 5px;
+            border-radius: 25px;
+            height: 212px;
+            width: 90%;
+            margin-top: -40px;
           }
 
           .inputdv {
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             flex-direction: column;
             padding: 5px 0 5px 0;
-            .icccontract {
+            .icccontractx{
+              // background-color: #00FFE0;
               display: flex;
-              outline: black solid 1px;
-              border-radius: 25px;
-              padding: 5px 8px 5px 5px;
-              overflow: hidden;
-              word-wrap: break-word;
-              p {
-                text-align: start;
-                color: #f5f5f5;
-                font-size: 0.68rem;
-                width: 85%;
-                flex-wrap: wrap;
-              }
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
             }
-          }
+            .inputdiv {
+              display: flex;
+              justify-content: space-around;
+            }
+            #copyid{
+              margin-right: 10px;
+              bottom: 0;
+            }
+         }
         }
         .playButton {
-          img {
-            height: 25px;
-            width: 320px;
+          margin-top: -10px;
+          #playmobile-button-desktop {
+            height: 52px;
+            width: 382px;
+            background: url(/assets/playnowmobile.png);
+            background-size: fit-content;
+            // background-position: center;
+            transition: all 500ms ease-in-out;
+          }
+      
+          #playmobile-button-desktop {
+            &:hover {
+              background: url(/assets/playnowhovermobile.png);
+              background-size: cover;
+            }
           }
         }
       }
@@ -237,4 +321,5 @@
       display: none;
     }
   }
+}
 }

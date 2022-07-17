@@ -1,19 +1,9 @@
 import "./App.css"
-import {
-  NavBar,
-  RoadMap,
-  Hero,
-  Footer,
-  Nft,
-  Team,
-  Coin,
-  GamePlay,
-} from "./components"
+import { RoadMap, Hero, Footer, Nft, Team, Coin, GamePlay } from "./components"
 
 function App() {
   return (
     <div className='App'>
-      <NavBar />
       <Hero />
       <GamePlay />
       <Nft />

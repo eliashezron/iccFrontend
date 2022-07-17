@@ -4,7 +4,10 @@
   scroll-snap-align: start;
   scroll-snap-stop: always;
   width: 100vw;
-  margin-top: 20%;
+  // margin-top: 20%;
+  background: url(/assets/bgteam.jpg) no-repeat center;
+  background-size: cover;
+
 
   .absolutediv {
     display: flex;
