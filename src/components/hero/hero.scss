@@ -10,11 +10,13 @@ section#hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 
   div#hero {
     height: calc(100vh - 130px);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 90%;
     margin-top: 10px;
   }
@@ -112,6 +114,20 @@ section#hero {
     #play-now-button {
       height: 40px;
       width: 100%;
+    }
+
+    .social-icons {
+      display: none;
+      // right: 0;
+      // width: auto;
+      // height: 250px;
+      // width: 50px;
+      // border-top-left-radius: 40px;
+      // border-bottom-left-radius: 40px;
+      // img {
+      //   height: 30px;
+      //   aspect-ratio: 1/1;
+      // }
     }
   }
 

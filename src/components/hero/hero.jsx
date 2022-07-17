@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './hero.scss';
-// import opensea from '../../assets/openseaicon.png';
-// import discord from '../../assets/discordicon.png';
-// import twitter from '../../assets/twittericon.png';
+import twitter from '../../assets/twittericon.png';
+import discord from '../../assets/discordicon.png';
+import opensea from '../../assets/openseaicon.png';
 import copy from '../../assets/iccaddress.png';
 import copyM from '../../assets/copymobiletoken.png';
 import home from '../../assets/homeicon.png';
@@ -77,19 +77,19 @@ export default function Hero() {
             ></iframe>
           </div>
         </div>
-        {/* <div className="social-icons">
-            <div className="community-buttons">
-              <a href="#home">
-                <img src={opensea} alt="opensea" />
-              </a>
-              <a href="#home">
-                <img src={twitter} alt="discord" />
-              </a>
-              <a href="#home">
-                <img src={discord} alt="twitter" />
-              </a>
-            </div>
-          </div> */}
+        <div className="social-icons">
+          <div className="community-buttons">
+            <a href="#home">
+              <img src={opensea} alt="opensea" />
+            </a>
+            <a href="#home">
+              <img src={twitter} alt="discord" />
+            </a>
+            <a href="#home">
+              <img src={discord} alt="twitter" />
+            </a>
+          </div>
+        </div>
         <div id="mobile-nav">
           <img
             src={home}
