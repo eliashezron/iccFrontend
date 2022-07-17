@@ -47,10 +47,31 @@ export default function GamePlay() {
           your personal skills.<br></br>Challenge yourself with our modes: Play
           To Earn & Free Play to win rewards.
         </p>
+        {/* 
+        @media screen and (min-width: 1600px) {
+  .upper-row {
+    #running-man-img {
+      height: 800px !important;
+      width: 750px !important;
+    }
+
+    #blueman-img {
+      margin-top: 45px !important;
+      height: 200px;
+      width: 400px;
+    }
+
+    .blueman {
+      display: flex;
+      flex-direction: column;
+      margin-right: 5rem;
+    }
+  }
+} */}
         <div className="upper-row">
           <div
             id="running-man-img"
-            className={slideIndex === 0 ? 'active' : ''}
+            className={` ${slideIndex === 0 ? 'active' : ''}`}
           />
           <div className="blueman">
             <div

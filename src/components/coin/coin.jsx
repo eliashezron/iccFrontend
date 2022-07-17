@@ -24,7 +24,7 @@ export default function Coin() {
             backgroundImage: `url(${mcoin})`,
           }}
         />
-        <div id="buy-icc-button" />
+        {/* <div id="buy-icc-button" /> */}
       </div>
     </section>
   );

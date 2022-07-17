@@ -101,8 +101,16 @@ export default function Hero() {
             alt=""
             onClick={() => window.location.replace('/#nft-genesis')}
           />
-          <img src={earn} alt="" />
-          <img src={trade} alt="" />
+          <img
+            src={earn}
+            onClick={() => window.location.replace('/#game-play')}
+            alt=""
+          />
+          <img
+            src={trade}
+            onClick={() => window.location.replace('/#coin')}
+            alt=""
+          />
           <img src={more} alt="" />
         </div>
       </div>

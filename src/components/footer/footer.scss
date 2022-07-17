@@ -1,7 +1,28 @@
+#mint-button-desktop {
+  background-image: url(/assets/mintnow.svg);
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-image: url(/assets/mintnowhover.svg);
+  }
+}
+#buy-button-desktop {
+  background-image: url(/assets/buyicca.svg);
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-image: url(/assets/buyiccahover.svg);
+  }
+}
+
 section#footer {
-  height: 70vh;
+  height: 50vh;
 
   background-image: url(/assets/bgfooter.jpg);
+
+  .container {
+    width: 95%;
+  }
 
   .upper-row {
     display: flex;
@@ -164,36 +185,6 @@ section#footer {
 
       .btn-col {
         width: 40%;
-        #mint-button-desktop {
-          height: 40px;
-          width: 100%;
-          margin-bottom: 13px;
-          background-image: url(/assets/mintnow.svg);
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-          transition: all 500ms ease-in-out;
-          cursor: pointer;
-
-          &:hover {
-            background-image: url(/assets/mintnowhover.svg);
-          }
-        }
-
-        #buy-button-desktop {
-          height: 40px;
-          width: 100%;
-          background-image: url(/assets/buyicca.svg);
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-          transition: all 500ms ease-in-out;
-          cursor: pointer;
-
-          &:hover {
-            background-image: url(/assets/buyiccahover.svg);
-          }
-        }
       }
     }
   }

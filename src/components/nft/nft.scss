@@ -2,14 +2,9 @@ section#nft-genesis {
   background-image: url(/assets/bgnft.jpg);
 
   #mint-button-desktop {
-    margin-left: auto;
-    margin-top: -80px;
-    height: 50px;
-    width: 350px;
     background-image: url(/assets/mintnowthover.png);
     transition: all 500ms ease-in;
     background-repeat: no-repeat;
-    margin-bottom: 1rem;
     background-position: center;
     background-size: contain;
     cursor: pointer;
@@ -26,13 +21,6 @@ section#nft-genesis {
   .nft-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    .grid-item {
-      img {
-        width: 220px;
-        height: 200px;
-      }
-    }
   }
   .lower-row {
     display: flex;
@@ -47,10 +35,6 @@ section#nft-genesis {
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      img {
-        height: 50px;
-        width: 250px;
-      }
     }
     // ================================================================  button fade
     #nft-next-button-desktop {
@@ -108,6 +92,82 @@ section#nft-genesis {
 @media screen and (min-width: 480px) {
   #mobile-carousel {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  //============================================ min 1020
+  section#nft-genesis {
+    div.container {
+      width: 100%;
+    }
+    #mint-button-desktop {
+      margin-left: auto;
+      height: 40px;
+      width: 250px;
+      margin-top: -50px;
+      margin-right: 75px;
+    }
+    .desktop-carousel {
+      width: 90%;
+      margin: 2rem 0;
+    }
+
+    .nft-grid {
+      display: grid;
+      .grid-item {
+        img {
+          width: 220px;
+          height: 200px;
+        }
+      }
+    }
+    .lower-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .directionbuttonL,
+      .directionbuttonR {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img {
+          height: 40px;
+          width: 200px;
+        }
+      }
+
+      #nft-next-button-desktop {
+        height: 50px;
+        width: 255px;
+      }
+
+      #nft-previous-button-desktop {
+        height: 50px;
+        width: 255px;
+      }
+    }
+
+    .middlebuttons {
+      img {
+        height: 26px;
+        width: 150px;
+        padding-right: 20px;
+        transition: all ease-in-out 550ms;
+      }
+
+      .pink-rectangle-translate {
+        transform: translateX(150px);
+      }
+
+      .blue-rectangle-translate {
+        transform: translateX(-150px);
+      }
+    }
   }
 }
 

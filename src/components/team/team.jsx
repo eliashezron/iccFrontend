@@ -4,9 +4,9 @@ import { teamItems } from '../../data/teamItems';
 export default function Team() {
   return (
     <section id="core-team">
-      <div className="container">
-        <h1>CORE TEAM</h1>
-        <p>
+      <div className="container tw-gap-5">
+        <h1 className="tw-text-2xl">CORE TEAM</h1>
+        <p className="tw-text-base tw-w-[90%]">
           The team always plays an important role in the success of a project.
           <br></br>
           As a team, we have been working with each other for long time, with

@@ -1,85 +1,66 @@
-.upper-row {
-  display: flex;
-  gap: 5rem;
-  height: 62vh;
-  #running-man-img {
-    background-image: url(/assets/runningman.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
-    height: 500px;
-    width: 900px;
-    transition-delay: none;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/runningman2.png);
-    }
-  }
-
-  #blueman-img {
-    background-image: url(/assets/bueman.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    height: 240px;
-    width: 430px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/blueman2.png);
-    }
-  }
-
-  .blueman {
-    display: flex;
-    flex-direction: column;
-    .freeplay {
-      color: #0bfff0;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      font-size: 30px;
-      line-height: 24px;
-      letter-spacing: -0.02em;
-      margin: 20px 0;
-      position: relative;
-
-      div {
-        position: absolute;
-        width: 100%;
-        transition: all 550ms ease-in-out;
-      }
-    }
-    .words {
-      margin-top: 15px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 800;
-      font-size: 15px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #0bfff0;
-    }
-    .watchButton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      img {
-        height: 60px;
-        width: 270px;
-      }
-    }
-  }
-}
-
-#watch-button-mobile {
-  display: none;
-}
-
 section#game-play {
   background-image: url(/assets/bggameplay.jpg);
+  .upper-row {
+    display: flex;
+    #running-man-img {
+      background-image: url(/assets/runningman.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition-delay: none;
+      transition: all 400ms ease-in-out;
+      &.active {
+        background-image: url(/assets/runningman2.png);
+      }
+    }
+
+    #blueman-img {
+      background-image: url(/assets/bueman.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: all 400ms ease-in-out;
+      &.active {
+        background-image: url(/assets/blueman2.png);
+      }
+    }
+
+    .blueman {
+      display: flex;
+      flex-direction: column;
+      .freeplay {
+        color: #0bfff0;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 900;
+        position: relative;
+
+        div {
+          position: absolute;
+          width: 100%;
+          transition: all 550ms ease-in-out;
+        }
+      }
+      .words {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 800;
+        text-align: center;
+        color: #0bfff0;
+      }
+      .watchButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+    }
+  }
+
+  #watch-button-mobile {
+    display: none;
+  }
 
   .sectionB {
     display: flex;
@@ -89,8 +70,6 @@ section#game-play {
     width: 100%;
 
     #nft-next-button-desktop {
-      height: 45px;
-      width: 230px;
       background-image: url(/assets/next.svg);
       transition: all 500ms ease-in-out;
       background-repeat: no-repeat;
@@ -102,8 +81,6 @@ section#game-play {
       }
     }
     #nft-previous-button-desktop {
-      height: 45px;
-      width: 230px;
       background-image: url(/assets/previous.svg);
       transition: all 500ms ease-in-out;
       background-repeat: no-repeat;
@@ -138,6 +115,118 @@ section#game-play {
   }
 }
 
+@media screen and (min-width: 1020px) {
+  section#game-play {
+    div.container {
+      width: 100%;
+    }
+    .upper-row {
+      display: flex;
+      gap: 5rem;
+      height: 62vh;
+      #running-man-img {
+        height: 500px;
+        width: 650px;
+      }
+
+      #blueman-img {
+        margin-top: 45px;
+        height: 200px;
+        width: 400px;
+      }
+
+      .blueman {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10rem;
+        .freeplay {
+          font-size: 1.45rem;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          margin: 20px 0;
+
+          div {
+            width: 100%;
+          }
+        }
+        .words {
+          margin-top: 15px;
+          font-size: 0.9rem;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #0bfff0;
+        }
+        .watchButton {
+          img {
+            height: 60px;
+            width: 220px;
+          }
+        }
+      }
+    }
+
+    #watch-button-mobile {
+      display: none;
+    }
+
+    .sectionB {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      #nft-next-button-desktop {
+        height: 45px;
+        width: 230px;
+        background-image: url(/assets/next.svg);
+        transition: all 500ms ease-in-out;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        &:hover {
+          background-image: url(/assets/hovernext.svg);
+        }
+      }
+      #nft-previous-button-desktop {
+        height: 45px;
+        width: 230px;
+        background-image: url(/assets/previous.svg);
+        transition: all 500ms ease-in-out;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+
+        &:hover {
+          background-image: url(/assets/previoushover.svg);
+        }
+      }
+      .middlebuttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 3s;
+        img {
+          height: 26px;
+          width: 150px;
+          padding-right: 20px;
+          transition: all ease-in-out 550ms;
+        }
+
+        .pink-rectangle-translate {
+          transform: translateX(150px);
+        }
+
+        .blue-rectangle-translate {
+          transform: translateX(-150px);
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 480px) {
   section#game-play {
     justify-content: center;

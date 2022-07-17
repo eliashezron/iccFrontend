@@ -5,8 +5,18 @@ section#road-map {
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      width: 80%;
-      height: 80%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  section#road-map {
+    div.container {
+      width: 100%;
+      div#road-map-img-desktop {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
