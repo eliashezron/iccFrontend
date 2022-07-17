@@ -1,111 +1,50 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  scroll-snap-align: start;
-  width: 100vw;
-  background: url(/assets/bgcoin.jpg) no-repeat center;
-  background-size: cover;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  .absolutediv {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30%;
-    // position: absolute;
-    .title {
-      font-size: 64px;
-      line-height: 80px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      color: #fff060;
-      text-align: center;
-      letter-spacing: -0.05em;
-      text-transform: capitalize;
-    }
-    .wording {
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-      padding-bottom: 10%;
+section#icc-coin {
+  background-image: url(/assets/bgcoin.jpg);
+  div.container {
+    div {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 80%;
+      height: 70%;
+      // background-color: red;
     }
   }
-  .imgdiv {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    padding-right: 5%;
-    img {
-      height: 800px;
-      width: auto;
-    }
-  }
-  .buybutton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // padding-top: -10%;
-    margin-top: 40%;
-    position: absolute;
-    cursor: pointer;
-    #buyicc-button-desktop {
-      height: 64px;
-      width: 337px;
-      background-image: url(/assets/buyicc.svg);
-      transition: all 500ms ease-in-out;
-    }
 
-    #buyicc-button-desktop {
-      &:hover {
-        background-image: url(/assets/buyicchover.svg);
-      }
+  #buy-icc-button {
+    cursor: pointer;
+    height: 40px;
+    width: 250px;
+    background-image: url(/assets/buyicc.svg);
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-image: url(/assets/buyicchover.svg);
     }
   }
 }
-@media screen and (max-width: 480px) {
-  .main {
-    gap: 1.5rem;
-    .absolutediv {
-      gap: 1.5rem;
-      position: unset;
-      margin: 0px;
-      .title {
-        font-size: 24px;
-        line-height: 0px;
-        // background-color: red;
-      }
-      .wording {
-        font-size: 13px;
-        line-height: 20px;
-        white-space: normal;
-        letter-spacing: 0.04em;
-        padding-bottom: 0px;
-      }
-    }
-    .imgdivcoin {
-      img {
-        transform: rotate(360deg);
-        height: 450px;
-        width: auto;
-      }
-    }
-    .buybutton {
-      margin-left: 0;
-      margin-right: 0;
-      position: unset;
-      margin-top: 0;
 
-      img {
-        width: 400px;
-        height: 50px;
-      }
+@media (min-width: 600px) {
+  div.container {
+    div#icc-coin-img-mobile {
+      display: none;
+    }
+
+    div#icc-coin-img-desktop {
+      margin-top: -8rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div.container {
+    div#icc-coin-img-desktop {
+      display: none;
+    }
+    div#icc-coin-img-mobile {
+      height: 55% !important;
+      width: 100% !important;
+      margin-bottom: 1rem;
     }
   }
 }

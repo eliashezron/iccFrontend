@@ -1,32 +1,28 @@
-.mainr{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  scroll-snap-align: start;
-  // scroll-snap-stop: always;
-  background: url(/assets/bgroadmap.jpg) no-repeat;
-  background-size: cover;
-}
-@media screen and (max-width: 550px) {
-  .mainr{
-    display: flex;
-    flex-direction: column;
-    img {
-      margin-right: 5%;
-      height: 630px;
-      width: 380px;
+section#road-map {
+  background-image: url(/assets/bgroadmap.jpg);
+  div.container {
+    div {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 80%;
+      height: 80%;
     }
+  }
+}
 
-    .road-map-title {
-      font-size: 24px;
-      line-height: 20px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      color: #fff060;
-      text-align: center;
-      letter-spacing: -0.05em;
-      padding-bottom: 10px;
+@media (min-width: 600px) {
+  div.container {
+    div#road-map-img-mobile {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  div.container {
+    div#road-map-img-desktop {
+      display: none;
     }
   }
 }

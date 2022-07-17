@@ -1,12 +1,11 @@
-
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 163px;
-  padding: 59px 60px 40px 76px;
+  height: 130px;
+  padding: 0 50px;
   scroll-snap-align: start;
-  background: url(/assets/dimbar.svg) no-repeat!important; /* Set the fixed background overlay */
+  background: url(/assets/dimbar.svg) no-repeat !important; /* Set the fixed background overlay */
   position: relative;
   width: 100%;
   .navcontainer {
@@ -94,8 +93,9 @@
             cursor: pointer;
             background: none;
             transition: all 1000ms ease-in-out;
-            
+
             &:hover {
+              color: white;
               animation: fadeIn 5s ease-in-out;
               @keyframes fadeIn {
                 0% {
@@ -106,32 +106,35 @@
                 }
               }
               background: url(/assets/bgbutton.svg) no-repeat center center !important; /* Set the fixed background overlay */
-              } 
             }
           }
         }
       }
+    }
 
-      .playButton {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        cursor: pointer;
-        #play-button-desktop {
-          height: 64px;
-          width: 338px;
-          background-image: url(/assets/playnow.svg);
-          transition: all 500ms ease-in-out;
-        }
-    
-        #play-button-desktop {
-          &:hover {
-            background-image: url(/assets/playnowhover.svg);
-          }
+    .playButton {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      #play-button-desktop {
+        height: 55px;
+        width: 280px;
+        background-image: url(/assets/playnow.svg);
+        transition: all 500ms ease-in-out;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      #play-button-desktop {
+        &:hover {
+          background-image: url(/assets/playnowhover.svg);
         }
       }
     }
   }
+}
 // }
 @media screen and (max-width: 1024px) {
   .navbar {

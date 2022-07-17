@@ -29,6 +29,7 @@ body {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .scale-up-center {
