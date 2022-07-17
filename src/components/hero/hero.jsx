@@ -73,7 +73,7 @@ export default function Hero() {
             <iframe
               className="tw-rounded-[25px] tw-hidden md:tw-block tw-h-full tw-w-full tw-border-[5px] tw-border-[#fbc4e6]"
               title="icc video"
-              // src="https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0"
+              src="https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0"
             ></iframe>
           </div>
         </div>
