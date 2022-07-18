@@ -49,23 +49,21 @@ export default function GamePlay() {
           your personal skills.<br></br>Challenge yourself with our modes: Play
           To Earn & Free Play to win rewards.
         </p>
-        <div className="upper-row">
-          {/* height: 500px;
-        width: 650px; */}
+        <div className="upper-row 3xl:tw-w-[90%] tw-mr-auto">
           <div
             id="running-man-img"
-            className={`2xl:tw-w-[900px] 2xl:tw-h-[600px] 3xl:tw-w-[1000px] 3xl:tw-h-[780px] ${
+            className={`2xl:tw-w-[900px] 2xl:tw-h-[600px] 3xl:tw-w-[1600px] 3xl:tw-h-[780px] ${
               slideIndex === 0 ? 'active' : ''
             }`}
           />
-          <div className="blueman">
+          <div className="tw-hidden md:tw-flex tw-flex-col tw-items-center tw-justify-center ">
             <div
               id="blueman-img"
               className={`2xl:tw-w-[900px] 2xl:tw-h-[600px] 3xl:tw-w-[500px] 3xl:tw-h-[300px]
               ${slideIndex === 0 ? 'active' : ''}`}
             />
 
-            <div className="tw-text-[#0bfff0] tw-relative 3xl:tw-text-[1.4rem] tw-font-medium tw-tracking-wider tw-leading-7 tw-mt-2 tw-mb-5">
+            <div className="tw-text-[#0bfff0] tw-w-full tw-relative 3xl:tw-text-[1.4rem] tw-font-medium tw-tracking-wider tw-leading-7 tw-mt-2 tw-mb-5">
               <div
                 className={`tw-absolute tw-w-full delay ${
                   slideIndex === 0 ? 'tw-opacity-100' : 'tw-opacity-0'
@@ -97,7 +95,7 @@ export default function GamePlay() {
           </div>
         </div>
 
-        <div className="sectionB">
+        <div className="sectionB 3xl:-tw-mt-10">
           <div className="directionbuttonL">
             {mobile ? (
               <img src={iprevious} alt="playnow" onClick={prevSlide} />
