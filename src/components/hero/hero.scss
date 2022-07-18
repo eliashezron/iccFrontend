@@ -1,325 +1,152 @@
-.herosection{
-  background: url(/assets/bghome.jpg) no-repeat center center;
-  background-size: cover;
+section#hero {
+  background-image: url(/assets/bghome.jpg);
   height: 100vh;
   display: flex;
+  width: 100vw;
   flex-direction: column;
-  position: relative;
-  justify-content: center;
-  // padding:0 7%;
-.hero{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 163px);
+  justify-content: flex-start;
+  scroll-snap-align: start;
   scroll-snap-stop: always;
-  padding-left: 150px;
-  .heroContainer{
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-direction: row;
-      max-width: 100%;
-      flex: 1 1 auto;
-      padding-right: 20px;
-      // height: 700px;
-      .theorySection{
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          height: 643px;
-          padding-right: 35px;
-          .logoImage{
-            #heroImage{
-              height: 269px;
-              width: 672px;
-              background: url(/assets/logo.png);
-              background-size: cover;
-              transition: all 500ms ease-in-out;
-            }
-            #heroImage {
-              &:hover {
-                background: url(/assets/footerlogoicon.png);
-                background-size: cover;
-              }
-          }
-          }
-          .textfield{
-              display: flex;
-              flex-direction: column;
-              width: 666px;
-              padding-top: 52px;
-              p{
-                  color: #f5f5f5;
-                  font-family: 'Orbitron',sans-serif;
-                  font-weight: 900;
-                  font-size: 18px;
-                  line-height: 20px;
-                  // letter-spacing: 0.1em;
-              }
-              p:nth-child(2){
-                  font-weight: 800;
-                  display: flex;
-                  color: #00FFE0;
-                  align-items: flex-start;
-                  padding-bottom: 52px;
-                  padding-top: 13px;
-              }
-              .inputdv{
-                  width: 100%;
-                  display: flex;
-                  justify-content: flex-start;
-                  flex-direction: column;
-                  .inputdiv{
-                    display: flex;
-                    justify-content: space-between;
-                    padding-bottom: 5px;
-                  }
-                  img{
-                      cursor: pointer;
-                  }
-                  #copyid {
-                    color: #f5f5f5;
-                    font-family: 'Orbitron',sans-serif;
-                    font-size: 18px;
-                    font-weight: 900;
-                    line-height: 20px;
-                    justify-content: flex-end;
-                    align-items: flex-end;
-                    animation: displays 7s forwards;
-                    @keyframes displays{
-                      0%{
-                        opacity: 1;
-                      }
-                      70%{
-                        opacity: 0.8;
-                      }
-                      100%{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 
-                        opacity: 0;
-                      }
-                      
-                    }}
-              }
-          }
-          .playButton{
-              cursor:pointer;
-              padding-top: 15px;
-              img{
-                height: 80px;
-                width: 672px;
-              }
-              #playh-button-desktop {
-                height: 80px;
-                width: 672px;
-                background: url(/assets/playnowidle.png);
-                background-size: fit-content;
-                // background-position: center;
-                transition: all 500ms ease-in-out;
-              }
-          
-              #playh-button-desktop {
-                &:hover {
-                  background: url(/assets/playnowidlehover.png);
-                  background-size: cover;
-                }
-              }
-          }
-      }
-      .gifSection{
-          display: flex;
-          iframe{
-              border:#FBC4E6 solid 10px;
-              border-radius: 50px;
-              height: 643px;
-              width: 936px;
-          }
-      }
-      
+  div#hero {
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-top: 10px;
   }
-  .socialIcons{
-    // position: absolute;
+
+  div.container {
+    height: 100%;
+  }
+
+  #play-now-button {
+    height: 80px;
+    width: 500px;
+    background-image: url(/assets/playnowidle.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &:hover {
+      background-image: url(/assets/playnowidlehover.png);
+    }
+  }
+
+  #hero-image {
+    height: 230px;
+    width: 580px;
+    background-image: url(/assets/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-image: url(/assets/footerlogoicon.png);
+    }
+  }
+
+  // height: calc(100vh - 163px);
+
+  .social-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: 318px;
+    width: 65px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background: url(/assets/bgsocialsidebar.svg) no-repeat center !important;
+    transition: all 500ms ease-in-out;
+    .community-buttons {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
       float: right;
-      // margin-right: -150px;
-      right: 0 !important;
-      width: auto;
-      height: 318px;
-      width: 90px;
-      background: url(/assets/bgsocialsidebar.svg) no-repeat center!important;
-      transition: all 500ms ease-in-out;
-      .communitybuttons{
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          float: right;
-          height: 242px;
-          width: 62px;
-          padding: 20px 10px;
-          margin-right: 12px;
-      }
-      &:hover{
-          background: url(/assets/bgsocialsidebarhover.svg) no-repeat center!important;
-
-      }
+      height: 242px;
+      width: 62px;
+      padding: 20px 10px;
+      margin-right: 12px;
+    }
+    &:hover {
+      background: url(/assets/bgsocialsidebarhover.svg) no-repeat center !important;
+    }
   }
-}
 }
 @media screen and (min-width: 480px) {
   .mobile-iframe {
     display: none;
   }
 
-  .mobile-nav {
+  #mobile-nav {
     display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  .herosection{
-    // background: url(/assets/bgmobile.png) no-repeat center center;
-    margin-top: 15%;
-  .hero {
-    display: flex;
-    padding-top: 0;
-    flex-direction: column;
+  div#hero {
     height: 100vh;
-    scroll-snap-align: start;
-    padding-left: 0px;
-    padding-right: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px !important;
 
-    .mobile-nav {
-      background: url(/assets/bgc.png) no-repeat center !important;
-      border-radius: 15px;
-      height: 87px;
-      // margin-bottom: 1px;
-      width: 92%;
-      // color: white;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 10px;
-      justify-content: space-around;
-      position:fixed;
-      bottom: 0;
-      margin-top: 10px;
-      // gap: 2.5rem;
+    #hero-image {
+      height: 150px;
+      width: 100%;
+    }
 
+    .mobile-iframe {
+      height: 30vh;
+    }
+
+    #play-now-button {
+      height: 40px;
+      width: 100%;
+    }
+
+    .social-icons {
+      display: none;
+      // right: 0;
+      // width: auto;
+      // height: 250px;
+      // width: 50px;
+      // border-top-left-radius: 40px;
+      // border-bottom-left-radius: 40px;
       // img {
-      //   height: 40px;
+      //   height: 30px;
       //   aspect-ratio: 1/1;
       // }
     }
+  }
 
-    .heroContainer {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0;
-      padding-right: 0px;
+  #mobile-nav {
+    background: url(/assets/bgc.png) no-repeat center;
+    border-radius: 25px;
+    height: 80px;
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    bottom: 10px;
+    position: absolute;
 
-      .theorySection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-
-        .logoImage {
-          margin-top: 20px;
-          #heroImage {
-            height: 128px;
-            width: 326px;
-          }
-        }
-
-        .textfield {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          gap: 0.5rem;
-          padding: 0;
-          p {
-            padding: 10px 49px 0px 49px;
-            font-size: 18px;
-            // letter-spacing: 0.03em;
-            font-weight: 900;
-            line-height: 20px;
-            text-align: center;
-          }
-          p:nth-child(2) {
-            padding-top: 5px;
-          }
-
-          .mobile-iframe {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border:#FBC4E6 solid 5px;
-            border-radius: 25px;
-            height: 212px;
-            width: 90%;
-            margin-top: -40px;
-          }
-
-          .inputdv {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 5px 0 5px 0;
-            .icccontractx{
-              // background-color: #00FFE0;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-            }
-            .inputdiv {
-              display: flex;
-              justify-content: space-around;
-            }
-            #copyid{
-              margin-right: 10px;
-              bottom: 0;
-            }
-         }
-        }
-        .playButton {
-          margin-top: -10px;
-          #playmobile-button-desktop {
-            height: 52px;
-            width: 382px;
-            background: url(/assets/playnowmobile.png);
-            background-size: fit-content;
-            // background-position: center;
-            transition: all 500ms ease-in-out;
-          }
-      
-          #playmobile-button-desktop {
-            &:hover {
-              background: url(/assets/playnowhovermobile.png);
-              background-size: cover;
-            }
-          }
-        }
-      }
-      .gifSection {
-        display: none;
-      }
-    }
-
-    .socialIcons {
-      display: none;
+    img {
+      height: 45px;
+      aspect-ratio: 1/1;
     }
   }
-}
 }

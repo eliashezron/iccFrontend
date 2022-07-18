@@ -1,9 +1,64 @@
-.App{
-  scroll-snap-type: y mandatory; 
+.App {
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+footer,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section div.container {
+  border: 1px solid gray;
+  height: 95%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+section div.container h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  color: #fff060;
+}
+
+section div.container p {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 1600px) {
+  .App {
+    scroll-snap-type: y mandatory;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .App {
+    scroll-snap-type: y mandatory;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .App {
+    scroll-snap-type: y mandatory;
+  }
 }

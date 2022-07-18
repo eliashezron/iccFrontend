@@ -1,134 +1,65 @@
-.bgb{
-  background: url(/assets/bggameplay.jpg) no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-}
-
-.upper-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  height: 62vh;
-  width: 100%;
-  left: 0;
-  margin-bottom: -100px;
-  // float:left;
-  #running-man-img {
-    background-image: url(/assets/runningman.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    float: 0;
-    left: 0;
+section#game-play {
+  background-image: url(/assets/bggameplay.jpg);
+  .upper-row {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-size: contain;
-    height: 630px;
-    width: 966px;
-    transition-delay: none;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/runningman2.png);
+    #running-man-img {
+      background-image: url(/assets/runningman.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition-delay: none;
+      transition: all 400ms ease-in-out;
+      &.active {
+        background-image: url(/assets/runningman2.png);
+      }
     }
-  }
 
-  #blueman-img {
-    background-image: url(/assets/bueman.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    height: 250px;
-    width: 430px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    // margin-right: 250px;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/blueman2.png);
+    #blueman-img {
+      background-image: url(/assets/bueman.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: contain;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transition: all 400ms ease-in-out;
+      &.active {
+        background-image: url(/assets/blueman2.png);
+      }
     }
-  }
 
-  .blueman {
-    margin-right: 250px;
-    .freeplay {
+    .blueman {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0bfff0;
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 30px;
-      line-height: 24px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: -0.02em;
-      margin-top: 30px;
-    }
-    .words {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 15px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #0bfff0;
-      padding: 10px 0;
-    }
-    .watchButton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      img {
-        height: 70px;
-        width: 330px;
+      flex-direction: column;
+      .freeplay {
+        color: #0bfff0;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 900;
+        position: relative;
+
+        div {
+          position: absolute;
+          width: 100%;
+          transition: all 550ms ease-in-out;
+        }
+      }
+      .words {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 800;
+        text-align: center;
+        color: #0bfff0;
+      }
+      .watchButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
       }
     }
   }
-}
 
-#watch-button-mobile {
-  display: none;
-}
-
-.bgb {
-  background: url(/assets/bggameplay.jpg) no-repeat center center;
-  background-size: cover;  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  padding-top: 210px;
-  position: relative;
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 80px;
-    font-size: 64px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    color: #fff060;
-    text-align: center;
-    -webkit-text-stroke: 1.3px #fff060;
-    // letter-spacing: -0.05em;
-  }
-  .wording {
-    font-family: 'Orbitron', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    padding-bottom: 15px;
+  #watch-button-mobile {
+    display: none;
   }
 
   .sectionB {
@@ -136,27 +67,27 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 
     #nft-next-button-desktop {
-      height: 50px;
-      width: 255px;
       background-image: url(/assets/next.svg);
       transition: all 500ms ease-in-out;
-    }
-
-    #nft-next-button-desktop {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
       &:hover {
         background-image: url(/assets/hovernext.svg);
       }
     }
     #nft-previous-button-desktop {
-      height: 50px;
-      width: 255px;
       background-image: url(/assets/previous.svg);
       transition: all 500ms ease-in-out;
-    }
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
 
-    #nft-previous-button-desktop {
       &:hover {
         background-image: url(/assets/previoushover.svg);
       }
@@ -184,23 +115,123 @@
   }
 }
 
+@media screen and (min-width: 1020px) {
+  section#game-play {
+    div.container {
+      width: 100%;
+    }
+    .upper-row {
+      display: flex;
+      gap: 5rem;
+      height: 62vh;
+      #running-man-img {
+        height: 500px;
+        width: 650px;
+      }
+
+      #blueman-img {
+        margin-top: 45px;
+        height: 200px;
+        width: 400px;
+      }
+
+      .blueman {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10rem;
+        .freeplay {
+          font-size: 1.45rem;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          margin: 20px 0;
+
+          div {
+            width: 100%;
+          }
+        }
+        .words {
+          margin-top: 15px;
+          font-size: 0.9rem;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #0bfff0;
+        }
+        .watchButton {
+          img {
+            height: 60px;
+            width: 220px;
+          }
+        }
+      }
+    }
+
+    #watch-button-mobile {
+      display: none;
+    }
+
+    .sectionB {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      #nft-next-button-desktop {
+        height: 45px;
+        width: 230px;
+        background-image: url(/assets/next.svg);
+        transition: all 500ms ease-in-out;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+        &:hover {
+          background-image: url(/assets/hovernext.svg);
+        }
+      }
+      #nft-previous-button-desktop {
+        height: 45px;
+        width: 230px;
+        background-image: url(/assets/previous.svg);
+        transition: all 500ms ease-in-out;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+
+        &:hover {
+          background-image: url(/assets/previoushover.svg);
+        }
+      }
+      .middlebuttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 3s;
+        img {
+          height: 26px;
+          width: 150px;
+          padding-right: 20px;
+          transition: all ease-in-out 550ms;
+        }
+
+        .pink-rectangle-translate {
+          transform: translateX(150px);
+        }
+
+        .blue-rectangle-translate {
+          transform: translateX(-150px);
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 480px) {
-  .bgb {
+  section#game-play {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 0;
-    .title {
-      font-size: 24px;
-      line-height: 36px;
-    }
-    .wording {
-      padding: 0 15px;
-      font-size: 18px;
-      line-height: 22px;
-      white-space: normal;
-      letter-spacing: 0.035em;
-    }
 
     .upper-row {
       display: flex;
@@ -214,8 +245,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 260px;
-        width: 100%;
+        height: 300px;
+        width: 80vw;
         transition: all 400ms ease-in-out;
         &.active {
           background-image: url(/assets/runningman2.png);
@@ -244,10 +275,7 @@
       }
     }
     .sectionB {
-      margin-top: 240px;
       overflow: hidden;
-      width: 95%;
-      // margin: 0 auto;
 
       .middlebuttons {
         img {
@@ -285,7 +313,8 @@
       justify-content: center;
       margin-top: 1rem;
       img {
-        width: 50%;
+        width: 250px;
+        height: 40px;
       }
     }
   }
