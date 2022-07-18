@@ -92,6 +92,7 @@
 
             span {
               position: relative;
+              transition: all 450ms ease-in-out;
             }
 
             &::before {
@@ -107,6 +108,7 @@
               background-repeat: no-repeat;
               background-position: center;
               background-size: cover;
+              transform: scale(90%);
               transition: all 450ms ease-in-out;
             }
             &:hover {
@@ -115,6 +117,7 @@
               }
               &::before {
                 opacity: 1;
+                transform: scale(100%);
               }
             }
           }
