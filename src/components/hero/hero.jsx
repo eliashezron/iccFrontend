@@ -15,7 +15,6 @@ import footerlogoicon from '../../assets/footerlogoicon.png';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 import NavBar from '../navbar/navbar';
-import HeroPlayButton from './components/HeroPlayButton';
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
@@ -76,6 +75,8 @@ export default function Hero() {
                 <img src={copy} alt="copy" />
               </CopyToClipboard>
             </div>
+            {/*  width: 660px;
+      height: 73px; */}
             <div className="hero-play-button" />
             {/* <img
               src={playNow}
