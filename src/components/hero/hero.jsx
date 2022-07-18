@@ -37,17 +37,15 @@ export default function Hero() {
               onMouseOver={(e) => (e.currentTarget.src = footerlogoicon)}
               onMouseOut={(e) => (e.currentTarget.src = logo)}
               alt=""
-              className="tw-h-[190px] md:tw-h-[270px] xl:tw-h-[230px] 3xl:tw-h-[270px] 3xl:tw-w-[672.56px] tw-bg-contain xl:tw-bg-cover tw-mb-2 tw-w-full"
+              className="tw-h-[190px] md:tw-h-[270px] xl:tw-h-[230px] 3xl:tw-h-[255px] 3xl:tw-w-[672.56px] tw-bg-contain xl:tw-bg-cover tw-mb-2 tw-w-full"
             />
-            {/* className="tw-text-sm md:tw-text-[13px] lg:tw-text-[12px] 2xl:tw-text-[15px] 3xl:tw-text-[18px] 3xl:tw-leading-7 tw-tracking-wide tw-text-white tw-font-semibold md:tw-mt-2 tw-mb-2" */}
-            <div className="tw-text-white tw-my-2 tw-font-semibold tw-text-[19px]">
+            <div className="tw-text-white tw-mt-[48px] tw-font-[900] tw-tracking-[-0.01em] tw-text-[18px] tw-leading-[20px]">
               Intergalactic Cockroach Space Race is an esport game based on
               blockchain technology.
               <br /> You can gather your friends, form a team, battle with
               others and earn crypto with just your skills
             </div>
-            {/* className="tw-text-sm 3xl:tw-text-[18px] 3xl:tw-mb-[3rem] tw-tracking-wide md:tw-text-base tw-text-[#00ffe0] tw-font-semibold tw-mb-4" */}
-            <div className="tw-text-[#00ffe0] tw-text-[17px] tw-my-2 tw-font-semibold tw-tracking-wider">
+            <div className="tw-text-[#00FFE0] tw-text-[18px] tw-my-2 tw-font-[800] tw-mt-[13px] tw-mb-[48px] tw-tracking-wider">
               #IntergalacticCockroach #ICC #SpaceRace # P2E #NFT
             </div>
             <iframe
@@ -55,7 +53,7 @@ export default function Hero() {
               title="icc video"
               src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0"
             ></iframe>
-            <div className="tw-flex tw-text-base tw-font-semibold tw-text-white tw-w-full tw-mt-auto">
+            <div className="tw-flex tw-text-[18px] tw-font-[800] tw-leading-[20px] tw-text-white tw-w-full tw-mb-[5px]">
               <span>$ICC Contract Address</span>
               {copied && <span className="tw-ml-auto ">Copied</span>}
             </div>
@@ -75,16 +73,8 @@ export default function Hero() {
                 <img src={copy} alt="copy" />
               </CopyToClipboard>
             </div>
-            {/*  width: 660px;
-      height: 73px; */}
+
             <div className="hero-play-button" />
-            {/* <img
-              src={playNow}
-              onMouseOver={(e) => (e.currentTarget.src = playNowidlehover)}
-              onMouseOut={(e) => (e.currentTarget.src = playNow)}
-              alt=""
-              className="tw-h-[76px] tw-w-[660px] tw-mt-4"
-            /> */}
           </div>
           <iframe
             className="3xl:tw-rounded-[50px] 2xl:tw-rounded-[40px] 3xl:tw-w-[936px] 3xl:tw-h-[644px] tw-hidden md:tw-block tw-h-full tw-w-full tw-border-[10px] tw-border-[#fbc4e6]"
