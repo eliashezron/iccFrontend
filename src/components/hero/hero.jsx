@@ -17,6 +17,7 @@ import playNowidlehover from '../../assets/playnowidlehover.png';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 import NavBar from '../navbar/navbar';
+import HeroPlayButton from './components/HeroPlayButton';
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
@@ -77,16 +78,17 @@ export default function Hero() {
                 <img src={copy} alt="copy" />
               </CopyToClipboard>
             </div>
-            <img
+            <HeroPlayButton />
+            {/* <img
               src={playNow}
               onMouseOver={(e) => (e.currentTarget.src = playNowidlehover)}
               onMouseOut={(e) => (e.currentTarget.src = playNow)}
               alt=""
               className="tw-h-[76px] tw-w-[660px] tw-mt-4"
-            />
+            /> */}
           </div>
           <iframe
-            className="3xl:tw-rounded-[50px] 3xl:tw-w-[936px] 3xl:tw-h-[644px] tw-hidden md:tw-block tw-h-full tw-w-full tw-border-[5px] tw-border-[#fbc4e6]"
+            className="3xl:tw-rounded-[50px] 2xl:tw-rounded-[40px] 3xl:tw-w-[936px] 3xl:tw-h-[644px] tw-hidden md:tw-block tw-h-full tw-w-full tw-border-[5px] tw-border-[#fbc4e6]"
             title="icc video"
             src="https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0"
           ></iframe>

@@ -3,8 +3,7 @@ import './navbar.scss';
 import logo from '../../assets/logo.png';
 import { navItems } from '../../data/navItems';
 import { motion, AnimatePresence } from 'framer-motion';
-import playnow from '../../assets/playnow.svg';
-import playnowhover from '../../assets/playnowhover.svg';
+import NavBarPlayButton from './components/NavBarPlayButton';
 
 const Navbar = () => {
   const [clickedMenuItem, setClickedMenuItem] = useState('1');
@@ -68,7 +67,8 @@ const Navbar = () => {
                 </div>
               ))}
             </ul>
-            <div className="tw-relative 3xl:tw-w-[338px] 3xl:tw-h-[69px] tw-h-[50px] tw-ease-in-out tw-transition tw-delay-200">
+            <NavBarPlayButton />
+            {/* <div className="tw-relative 3xl:tw-w-[338px] 3xl:tw-h-[69px] tw-h-[50px] tw-ease-in-out tw-transition tw-delay-200">
               <img
                 src={playnow}
                 style={{
@@ -79,7 +79,7 @@ const Navbar = () => {
                 onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
                 onMouseOut={(e) => (e.currentTarget.src = playnow)}
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
