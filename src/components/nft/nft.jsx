@@ -56,11 +56,10 @@ export default function Nft() {
           onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
           onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
           alt=""
-          className="3xl:tw-ml-[1200px] 3xl:-tw-mt-[70px] 3xl:tw-w-[338px] 3xl:tw-h-[69px]"
+          className="3xl:tw-ml-[1200px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
         />
-        {/* <div id="mint-button-desktop" /> */}
-        <div id="mint-button-mobile" />
-        <div className="tw-hidden md:tw-block tw-w-[90%] 3xl:tw-mb-10 md:tw-mt-[1.5rem]">
+        {/* <div id="mint-button-mobile" /> */}
+        <div className="tw-hidden md:tw-block 3xl:tw-w-[90%] tw-w-[80%] xl:tw-mb-10 md:tw-mt-[1.5rem]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
             <div className="tw-grid tw-grid-cols-5">
               {nftItems.map((item) => {

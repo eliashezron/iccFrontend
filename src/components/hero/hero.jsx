@@ -91,7 +91,7 @@ export default function Hero() {
             ></iframe>
           </div>
         </div>
-        <div className="social-icons 3xl:tw-gap-[1.8rem]">
+        <div className="social-icons 2xl:tw-gap-[1.8rem] 3xl:tw-h-[318px] 3xl:tw-w-[90px]">
           <a href="#home">
             <img src={opensea} alt="opensea" />
           </a>

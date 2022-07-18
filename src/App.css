@@ -21,7 +21,7 @@ section {
 }
 
 section div.container {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   height: 95%;
   text-align: center;
   display: flex;
