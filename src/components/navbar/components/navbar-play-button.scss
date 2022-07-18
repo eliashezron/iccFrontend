@@ -1,0 +1,29 @@
+div#navbar-play-button {
+  background-image: url(../../../assets/playnow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+
+  &:hover {
+    background-image: url(../../../assets/playnowhover.svg);
+  }
+}
+
+@media (min-width: 1920px) {
+  div#navbar-play-button {
+    width: 338px;
+    height: 90px;
+  }
+}
+
+@media (min-width: 1600px) {
+  div#navbar-play-button {
+    width: 280px;
+    height: 70px;
+  }
+}
+
+/* 3xl:tw-w-[338px] 3xl:tw-h-[69px] */

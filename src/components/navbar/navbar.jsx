@@ -30,7 +30,9 @@ const Navbar = () => {
                   className="dropdown"
                   key={Math.random() * index}
                 >
-                  <button>{item.title}</button>
+                  <button>
+                    <span>{item.title}</span>
+                  </button>
                   <AnimatePresence>
                     {clickedMenuItem === item.title && (
                       <motion.div
