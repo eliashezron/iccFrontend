@@ -65,28 +65,26 @@ export default function GamePlay() {
               ${slideIndex === 0 ? 'active' : ''}`}
             />
 
-            <div className="freeplay">
+            <div className="tw-text-[#0bfff0] tw-relative 3xl:tw-text-[1.4rem] tw-font-medium tw-tracking-wider tw-leading-7 tw-mt-2 tw-mb-5">
               <div
-                style={{
-                  opacity: slideIndex === 0 ? 1 : 0,
-                }}
+                className={`tw-absolute tw-w-full delay ${
+                  slideIndex === 0 ? 'tw-opacity-100' : 'tw-opacity-0'
+                }`}
               >
                 FREE PLAY
               </div>
 
               <div
-                style={{
-                  opacity: slideIndex === 1 ? 1 : 0,
-                }}
+                className={`tw-absolute tw-w-full delay ${
+                  slideIndex === 1 ? 'tw-opacity-100' : 'tw-opacity-0'
+                }`}
               >
                 PLAY AND EARN
               </div>
             </div>
-            <div className="words">
-              <p>
-                Win the race and be the last Cockroach standing.<br></br>Show
-                your skills, win 3 rounds and win prizes.
-              </p>
+            <div className="tw-text-[#0bfff0] 3xl:tw-text-[1.1rem] tw-font-medium tw-tracking-wider tw-leading-7 tw-my-2">
+              Win the race and be the last Cockroach standing.<br></br>Show your
+              skills, win 3 rounds and win prizes.
             </div>
             <div className="watchButton">
               <img

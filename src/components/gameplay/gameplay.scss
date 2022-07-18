@@ -28,6 +28,10 @@ section#game-play {
       }
     }
 
+    div.delay {
+      transition: all 550ms ease-in-out;
+    }
+
     .blueman {
       display: flex;
       flex-direction: column;
@@ -149,7 +153,6 @@ section#game-play {
           line-height: 24px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #0bfff0;
         }
         .watchButton {
           img {
