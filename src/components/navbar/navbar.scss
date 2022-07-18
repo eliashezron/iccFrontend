@@ -3,11 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 163px;
-  padding: 0 50px;
+
   scroll-snap-align: start;
   background: url(/assets/dimbar.svg) no-repeat !important; /* Set the fixed background overlay */
   position: relative;
   width: 100%;
+  padding: 20px 50px 0 77px;
   .navcontainer {
     flex: 1;
     display: flex;

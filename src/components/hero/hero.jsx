@@ -76,7 +76,7 @@ export default function Hero() {
                 <img src={copy} alt="copy" />
               </CopyToClipboard>
             </div>
-            <HeroPlayButton />
+            <div className="hero-play-button" />
             {/* <img
               src={playNow}
               onMouseOver={(e) => (e.currentTarget.src = playNowidlehover)}
@@ -91,16 +91,18 @@ export default function Hero() {
             src="https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0"
           ></iframe>
         </div>
-        <div className="social-icons 2xl:tw-gap-[1.8rem] 3xl:tw-h-[318px] 3xl:tw-w-[90px]">
-          <a href="#home">
-            <img src={opensea} alt="opensea" />
-          </a>
-          <a href="#home">
-            <img src={twitter} alt="discord" />
-          </a>
-          <a href="#home">
-            <img src={discord} alt="twitter" />
-          </a>
+        <div className="social-icons">
+          <div className="container">
+            <a href="#home">
+              <img src={opensea} alt="opensea" />
+            </a>
+            <a href="#home">
+              <img src={twitter} alt="discord" />
+            </a>
+            <a href="#home">
+              <img src={discord} alt="twitter" />
+            </a>
+          </div>
         </div>
         <div id="mobile-nav">
           <img
