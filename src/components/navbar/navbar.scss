@@ -3,8 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 163px;
-  padding: 59px 60px 40px 76px;
+  height: 10vw;
+  justify-content: space-between;
+  align-items: center;
+  padding:2% 7%;
   scroll-snap-align: start;
   background: url(/assets/dimbar.svg) no-repeat!important; /* Set the fixed background overlay */
   position: relative;
@@ -18,8 +20,8 @@
     .logo {
       justify-content: flex-start;
       img {
-        width: 158px;
-        height: 64px;
+        max-width: 158px;
+        max-height: 64px;
       }
     }
     .navlinks {
