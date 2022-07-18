@@ -12,6 +12,8 @@ import iccprice from '../../assets/iccprice.svg';
 import buyicca from '../../assets/buyicca.svg';
 import bgc from '../../assets/bgc.png';
 import buyiccahover from '../../assets/buyiccahover.svg';
+import Button from '../../shared/Button';
+
 export default function Footer() {
   return (
     <section id="footer">
@@ -80,47 +82,28 @@ export default function Footer() {
         </div>
         {/* ==================================================== */}
         <div className="md:tw-flex tw-w-full tw-flex-row tw-gap-10 tw-mb-6 tw-hidden">
-          <div
-            className="tw-bg-center tw-bg-contain 3xl:tw-bg-cover tw-bg-no-repeat tw-w-[600px] tw-h-[150px] 3xl:tw-w-[32%] 3xl:tw-h-[220px]"
-            style={{
-              backgroundImage: `url(${logo})`,
-            }}
+          <img
+            className="tw-w-[600px] tw-h-[150px] 3xl:tw-w-[468px] 3xl:tw-h-[188px]"
+            src={logo}
+            alt=""
           />
           <div className="tw-flex tw-w-[70%] tw-flex-row">
             <div className="tw-grid tw-grid-cols-3 tw-gap-1 3xl:tw-gap-4 tw-w-[65%]">
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Home
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Earn
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Trade
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                WhitePaper
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Farms
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Exchange
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Nfts
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Pools
-              </button>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem]">
-                Liquidity
-              </button>
+              <Button className="3xl:tw-w-[212px]">Home</Button>
+              <Button className="3xl:tw-w-[212px]">Earn</Button>
+              <Button className="3xl:tw-w-[212px]">Trade</Button>
+              <Button className="3xl:tw-w-[212px]">WhitePaper</Button>
+              <Button className="3xl:tw-w-[212px]">Farms</Button>
+              <Button className="3xl:tw-w-[212px]">Exchange</Button>
+              <Button className="3xl:tw-w-[212px]">Nfts</Button>
+              <Button className="3xl:tw-w-[212px]">Pools</Button>
+              <Button className="3xl:tw-w-[212px]">Liquidity</Button>
             </div>
             <div className="tw-border-l-[1.5px] tw-mx-4 tw-border-[#0bfff0]" />
 
             <div className="tw-flex tw-flex-col tw-items-center tw-w-[40%] tw-gap-4">
               <div
-                className="tw-bg-no-repeat tw-h-[83px] 3xl:tw-h-[120px] tw-w-full tw-rounded-[30px] tw-p-1 tw-bg-cover tw-bg-center tw-flex tw-flex-col tw-items-center tw-overflow-hidden tw-gap-1"
+                className="tw-bg-no-repeat tw-h-[83px] 3xl:tw-h-[134px] tw-w-[400px] tw-rounded-[30px] tw-p-1 tw-bg-cover tw-bg-center tw-flex tw-flex-col tw-items-center tw-overflow-hidden tw-gap-1"
                 style={{
                   backgroundImage: `url(${bgc})`,
                 }}
@@ -148,16 +131,14 @@ export default function Footer() {
                   />
                 </div>
               </div>
-              <button className="tw-p-[3px] tw-border-[#0bfff0] tw-border-b-[3px] tw-h-[50px] tw-font-[Orbitron] tw-text-[0.65rem] tw-uppercase tw-text-[#0bfff0] tw-bg-transparent tw-w-[150px] tw-rounded-3xl tw-border-t-0 3xl:tw-font-semibold 3xl:tw-text-[1.2rem] 3xl:tw-w-[200px]">
-                contact us
-              </button>
+              <Button className="3xl:tw-w-[272px]">contact us</Button>
             </div>
           </div>
         </div>
         <div className="md:tw-flex tw-w-full tw-justify-between tw-items-end tw-hidden">
           <div className="tw-flex tw-flex-col tw-text-start tw-items-start tw-w-[60%]">
             <img
-              className="tw-h-[80px] tw-w-[500px] 3xl:tw-w-[650px]"
+              className="tw-h-[80px] tw-w-[500px] 3xl:tw-w-[730px]"
               src={playnow}
               alt="playnow"
               onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
@@ -168,21 +149,33 @@ export default function Footer() {
             </div>
           </div>
           <div className="tw-flex tw-flex-row tw-gap-2 tw-items-end tw-w-[40%]">
-            <div
+            {/* <div
               className="tw-bg-no-repeat tw-bg-center tw-bg-contain tw-h-[70px] tw-w-[280px] 3xl:tw-w-[500px] 3xl:tw-h-[110px]"
               style={{
                 backgroundImage: `url(${iccprice})`,
               }}
+            /> */}
+            <img
+              className="tw-h-[70px] tw-w-[280px] 3xl:tw-w-[362px] 3xl:tw-h-[98px]"
+              src={iccprice}
+              alt=""
             />
             <div className="tw-flex tw-flex-col">
-              <div
-                className="tw-bg-no-repeat tw-bg-center tw-bg-contain tw-h-[50px] tw-w-[200px] 3xl:tw-w-[260px] 3xl:tw-h-[70px]"
-                id="mint-button-desktop"
-              ></div>
-              <div
-                className="tw-bg-no-repeat tw-bg-center tw-bg-contain tw-h-[50px] tw-w-[200px] 3xl:tw-w-[260px] 3xl:tw-h-[70px]"
-                id="buy-button-desktop"
-              ></div>
+              {/* <img src={} alt=""/> */}
+              <img
+                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px] tw-mb-1"
+                src={mintnow}
+                alt="#"
+                onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
+                onMouseOut={(e) => (e.currentTarget.src = mintnow)}
+              />
+              <img
+                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px]"
+                src={buyicca}
+                alt="#"
+                onMouseOver={(e) => (e.currentTarget.src = buyiccahover)}
+                onMouseOut={(e) => (e.currentTarget.src = buyicca)}
+              />
             </div>
           </div>
         </div>
