@@ -71,6 +71,9 @@ const Navbar = () => {
             <div className="tw-relative 3xl:tw-w-[338px] 3xl:tw-h-[69px] tw-h-[50px] tw-ease-in-out tw-transition tw-delay-200">
               <img
                 src={playnow}
+                style={{
+                  transition: 'all 300ms ease-in-out',
+                }}
                 alt=""
                 className="tw-cursor-pointer tw-w-full tw-h-full"
                 onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
