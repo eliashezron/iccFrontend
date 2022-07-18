@@ -2,31 +2,35 @@ import React from 'react';
 import './coin.scss';
 import coin from '../../assets/coinimagepng.png';
 import mcoin from '../../assets/mcoin.png';
+import buyicc from '../../assets/buyicc.svg';
+import buyicchover from '../../assets/buyicchover.svg';
+
 export default function Coin() {
   return (
     <section id="icc-coin">
       <div className="container">
-        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[3.4rem]">
+        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[64px] tw-leading-[80px]">
           What's ICC Coin?
         </h1>
-        <p className="tw-text-[0.8rem] tw-leading-6 xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[1.2rem] 2xl:tw-leading-8 tw-tracking-wider">
+        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[20px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider">
           ICC Coin is our main ingame currency which can be achieved by purchase
           in open market or<br></br>by playing game modes and participating in
           many other activities.
         </p>
         <div
-          id="icc-coin-img-desktop"
+          className="tw-hidden tw-bg-no-repeat tw-bg-center tw-bg-contain 3xl:-tw-mt-[15rem] md:tw-block 3xl:tw-w-[1649px] 3xl:tw-h-[511px]"
           style={{
             backgroundImage: `url(${coin})`,
           }}
         />
-        <div
-          id="icc-coin-img-mobile"
-          style={{
-            backgroundImage: `url(${mcoin})`,
-          }}
+        <img className="md:tw-hidden" src={mcoin} alt="" />
+        <img
+          className="3xl:-tw-mt-[8rem] 3xl:tw-h-[3.5rem]"
+          src={buyicc}
+          alt=""
+          onMouseOver={(e) => (e.currentTarget.src = buyicchover)}
+          onMouseOut={(e) => (e.currentTarget.src = buyicc)}
         />
-        {/* <div id="buy-icc-button" /> */}
       </div>
     </section>
   );

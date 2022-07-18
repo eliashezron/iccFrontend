@@ -6,8 +6,12 @@ import inext from '../../assets/ipreviousb.svg';
 import iprevious from '../../assets/iprevious.svg';
 import { nftItems } from '../../data/nftIteams';
 import { nftItemsScroll } from '../../data/nftIteams';
-// import mintmobile from '../../assets/mintmobile.png';
-// import mintmobilehover from '../../assets/mintmobilehover.png';
+import previous from '../../assets/previous.svg';
+import previoushover from '../../assets/next.svg';
+import next from '../../assets/previoushover.svg';
+import hovernext from '../../assets/hovernext.svg';
+import mintmobile from '../../assets/mintmobile.png';
+import mintmobilehover from '../../assets/mintmobilehover.png';
 
 import SwipeableViews from 'react-swipeable-views';
 
@@ -41,17 +45,24 @@ export default function Nft() {
   return (
     <section id="nft-genesis">
       <div className="container">
-        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[3.4rem]">
+        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[64px] tw-leading-[80px]">
           NFT GENESIS SERIES
         </h1>
-        <p className="tw-text-[0.8rem] tw-leading-6 xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[1.2rem] 2xl:tw-leading-8 tw-tracking-wider">
+        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[20px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider">
           Play, Stake, Hold or just brag with our NFT Genesis series !
         </p>
-        <div id="mint-button-desktop" />
+        <img
+          src={mintmobile}
+          onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
+          onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
+          alt=""
+          className="3xl:tw-ml-[1200px] 3xl:-tw-mt-[70px] 3xl:tw-w-[338px] 3xl:tw-h-[69px]"
+        />
+        {/* <div id="mint-button-desktop" /> */}
         <div id="mint-button-mobile" />
-        <div className="desktop-carousel md:tw-mt-[1.5rem]">
+        <div className="tw-hidden md:tw-block tw-w-[90%] 3xl:tw-mb-10 md:tw-mt-[1.5rem]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
-            <div className="nft-grid">
+            <div className="tw-grid tw-grid-cols-5">
               {nftItems.map((item) => {
                 return (
                   <img
@@ -66,7 +77,7 @@ export default function Nft() {
                 );
               })}
             </div>
-            <div className="nft-grid">
+            <div className="tw-grid tw-grid-cols-5">
               {nftItemsScroll.map((item) => {
                 return (
                   <img
@@ -94,7 +105,14 @@ export default function Nft() {
             {mobile ? (
               <img src={iprevious} alt="playnow" onClick={prevSlide} />
             ) : (
-              <div id="nft-previous-button-desktop" onClick={prevSlide} />
+              <img
+                src={previous}
+                onMouseOver={(e) => (e.currentTarget.src = previoushover)}
+                onMouseOut={(e) => (e.currentTarget.src = previous)}
+                alt=""
+                id="nft-previous-button-desktop"
+                onClick={prevSlide}
+              />
             )}
           </div>
           <div className="middlebuttons">
@@ -113,7 +131,14 @@ export default function Nft() {
             {mobile ? (
               <img src={inext} alt="playnow" onClick={nextSlide} />
             ) : (
-              <div id="nft-next-button-desktop" onClick={nextSlide} />
+              <img
+                src={next}
+                onMouseOver={(e) => (e.currentTarget.src = hovernext)}
+                onMouseOut={(e) => (e.currentTarget.src = next)}
+                alt=""
+                id="nft-previous-button-desktop"
+                onClick={prevSlide}
+              />
             )}
           </div>
         </div>
