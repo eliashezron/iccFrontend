@@ -41,8 +41,12 @@ export default function Nft() {
   return (
     <section id="nft-genesis">
       <div className="container">
-        <h1>NFT GENESIS SERIES</h1>
-        <p>Play, Stake, Hold or just brag with our NFT Genesis series !</p>
+        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[3.4rem]">
+          NFT GENESIS SERIES
+        </h1>
+        <p className="tw-text-[0.8rem] tw-leading-6 xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[1.2rem] 2xl:tw-leading-8 tw-tracking-wider">
+          Play, Stake, Hold or just brag with our NFT Genesis series !
+        </p>
         <div id="mint-button-desktop" />
         <div id="mint-button-mobile" />
         <div className="desktop-carousel md:tw-mt-[1.5rem]">

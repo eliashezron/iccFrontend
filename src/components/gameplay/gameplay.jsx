@@ -41,42 +41,28 @@ export default function GamePlay() {
   return (
     <section id="game-play">
       <div className="container">
-        <h1>GAMEPLAY</h1>
-        <p>
+        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[3.4rem]">
+          GAMEPLAY
+        </h1>
+        <p className="tw-text-[0.8rem] tw-leading-6 xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[1.2rem] 2xl:tw-leading-8 tw-tracking-wider">
           Intergalactic Cockroach Space Race’s gameplay is designed to challenge
           your personal skills.<br></br>Challenge yourself with our modes: Play
           To Earn & Free Play to win rewards.
         </p>
-        {/* 
-        @media screen and (min-width: 1600px) {
-  .upper-row {
-    #running-man-img {
-      height: 800px !important;
-      width: 750px !important;
-    }
-
-    #blueman-img {
-      margin-top: 45px !important;
-      height: 200px;
-      width: 400px;
-    }
-
-    .blueman {
-      display: flex;
-      flex-direction: column;
-      margin-right: 5rem;
-    }
-  }
-} */}
         <div className="upper-row">
+          {/* height: 500px;
+        width: 650px; */}
           <div
             id="running-man-img"
-            className={` ${slideIndex === 0 ? 'active' : ''}`}
+            className={`2xl:tw-w-[900px] 2xl:tw-h-[600px] 3xl:tw-w-[1000px] 3xl:tw-h-[780px] ${
+              slideIndex === 0 ? 'active' : ''
+            }`}
           />
           <div className="blueman">
             <div
               id="blueman-img"
-              className={slideIndex === 0 ? 'active' : ''}
+              className={`2xl:tw-w-[900px] 2xl:tw-h-[600px] 3xl:tw-w-[500px] 3xl:tw-h-[300px]
+              ${slideIndex === 0 ? 'active' : ''}`}
             />
 
             <div className="freeplay">

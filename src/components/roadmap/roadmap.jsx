@@ -6,7 +6,9 @@ export default function RoadMap() {
   return (
     <section id="road-map">
       <div className="container">
-        <h1 className="tw-text-2xl">ROAD MAP</h1>
+        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[3.4rem]">
+          ROAD MAP
+        </h1>
         <div
           id="road-map-img-desktop"
           style={{
