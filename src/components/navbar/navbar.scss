@@ -78,7 +78,7 @@
           }
           button {
             text-transform: uppercase;
-            // height: 34px;
+            height: 60px;
             width: 150px;
             text-decoration: none;
             padding: 5px;
@@ -107,7 +107,7 @@
               background-image: url(/assets/bgbutton.svg);
               background-repeat: no-repeat;
               background-position: center;
-              background-size: cover;
+              background-size: contain;
               transform: scale(90%);
               transition: all 450ms ease-in-out;
             }
