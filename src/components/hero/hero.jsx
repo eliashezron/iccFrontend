@@ -12,8 +12,6 @@ import more from '../../assets/moreicon.png';
 import nft from '../../assets/nfticon.png';
 import logo from '../../assets/logo.png';
 import footerlogoicon from '../../assets/footerlogoicon.png';
-import playNow from '../../assets/playnowidle.png';
-import playNowidlehover from '../../assets/playnowidlehover.png';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 import NavBar from '../navbar/navbar';
