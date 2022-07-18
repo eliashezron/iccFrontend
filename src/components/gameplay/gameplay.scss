@@ -28,6 +28,10 @@ section#game-play {
       }
     }
 
+    div.delay {
+      transition: all 550ms ease-in-out;
+    }
+
     .blueman {
       display: flex;
       flex-direction: column;
@@ -124,15 +128,9 @@ section#game-play {
       display: flex;
       gap: 5rem;
       height: 62vh;
-      #running-man-img {
-        height: 500px;
-        width: 650px;
-      }
 
       #blueman-img {
         margin-top: 45px;
-        height: 200px;
-        width: 400px;
       }
 
       .blueman {
@@ -155,7 +153,6 @@ section#game-play {
           line-height: 24px;
           text-align: center;
           letter-spacing: -0.02em;
-          color: #0bfff0;
         }
         .watchButton {
           img {

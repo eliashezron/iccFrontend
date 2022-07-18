@@ -6,7 +6,7 @@ export default function Team() {
     <section id="core-team">
       <div className="container tw-gap-5">
         <h1 className="tw-text-2xl">CORE TEAM</h1>
-        <p className="tw-text-base tw-w-[90%]">
+        <p className="tw-text-[0.8rem] tw-leading-6 xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[1.2rem] 2xl:tw-leading-8 tw-tracking-wider">
           The team always plays an important role in the success of a project.
           <br></br>
           As a team, we have been working with each other for long time, with

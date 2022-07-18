@@ -26,8 +26,6 @@ section#hero {
   }
 
   #play-now-button {
-    height: 80px;
-    width: 500px;
     background-image: url(/assets/playnowidle.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -41,10 +39,7 @@ section#hero {
   }
 
   #hero-image {
-    height: 230px;
-    width: 580px;
     background-image: url(/assets/logo.png);
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -62,10 +57,10 @@ section#hero {
     justify-content: center;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-35%);
     width: auto;
-    height: 318px;
-    width: 65px;
+    height: 280px;
+    width: 55px;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     background: url(/assets/bgsocialsidebar.svg) no-repeat center !important;

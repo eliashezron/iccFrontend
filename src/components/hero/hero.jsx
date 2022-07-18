@@ -28,16 +28,19 @@ export default function Hero() {
     <section id='hero'>
       <NavBar />
       <div id='hero'>
-        <div className='tw-flex md:tw-flex-row tw-w-full tw-gap-10'>
-          <div className='tw-flex tw-flex-col md:tw-flex-[1] tw-text-center md:tw-text-start'>
-            <div id='hero-image' />
-            <div className='tw-text-sm md:tw-text-md tw-tracking-wide tw-text-white tw-font-semibold md:tw-mt-10 tw-my-2'>
+        <div className='tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[66vh] 2xl:tw-h-[59.5vh] 3xl:tw-h-[63vh] tw-gap-10'>
+          <div className='tw-flex tw-flex-col tw-w-[40%] tw-bg-gray-400 tw-justify-center tw-text-justify tw-h-full tw-items-center md:tw-items-start'>
+            <div
+              id='hero-image'
+              className='tw-h-[190px] md:tw-h-[270px] xl:tw-h-[230px] 3xl:tw-h-[270px] tw-bg-contain xl:tw-bg-cover tw-mb-2 tw-w-full'
+            />
+            <div className='tw-text-sm md:tw-text-[13px] lg:tw-text-[12px] 2xl:tw-text-[15px] 3xl:tw-text-[18px] 3xl:tw-leading-7 tw-tracking-wide tw-text-white tw-font-semibold md:tw-mt-2 tw-mb-2'>
               Intergalactic Cockroach Space Race is an esport game based on
               blockchain technology. <br></br>
               You can gather your friends, form a team, battle with others and
               earn crypto with just your skills
             </div>
-            <div className='tw-text-sm tw-tracking-wide md:tw-text-base tw-text-[#00ffe0] tw-font-semibold tw-mb-4'>
+            <div className='tw-text-sm 3xl:tw-text-[18px] 3xl:tw-mb-[4rem] tw-tracking-wide md:tw-text-base tw-text-[#00ffe0] tw-font-semibold tw-mb-4'>
               #IntergalacticCockroach #ICC #SpaceRace # P2E #NFT
             </div>
             <iframe
@@ -65,7 +68,7 @@ export default function Hero() {
                 <img src={copy} alt='copy' />
               </CopyToClipboard>
             </div>
-            <div id='play-now-button' />
+            <div id='play-now-button' className='tw-h-[80px] tw-w-[100%]' />
           </div>
           <div className='tw-hidden md:tw-flex tw-flex-col tw-flex-[1]'>
             <iframe
