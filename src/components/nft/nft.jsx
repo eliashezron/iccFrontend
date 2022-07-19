@@ -47,13 +47,8 @@ export default function Nft() {
         </p>
         <div
           id="nft-mint-button"
-          // src={mintmobile}
-          // onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
-          // onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
-          // alt=""
           className="3xl:tw-ml-[1200px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
         />
-        {/* <div id="mint-button-mobile" /> */}
         <div className="tw-hidden md:tw-block 3xl:tw-w-[90%] tw-w-[80%] xl:tw-mb-10 md:tw-mt-[1.5rem]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
             <div className="tw-grid tw-grid-cols-5">
@@ -99,14 +94,7 @@ export default function Nft() {
             {mobile ? (
               <img src={iprevious} alt="playnow" onClick={prevSlide} />
             ) : (
-              <div
-                // src={previous}
-                // onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-                // onMouseOut={(e) => (e.currentTarget.src = previous)}
-                // alt=""
-                id="nft-previous-button-desktop"
-                onClick={prevSlide}
-              />
+              <div id="nft-previous-button-desktop" onClick={prevSlide} />
             )}
           </div>
           <div className="middlebuttons">
@@ -125,14 +113,7 @@ export default function Nft() {
             {mobile ? (
               <img src={inext} alt="playnow" onClick={nextSlide} />
             ) : (
-              <div
-                // src={next}
-                // onMouseOver={(e) => (e.currentTarget.src = hovernext)}
-                // onMouseOut={(e) => (e.currentTarget.src = next)}
-                // alt=""
-                id="nft-previous-button-desktop"
-                onClick={prevSlide}
-              />
+              <div id="nft-previous-button-desktop" onClick={prevSlide} />
             )}
           </div>
         </div>
