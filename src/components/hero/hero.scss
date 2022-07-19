@@ -13,12 +13,13 @@ section#hero {
   position: relative;
 
   div#hero {
-    height: 100vh;
+    height: calc(100vh - 163px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 90%;
     margin-top: 10px;
+    margin: auto;
 
     .hero-play-button {
       // =============================================== hero play now button
