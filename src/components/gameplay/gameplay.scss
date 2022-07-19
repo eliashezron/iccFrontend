@@ -1,13 +1,8 @@
 section#game-play {
-  // background-image: url(/assets/bggameplay.jpg);
+  background-image: url(/assets/bggameplay.jpg);
   .upper-row {
     display: flex;
     #running-man-img {
-      // background-image: url(/assets/runningman.png);
-      // background-repeat: no-repeat;
-      // background-position: center;
-      // background-size: contain;
-      // transition: all 400ms ease-in-out;
       position: relative;
 
       &::after {
@@ -101,7 +96,7 @@ section#game-play {
 
     #watch-button {
       cursor: pointer;
-      background-image: url(/assets/watch.svg);
+      background-image: url(/assets/playnow.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -119,7 +114,7 @@ section#game-play {
         width: 100%;
         height: 100%;
         opacity: 0;
-        background-image: url(/assets/watchhover.svg);
+        background-image: url(/assets/playnowhover.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;

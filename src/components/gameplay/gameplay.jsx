@@ -39,7 +39,7 @@ export default function GamePlay() {
   return (
     <section id="game-play">
       <div className="container tw-relative">
-        <h1 className="tw-text-[2rem] tw-mt-[150px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
+        <h1 className="tw-text-[2rem] tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
           GAMEPLAY
         </h1>
         <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
@@ -51,14 +51,14 @@ export default function GamePlay() {
           <div
             id="running-man-img"
             className={`xl:tw-w-[1600px] xl:tw-h-[580px] 2xl:tw-w-[1600px] 2xl:tw-h-[600px]  3xl:tw-w-[966px] 3xl:tw-h-[630px] 3xl:tw-mr-[259px] ${
-              slideIndex === 0 ? 'active' : ''
+              slideIndex === 1 ? 'active' : ''
             }`}
           />
           <div className="tw-hidden md:tw-flex tw-flex-col tw-items-center 3xl:tw-mt-[21px]">
             <div
               id="blueman-img"
               className={`xl:tw-w-[550px] xl:tw-h-[200px] 2xl:tw-w-[600px] 2xl:tw-h-[250px] 3xl:tw-h-[254x] 3xl:tw-w-[426px]
-              ${slideIndex === 0 ? 'active' : ''}`}
+              ${slideIndex === 1 ? 'active' : ''}`}
             />
 
             <div className="tw-text-[#0bfff0] tw-w-full tw-relative xl:tw-text-[1.2rem] 3xl:tw-text-[36px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] tw-mb-5 tw-text-center">
