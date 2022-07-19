@@ -39,7 +39,7 @@ export default function Nft() {
   return (
     <section id="nft-genesis">
       <div className="container">
-        <h1 className="tw-text-[2rem] tw-mt-[95px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
+        <h1 className="tw-text-[2rem] tw-mt-[55px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
           NFT GENESIS SERIES
         </h1>
         <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
