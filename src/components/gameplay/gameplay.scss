@@ -171,14 +171,25 @@ section#game-play {
     #nft-next-button-desktop {
       height: 55px;
       width: 265px;
-      background-image: url(/assets/next.svg);
-      transition: all 500ms ease-in-out;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+
       cursor: pointer;
       position: relative;
 
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/next.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
       &::before {
         content: ' ';
         display: block;
@@ -196,6 +207,9 @@ section#game-play {
       }
 
       &:hover {
+        &::after {
+          opacity: 0;
+        }
         &::before {
           opacity: 1;
         }
@@ -204,14 +218,24 @@ section#game-play {
     #nft-previous-button-desktop {
       height: 55px;
       width: 265px;
-      background-image: url(/assets/previous.svg);
-      transition: all 500ms ease-in-out;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
       cursor: pointer;
       position: relative;
 
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/previous.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
       &::before {
         content: ' ';
         display: block;
@@ -229,6 +253,9 @@ section#game-play {
       }
 
       &:hover {
+        &::after {
+          opacity: 0;
+        }
         &::before {
           opacity: 1;
         }

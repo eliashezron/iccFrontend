@@ -39,17 +39,17 @@ export default function Nft() {
   return (
     <section id="nft-genesis">
       <div className="container">
-        <h1 className="tw-text-[2rem] xl:tw-text-[2.3rem] 2xl:tw-text-[2.8rem] 3xl:tw-text-[64px] tw-leading-[80px]">
+        <h1 className="tw-text-[2rem] tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
           NFT GENESIS SERIES
         </h1>
-        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[20px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider">
+        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
           Play, Stake, Hold or just brag with our NFT Genesis series !
         </p>
         <div
           id="nft-mint-button"
-          className="3xl:tw-ml-[1200px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
+          className="3xl:tw-ml-[1330px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
         />
-        <div className="tw-hidden md:tw-block 3xl:tw-w-[90%] tw-w-[80%] xl:tw-mb-10 md:tw-mt-[1.5rem]">
+        <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] tw-w-[80%] xl:tw-mb-10 3xl:tw-mt-[100px]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
             <div className="tw-grid tw-grid-cols-5">
               {nftItems.map((item) => {
@@ -113,7 +113,7 @@ export default function Nft() {
             {mobile ? (
               <img src={inext} alt="playnow" onClick={nextSlide} />
             ) : (
-              <div id="nft-previous-button-desktop" onClick={prevSlide} />
+              <div id="nft-next-button-desktop" onClick={prevSlide} />
             )}
           </div>
         </div>

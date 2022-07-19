@@ -75,7 +75,7 @@ export default function GamePlay() {
                   slideIndex === 1 ? 'tw-opacity-100' : 'tw-opacity-0'
                 }`}
               >
-                PLAY AND EARN
+                PLAY 2 EARN
               </div>
             </div>
             <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
