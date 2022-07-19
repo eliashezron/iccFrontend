@@ -6,12 +6,6 @@ import inext from '../../assets/ipreviousb.svg';
 import iprevious from '../../assets/iprevious.svg';
 import { nftItems } from '../../data/nftIteams';
 import { nftItemsScroll } from '../../data/nftIteams';
-import previous from '../../assets/previous.svg';
-import previoushover from '../../assets/next.svg';
-import next from '../../assets/previoushover.svg';
-import hovernext from '../../assets/hovernext.svg';
-import mintmobile from '../../assets/mintmobile.png';
-import mintmobilehover from '../../assets/mintmobilehover.png';
 
 import SwipeableViews from 'react-swipeable-views';
 
@@ -51,11 +45,12 @@ export default function Nft() {
         <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[0.9rem] 3xl:tw-text-[20px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider">
           Play, Stake, Hold or just brag with our NFT Genesis series !
         </p>
-        <img
-          src={mintmobile}
-          onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
-          onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
-          alt=""
+        <div
+          id="nft-mint-button"
+          // src={mintmobile}
+          // onMouseOver={(e) => (e.currentTarget.src = mintmobilehover)}
+          // onMouseOut={(e) => (e.currentTarget.src = mintmobile)}
+          // alt=""
           className="3xl:tw-ml-[1200px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
         />
         {/* <div id="mint-button-mobile" /> */}
@@ -104,11 +99,11 @@ export default function Nft() {
             {mobile ? (
               <img src={iprevious} alt="playnow" onClick={prevSlide} />
             ) : (
-              <img
-                src={previous}
-                onMouseOver={(e) => (e.currentTarget.src = previoushover)}
-                onMouseOut={(e) => (e.currentTarget.src = previous)}
-                alt=""
+              <div
+                // src={previous}
+                // onMouseOver={(e) => (e.currentTarget.src = previoushover)}
+                // onMouseOut={(e) => (e.currentTarget.src = previous)}
+                // alt=""
                 id="nft-previous-button-desktop"
                 onClick={prevSlide}
               />
@@ -130,11 +125,11 @@ export default function Nft() {
             {mobile ? (
               <img src={inext} alt="playnow" onClick={nextSlide} />
             ) : (
-              <img
-                src={next}
-                onMouseOver={(e) => (e.currentTarget.src = hovernext)}
-                onMouseOut={(e) => (e.currentTarget.src = next)}
-                alt=""
+              <div
+                // src={next}
+                // onMouseOver={(e) => (e.currentTarget.src = hovernext)}
+                // onMouseOut={(e) => (e.currentTarget.src = next)}
+                // alt=""
                 id="nft-previous-button-desktop"
                 onClick={prevSlide}
               />

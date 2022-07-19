@@ -137,44 +137,29 @@ export default function Footer() {
         </div>
         <div className="md:tw-flex tw-w-full tw-justify-between tw-items-end tw-hidden">
           <div className="tw-flex tw-flex-col tw-text-start tw-items-start tw-w-[60%]">
-            <img
+            <div
+              id="footer-play-button"
               className="tw-h-[80px] tw-w-[500px] 3xl:tw-w-[730px]"
-              src={playnow}
-              alt="playnow"
-              onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = playnow)}
             />
             <div className="tw-text-[#fff060] tw-uppercase tw-text-base 3xl:tw-text-[1.4rem] tw-font-extrabold">
               2022@ INTERGALACTIC COCKROACH GAME. ALL RIGHTS RESERVED.
             </div>
           </div>
           <div className="tw-flex tw-flex-row tw-gap-2 tw-items-end tw-w-[40%]">
-            {/* <div
-              className="tw-bg-no-repeat tw-bg-center tw-bg-contain tw-h-[70px] tw-w-[280px] 3xl:tw-w-[500px] 3xl:tw-h-[110px]"
-              style={{
-                backgroundImage: `url(${iccprice})`,
-              }}
-            /> */}
             <img
               className="tw-h-[70px] tw-w-[280px] 3xl:tw-w-[362px] 3xl:tw-h-[98px]"
               src={iccprice}
               alt=""
             />
             <div className="tw-flex tw-flex-col">
-              {/* <img src={} alt=""/> */}
-              <img
+              <div
+                id="footer-mint-now-button"
                 className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px] tw-mb-1"
-                src={mintnow}
-                alt="#"
-                onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-                onMouseOut={(e) => (e.currentTarget.src = mintnow)}
               />
-              <img
+
+              <div
+                id="footer-buy-icc-button"
                 className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px]"
-                src={buyicca}
-                alt="#"
-                onMouseOver={(e) => (e.currentTarget.src = buyiccahover)}
-                onMouseOut={(e) => (e.currentTarget.src = buyicca)}
               />
             </div>
           </div>

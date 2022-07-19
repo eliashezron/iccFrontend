@@ -130,9 +130,6 @@ section#hero {
     }
 
     &:hover {
-      &::after {
-        opacity: 0;
-      }
       &::before {
         opacity: 1;
       }

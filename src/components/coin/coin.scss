@@ -15,14 +15,34 @@
     }
 
     #buy-icc-button {
-      cursor: pointer;
-      height: 40px;
-      width: 250px;
       background-image: url(/assets/buyicc.svg);
-      transition: all 300ms ease-in-out;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/buyicchover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
 
       &:hover {
-        background-image: url(/assets/buyicchover.svg);
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }
@@ -38,15 +58,21 @@
   }
 }
 
-@media (max-width: 600px) {
-  div.container {
-    div#icc-coin-img-desktop {
-      display: none;
-    }
-    div#icc-coin-img-mobile {
-      height: 55% !important;
-      width: 100% !important;
-      margin-bottom: 1rem;
+@media (min-width: 1020px) {
+  section#icc-coin {
+    #buy-icc-button {
+      height: 40px;
+      width: 250px;
     }
   }
+  // div.container {
+  //   div#icc-coin-img-desktop {
+  //     display: none;
+  //   }
+  //   div#icc-coin-img-mobile {
+  //     height: 55% !important;
+  //     width: 100% !important;
+  //     margin-bottom: 1rem;
+  //   }
+  // }
 }

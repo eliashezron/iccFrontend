@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import './gameplay.scss';
 import pinkrrectangle from '../../assets/pinkrectangle.svg';
 import bluerectangle from '../../assets/bluerectangle.svg';
-import watch from '../../assets/watch.svg';
-import watchhover from '../../assets/watchhover.svg';
 import inext from '../../assets/ipreviousb.svg';
 import iprevious from '../../assets/iprevious.svg';
 import watchmobile from '../../assets/watchmobile.png';
@@ -84,14 +82,7 @@ export default function GamePlay() {
               Win the race and be the last Cockroach standing.<br></br>Show your
               skills, win 3 rounds and win prizes.
             </div>
-            <div className="watchButton">
-              <img
-                src={watch}
-                alt="playnow"
-                onMouseOver={(e) => (e.currentTarget.src = watchhover)}
-                onMouseOut={(e) => (e.currentTarget.src = watch)}
-              />
-            </div>
+            <div id="watch-button" />
           </div>
         </div>
 

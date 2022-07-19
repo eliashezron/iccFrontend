@@ -22,6 +22,38 @@ section#nft-genesis {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
   }
+
+  #nft-mint-button {
+    background-image: url(/assets/mintmobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: all 450ms ease-in-out;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: url(/assets/mintmobilehover.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
   .lower-row {
     display: flex;
     flex-direction: row;
@@ -36,30 +68,76 @@ section#nft-genesis {
       justify-content: center;
       cursor: pointer;
     }
-    // ================================================================  button fade
+
     #nft-next-button-desktop {
-      height: 50px;
-      width: 255px;
+      // height: 50px;
+      // width: 255px;
       background-image: url(/assets/next.svg);
-      transition: all 500ms ease-in-out;
-    }
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+      position: relative;
 
-    #nft-next-button-desktop {
-      &:hover {
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/hovernext.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
       }
-    }
-    #nft-previous-button-desktop {
-      height: 50px;
-      width: 255px;
-      background-image: url(/assets/previous.svg);
-      transition: all 500ms ease-in-out;
-    }
 
-    #nft-previous-button-desktop {
       &:hover {
-        background-image: url(/assets/previoushover.svg);
+        &::before {
+          opacity: 1;
+        }
       }
+    }
+    #nft-previous-button-desktop {
+      // height: 50px;
+      // width: 255px;
+      background-image: url(/assets/previous.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+      position: relative;
+
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/previoushover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+      // }
+
+      // #nft-previous-button-desktop {
+      //   &:hover {
+      //     background-image: url(/assets/previoushover.svg);
+      //   }
     }
 
     .middlebuttons {

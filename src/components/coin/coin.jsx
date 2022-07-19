@@ -2,8 +2,6 @@ import React from 'react';
 import './coin.scss';
 import coin from '../../assets/coinimagepng.png';
 import mcoin from '../../assets/mcoin.png';
-import buyicc from '../../assets/buyicc.svg';
-import buyicchover from '../../assets/buyicchover.svg';
 
 export default function Coin() {
   return (
@@ -24,12 +22,9 @@ export default function Coin() {
           }}
         />
         <img className="md:tw-hidden" src={mcoin} alt="" />
-        <img
-          className="3xl:-tw-mt-[8rem] 3xl:tw-h-[3.5rem]"
-          src={buyicc}
-          alt=""
-          onMouseOver={(e) => (e.currentTarget.src = buyicchover)}
-          onMouseOut={(e) => (e.currentTarget.src = buyicc)}
+        <div
+          id="buy-icc-button"
+          className="2xl:-tw-mt-[8rem] 3xl:-tw-mt-[8rem] 3xl:tw-h-[3.5rem]"
         />
       </div>
     </section>
