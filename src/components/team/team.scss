@@ -4,14 +4,8 @@
       div {
         margin: 0 -30px !important;
         img {
-          height: 290px !important;
-          width: 340px !important;
-        }
-        .info {
-          h1 {
-            font-size: 1.25rem;
-            padding-top: 1px;
-          }
+          height: 279px;
+          width: 315px;
         }
       }
     }
@@ -22,14 +16,10 @@
     .team {
       div {
         img {
-          height: 220px;
-          width: 240px;
+          height: 279px;
+          width: 315px;
         }
         .info {
-          h1 {
-            font-size: 1.25rem;
-            padding-top: 1px;
-          }
         }
       }
     }
@@ -41,10 +31,6 @@
       div {
         column-gap: 10px;
         .info {
-          h1 {
-            font-size: 1.15rem !important;
-            padding-top: 1px;
-          }
         }
       }
     }
@@ -61,14 +47,9 @@
       align-items: center;
       div {
         margin: 0 -15px; // ================================= use this to reduce the spacing
-        // row-gap: -10px;
-        // display: grid;
-        // column-gap: 120%;
-        // bottom: 0;
-        // padding: 0 -40%;
         img {
-          height: 200px;
-          width: 220px;
+          // height: 200px;
+          // width: 220px;
           justify-content: center;
         }
         .info {
@@ -80,7 +61,6 @@
           font-weight: 900;
 
           h1 {
-            font-size: 1rem;
             font-family: 'Orbitron', sans-serif;
             color: #fff060;
             text-align: center;
@@ -90,7 +70,6 @@
             font-family: 'Orbitron', sans-serif;
             font-style: normal;
             font-weight: 900;
-            font-size: 0.88rem;
             text-align: center;
             color: #ffffff;
             text-transform: uppercase;
@@ -99,29 +78,6 @@
       }
     }
   }
-
-  // section#core-team {
-  //   .team {
-  //     div {
-  //       margin: 0;
-  //       img {
-  //         height: 180px;
-  //         width: 230px;
-  //         justify-content: center;
-  //       }
-  //       .info {
-  //         h1 {
-  //           font-size: 1.2rem;
-  //           padding-top: 5px;
-  //         }
-  //         p {
-  //           font-size: 0.8rem;
-  //           line-height: 24px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 @media screen and (max-width: 480px) {

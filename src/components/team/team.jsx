@@ -24,9 +24,27 @@ export default function Team() {
                   onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
                   onMouseOut={(e) => (e.currentTarget.src = item.image)}
                 />
+                {/*   .info {
+          h1 {
+            font-size: 25px;
+            padding-top: 1px;
+            font-weight: 900;
+            line-height: 31px;
+          }
+          p {
+            font-size: 20px;
+            padding-top: 1px;
+            font-weight: 900;
+            line-height: 25px;
+          }
+        } */}
                 <div className="info">
-                  <h1>{item.name}</h1>
-                  <p>{item.role}</p>
+                  <h1 className="tw-text-[25px] tw-pt-[17px] tw-leading-[31px]">
+                    {item.name}
+                  </h1>
+                  <p className="tw-text-[20px] tw-leading-[25px]">
+                    {item.role}
+                  </p>
                 </div>
               </div>
             );
