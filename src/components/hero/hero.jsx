@@ -30,7 +30,7 @@ export default function Hero() {
     <section id="hero">
       <NavBar />
       <div id="hero">
-        <div className="tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[66vh] 2xl:tw-h-[59.5vh] 3xl:tw-h-[644px] tw-gap-[35px] 3xl:tw-ml-[50px]">
+        <div className="tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[66vh] 2xl:tw-h-[59.5vh] 3xl:tw-h-[644px] tw-gap-[35px] 3xl:tw-ml-[150px]">
           <div className="tw-flex tw-flex-col 3xl:tw-w-[672px] tw-justify-start tw-text-justify tw-items-center md:tw-items-start">
             <img
               src={logo}

@@ -1,5 +1,5 @@
 section#hero {
-  background-image: url(/assets/bghome.jpg);
+  // background-image: url(/assets/bghome.jpg);
   height: 100vh;
   display: flex;
   width: 100vw;
@@ -17,9 +17,9 @@ section#hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     // background-color: red;
-    margin-left: 83px;
+    // margin-left: 83px;
 
     .hero-play-button {
       position: relative;
