@@ -51,7 +51,7 @@ export default function Nft() {
         />
         <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] tw-w-[80%] xl:tw-mb-10 3xl:tw-mt-[100px]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
-            <div className="tw-grid tw-grid-cols-5 tw-gap-y-3">
+            <div className="tw-grid tw-grid-cols-5 tw-gap-y-[18px]">
               {nftItems.map((item) => {
                 return (
                   <img
@@ -66,7 +66,7 @@ export default function Nft() {
                 );
               })}
             </div>
-            <div className="tw-grid tw-grid-cols-5">
+            <div className="tw-grid tw-grid-cols-5 tw-gap-y-[18px]">
               {nftItemsScroll.map((item) => {
                 return (
                   <img
