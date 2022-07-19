@@ -1,6 +1,6 @@
 import React from 'react';
 import './coin.scss';
-import coin from '../../assets/coinimagepng.png';
+// import coin from '../../assets/coinimagepng.png';
 import mcoin from '../../assets/mcoin.png';
 
 export default function Coin() {
@@ -15,12 +15,13 @@ export default function Coin() {
           in open market or<br></br>by playing game modes and participating in
           many other activities.
         </p>
-        <div
-          className="tw-hidden tw-border tw-bg-no-repeat tw-bg-center tw-bg-contain md:tw-block 3xl:tw-w-[1649px] 3xl:tw-h-[511px]"
-          // style={{
-          //   backgroundImage: `url(${coin})`,
-          // }}
-        />
+        <div className="tw-bg-red-500">123</div>
+        {/* <div
+          className="tw-hidden tw-border tw-bg-no-repeat tw-bg-center tw-bg-contain md:tw-flex 3xl:tw-w-[1649px] 3xl:tw-h-[511px]"
+          style={{
+            backgroundImage: `url(${coin})`,
+          }}
+        /> */}
         <img className="md:tw-hidden" src={mcoin} alt="" />
         {/* <div
           id="buy-icc-button"
