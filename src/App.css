@@ -9,9 +9,9 @@
 
 footer,
 section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
@@ -21,14 +21,16 @@ section {
 }
 
 section div.container {
-  /* border: 1px solid gray; */
-  height: 95%;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  width: 90%;
   align-items: center;
+  height: 100%;
+  /* 
+  border: 1px solid gray;
+  text-align: center;
+  width: 90%;
   justify-content: center;
+   */
   overflow: hidden;
 }
 
