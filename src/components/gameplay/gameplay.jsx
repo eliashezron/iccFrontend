@@ -78,7 +78,7 @@ export default function GamePlay() {
                 PLAY AND EARN
               </div>
             </div>
-            <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-[800] tw-tracking-wider tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
+            <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
               Win the race and be the last Cockroach standing.<br></br>Show your
               skills, win 3 rounds and win prizes.
             </div>
