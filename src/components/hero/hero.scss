@@ -18,11 +18,8 @@ section#hero {
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    margin-top: 10px;
-    margin: auto;
 
     .hero-play-button {
-      // =============================================== hero play now button
       position: relative;
       margin-top: 15px;
       &::after {
@@ -51,7 +48,7 @@ section#hero {
         background-image: url(/assets/playnowidlehover.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-size: contain;
+        background-size: cover;
         transition: all 450ms ease-in-out;
         cursor: pointer;
       }
