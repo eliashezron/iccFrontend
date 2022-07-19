@@ -61,7 +61,7 @@ export default function GamePlay() {
               ${slideIndex === 0 ? 'active' : ''}`}
             />
 
-            <div className="tw-text-[#0bfff0] tw-w-full tw-relative xl:tw-text-[1.2rem] 3xl:tw-text-[36px] tw-font-medium tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] tw-mb-5 tw-text-center">
+            <div className="tw-text-[#0bfff0] tw-w-full tw-relative xl:tw-text-[1.2rem] 3xl:tw-text-[36px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] tw-mb-5 tw-text-center">
               <div
                 className={`tw-absolute tw-w-full delay ${
                   slideIndex === 0 ? 'tw-opacity-100' : 'tw-opacity-0'
@@ -78,7 +78,7 @@ export default function GamePlay() {
                 PLAY AND EARN
               </div>
             </div>
-            <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-semibold tw-tracking-wider tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
+            <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-[800] tw-tracking-wider tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
               Win the race and be the last Cockroach standing.<br></br>Show your
               skills, win 3 rounds and win prizes.
             </div>
