@@ -47,9 +47,9 @@ export default function Nft() {
         </p>
         <div
           id="nft-mint-button"
-          className="3xl:tw-ml-[1330px] 2xl:tw-ml-[1000px] xl:tw-ml-[850px] 2xl:-tw-mt-[80px] xl:-tw-mt-[65px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
+          className="3xl:tw-ml-[1330px] 2xl:tw-ml-[1010px] xl:tw-ml-[850px] 3xl:-tw-mt-[80px] 2xl:-tw-mt-[55px] xl:-tw-mt-[45px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
         />
-        <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] tw-w-[80%] xl:tw-mb-10 3xl:tw-mt-[60px]">
+        <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] 2xl:tw-w-[1300px] xl:tw-w-[1100px] tw-w-[80%] xl:tw-mb-10  xl:tw-mt-[60px]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
             <div className="tw-grid tw-grid-cols-5 tw-gap-y-[18px]">
               {nftItems.map((item) => {
@@ -94,26 +94,38 @@ export default function Nft() {
             {mobile ? (
               <img src={iprevious} alt="playnow" onClick={prevSlide} />
             ) : (
-              <div id="nft-previous-button-desktop" onClick={prevSlide} />
+              <div
+                id="nft-previous-button-desktop"
+                className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
+                onClick={prevSlide}
+              />
             )}
           </div>
           <div className="middlebuttons">
             <img
               src={pinkrrectangle}
-              className={slideIndex === 1 && 'pink-rectangle-translate'}
+              className={`${
+                slideIndex === 1 && 'pink-rectangle-translate'
+              } 3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]`}
               alt="playnow"
             />
             <img
               src={bluerectangle}
               alt="playnow"
-              className={slideIndex === 1 && 'blue-rectangle-translate'}
+              className={`${
+                slideIndex === 1 && 'blue-rectangle-translate'
+              } 3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]`}
             />
           </div>
           <div className="directionbuttonR">
             {mobile ? (
               <img src={inext} alt="playnow" onClick={nextSlide} />
             ) : (
-              <div id="nft-next-button-desktop" onClick={prevSlide} />
+              <div
+                className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
+                id="nft-next-button-desktop"
+                onClick={prevSlide}
+              />
             )}
           </div>
         </div>

@@ -174,9 +174,6 @@ section#nft-genesis {
       justify-content: space-between;
 
       img {
-        height: 26px;
-        width: 150px;
-        padding-right: 20px;
         transition: all ease-in-out 550ms;
       }
 
@@ -241,27 +238,11 @@ section#nft-genesis {
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        img {
-          height: 40px;
-          width: 200px;
-        }
-      }
-
-      #nft-next-button-desktop {
-        height: 55px;
-        width: 265px;
-      }
-
-      #nft-previous-button-desktop {
-        height: 55px;
-        width: 265px;
       }
     }
 
     .middlebuttons {
       img {
-        height: 26px;
-        width: 150px;
         padding-right: 20px;
         transition: all ease-in-out 550ms;
       }
