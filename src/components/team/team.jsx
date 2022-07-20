@@ -17,32 +17,23 @@ export default function Team() {
         <div className="team">
           {teamItems.map((item) => {
             return (
-              <div key={item.id}>
+              <div
+                key={item.id}
+                className="3xl:-tw-mx-[15px] 2xl:-tw-mx-[30px] xl:-tw-mx-[30px]"
+              >
                 <img
+                  className="3xl:tw-w-[315px] 2xl:tw-w-[300px] xl:tw-w-[250px] 3xl:tw-h-[250px] 2xl:tw-h-[265px] xl:tw-h-[215px]"
                   src={item.image}
-                  alt="next"
+                  alt="#"
                   onMouseOver={(e) => (e.currentTarget.src = item.hoverImage)}
                   onMouseOut={(e) => (e.currentTarget.src = item.image)}
                 />
-                {/*   .info {
-          h1 {
-            font-size: 25px;
-            padding-top: 1px;
-            font-weight: 900;
-            line-height: 31px;
-          }
-          p {
-            font-size: 20px;
-            padding-top: 1px;
-            font-weight: 900;
-            line-height: 25px;
-          }
-        } */}
+
                 <div className="info">
-                  <h1 className="tw-text-[25px] tw-pt-[17px] tw-leading-[31px]">
+                  <h1 className="3xl:tw-text-[25px] 2xl:tw-text-[20px] 3xl:tw-pt-[17px] 2xl:tw-pt-[13px] 3xl:tw-leading-[31px] 2xl:tw-leading-[26px]">
                     {item.name}
                   </h1>
-                  <p className="tw-text-[20px] tw-leading-[25px]">
+                  <p className="3xl:tw-text-[20px] 2x;:tw-text-[18px] 3xl:tw-leading-[25px] 2xl:tw-leading-[20px] tw-w-[90%]">
                     {item.role}
                   </p>
                 </div>
