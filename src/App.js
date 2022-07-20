@@ -1,9 +1,9 @@
-import "./App.css"
-import { RoadMap, Hero, Footer, Nft, Team, Coin, GamePlay } from "./components"
+import './App.css';
+import { RoadMap, Hero, Footer, Nft, Team, Coin, GamePlay } from './components';
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Hero />
       <GamePlay />
       <Nft />
@@ -12,9 +12,9 @@ function App() {
       <RoadMap />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 // import backgroundImage from "./assets/backgroundImage.svg"
 // "homepage": "https://github.com/eliashezron/iccFrontend",

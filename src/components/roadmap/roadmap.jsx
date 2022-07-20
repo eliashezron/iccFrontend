@@ -1,19 +1,25 @@
-import React from "react"
-import "./roadmap.scss"
-import roadmap from "../../assets/roadmap.png"
-import mrmp from "../../assets/mrmp.png"
+import React from 'react';
+import './roadmap.scss';
+import roadmap from '../../assets/roadmap.png';
+import mrmp from '../../assets/mrmp.png';
 export default function RoadMap() {
-  const windowWidth = window.innerWidth
   return (
-    <div className='mainr'>
-      {windowWidth < 550 ? (
-        <>
-          <div className='title road-map-title'>ROAD MAP</div>
-          <img src={mrmp} alt='roadMap' />
-        </>
-      ) : (
-        <img src={roadmap} alt='roadMap' />
-      )}
-    </div>
-  )
+    <section id="road-map">
+      <div className="container">
+        <h1 className="tw-text-[14px] md:tw-hidden">ROAD MAP</h1>
+        <div
+          id="road-map-img-desktop"
+          style={{
+            backgroundImage: `url(${roadmap})`,
+          }}
+        />
+        <div
+          id="road-map-img-mobile"
+          style={{
+            backgroundImage: `url(${mrmp})`,
+          }}
+        />
+      </div>
+    </section>
+  );
 }

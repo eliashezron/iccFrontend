@@ -1,187 +1,115 @@
-.main {
-  display: flex;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  width: 100vw;
-  // margin-top: 20%;
-  background: url(/assets/bgteam.jpg) no-repeat center;
-  background-size: cover;
-
-
-  .absolutediv {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20%;
-    position: absolute;
-    .title {
-      font-size: 64px;
-      line-height: 80px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      color: #fff060;
-      text-align: center;
-      letter-spacing: -0.05em;
-      padding-bottom: 20px;
-    }
-    .wording {
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-    }
-  }
-  .teams {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 80% !important;
-    // display: grid;
-    padding: 0 100px;
-    // grid-template-columns: 1fr;
-    .img {
-      margin: 0 -25px; // ================================= use this to reduce the spacing
-      row-gap: -10px;
-      display: grid;
-      column-gap: 120%;
-      // background-color: #4d4c47;
-      // justify-content: center;
-      // position: block;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: space-around;
-      // align-items: center;
-      bottom: 0;
-      padding: 0 -40%;
-      img {
-        height: 275px;
-        width: 315px;
-        justify-content: center;
-      }
-      .titl {
-        display: flex;
-        justify-content: baseline;
-        flex-direction: column;
-        align-items: center;
-        h1 {
-          padding-top: 10%;
-          font-size: 24px;
-          line-height: 40px;
-          font-family: 'Orbitron', sans-serif;
-          font-weight: 900;
-          color: #fff060;
-          text-align: center;
-          letter-spacing: -0.05em;
-          padding-bottom: 10px;
-          text-transform: uppercase;
-        }
-        p {
-          font-family: 'Orbitron', sans-serif;
-          font-style: normal;
-          font-weight: 900;
-          font-size: 18px;
-          line-height: 24px;
-          text-align: center;
-          letter-spacing: -0.02em;
-          color: #ffffff;
-          text-transform: uppercase;
+@media (min-width: 1920px) {
+  section#core-team {
+    .team {
+      div {
+        margin: 0 -30px !important;
+        img {
+          height: 279px;
+          width: 315px;
         }
       }
-    }
-    .one {
-      position: relative;
-      z-index: 10;
-      padding-left: 10%;
-    }
-    .two {
-      position: relative;
-      z-index: 9;
-      padding-left: -10px;
-    }
-    .three {
-      position: relative;
-      z-index: 7;
-      padding-right: -10px;
-    }
-    .four {
-      position: relative;
-      z-index: 6;
-      padding-right: -10px;
-    }
-    .five {
-      position: relative;
-      z-index: 9;
-      padding-right: -10px;
-    }
-    .six {
-      position: relative;
-      z-index: 10;
-      padding-right: 10%;
     }
   }
 }
-@media screen and (max-width: 480px) {
-  .main {
-    gap: 1rem !important;
-    .absolutediv {
-      gap: 0rem !important;
-      .title {
-        font-size: 24px;
-        line-height: 28px;
-      }
-      .wording {
-        font-size: 12px;
-        line-height: 14px;
-        padding: 0 25px;
+@media (min-width: 1600px) {
+  section#core-team {
+    .team {
+      div {
+        img {
+          height: 279px;
+          width: 315px;
+        }
+        .info {
+        }
       }
     }
-    .teams {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr);
-      width: 100% !important;
-      padding: 0 50% !important;
-      gap: 10px;
+  }
+}
+@media (min-width: 1366px) {
+  section#core-team {
+    .team {
+      div {
+        column-gap: 10px;
+        .info {
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1280px) {
+  section#core-team {
+    background-image: url(/assets/bgteam.jpg);
 
-      .img {
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-        margin: 0px;
-        width: 160px;
-        height: 210px;
-        .titl {
+    .team {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      div {
+        margin: 0 -15px; // ================================= use this to reduce the spacing
+        img {
+          // height: 200px;
+          // width: 220px;
+          justify-content: center;
+        }
+        .info {
+          display: flex;
+          justify-content: baseline;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px;
+          font-weight: 900;
+
           h1 {
-            font-size: 15px;
-            line-height: 20px;
             font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
             color: #fff060;
             text-align: center;
-            letter-spacing: -0.05em;
-            padding-bottom: 10px;
+            text-transform: uppercase;
           }
           p {
             font-family: 'Orbitron', sans-serif;
             font-style: normal;
             font-weight: 900;
-            font-size: 13px;
-            line-height: 16px;
             text-align: center;
-            letter-spacing: -0.02em;
             color: #ffffff;
             text-transform: uppercase;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#core-team {
+    .team {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      // gap: 10px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 175px;
+        height: 175px;
+        overflow: hidden;
+        align-self: center;
+        justify-self: center;
+        align-items: center;
+        margin: 0.3rem;
+        .info {
+          h1 {
+            font-size: 0.9rem;
+            line-height: 15px;
+          }
+          p {
+            font-size: 0.7rem;
+            line-height: 12px;
+          }
+        }
         img {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
+          width: 120px;
+          height: 120px;
         }
       }
     }

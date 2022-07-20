@@ -1,186 +1,137 @@
-.footer {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  scroll-snap-align: start;
-  width: 100%;
-  margin: 0px auto;
-  // padding-bottom: 1%;
-  // margin-top: 5rem;
-  background: url(/assets/bgfooter.jpg)no-repeat top;
-  background-size: cover;
-  .upper-row {
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    .footerimg {
-      #footerlogo{
-        height: 188px;
-        width: 468px;
-        background: url(/assets/logo.png);
-        background-size: cover;
-        transition: all 500ms ease-in-out;
+section#footer {
+  // background-image: url(/assets/bgfooter.jpg);
+  .container {
+    #footer-play-button {
+      position: relative;
+      &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/playnowlong.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
       }
-      #footerlogo {
-        &:hover {
-          background: url(/assets/footerlogoicon.png);
-          background-size: cover;
-        }
-    }
-    }
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding-right: 50px;
-      border-right: #0bfff0 solid 1px;
-      button {
-        width: 240px;
-        height: 50px;
-        font-family: 'Orbitron';
-        font-weight: 900;
-        font-size: 18px;
-        text-transform: uppercase;
-        color: #0bfff0;
-        background-color: transparent;
-        border-radius: 25px;
-        // padding: 10px;
-        border-color: #0bfff0;
-        border-bottom-width: 3px;
-        border-top: none;
+      &::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/playnowlonghover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
       }
-    }
-    .community {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.2rem;
-      // margin-left: -50px;
-      .bgc {
-        background: url(/assets/bgc.png) no-repeat center !important;
-        border-radius: 25px;
-        height: 134px;
-        width: 400px;
-        // padding: 20px;
-        // margin-bottom: 10px;
-        background-clip: text;
-        -webkit-background-clip: text;
-        p {
-          font-size: 24px;
-          line-height: 30px;
-          font-family: 'Orbitron', sans-serif;
-          font-weight: 900;
-          color: #fff060;
-          text-align: center;
-          letter-spacing: -0.05em;
-          text-transform: Uppercase;
-          padding-top: 12px;
-        }
-        .communitybuttons {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          padding: 8px;
-        }
-      }
-      button {
-        width: 240px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        line-height: 30px;
-        // width: 190px;
-        // height: auto;
-        font-family: 'Orbitron';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 30px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #0bfff0;
-        background-color: transparent;
-        border-radius: 25px;
-        padding: 10px;
-        border-color: #0bfff0;
-        border-bottom-width: 3px;
-        border-top: none;
-      }
-    }
-  }
-  .secb {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px 20px 20px 20px;
-    .playbutton {
-      img {
-        height: 80px;
-        width: 730px;
-      }
-    }
-  }
-  .lower-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0px 97px 121px 103px;
 
-    #col-one {
-      flex: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      h1 {
-        margin-top: 13px;
-        font-family: 'Orbitron';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff060;
-        bottom: 0px;
-      }
-    }
-
-    #col-two {
-      display: flex;
-      flex: 1;
-      flex-grow: 0;
-      align-items: flex-end;
-      gap: 10px;
-    }
-    #mint-button-desktop {
-      height: 53px;
-      margin-bottom: 13px;
-      width: 257px;
-      background-image: url(/assets/mintnow.svg);
-      transition: all 500ms ease-in-out;
-    }
-    #mint-button-desktop {
       &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    #footer-mint-now-button {
+      position: relative;
+      &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/mintnow.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
+      }
+      &::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/mintnowhover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
-    #buy-button-desktop {
-      height: 53px;
-      width: 257px;
-      background-image: url(/assets/buyicca.svg);
-      transition: all 500ms ease-in-out;
-    }
 
-    #buy-button-desktop {
-      &:hover {
+    #footer-buy-icc-button {
+      position: relative;
+      &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/buyicca.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
+      }
+      &::before {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/buyiccahover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+        cursor: pointer;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
   }
 }
+
 @media screen and (min-width: 480px) {
   #mobile-view {
     display: none;
@@ -188,7 +139,7 @@
 }
 
 @media screen and (max-width: 480px) {
-  .footer {
+  section#footer {
     max-height: none;
     height: 100vh;
     .upper-row {
@@ -196,120 +147,6 @@
     }
     .lower-row {
       display: none;
-    }
-
-    #mobile-view {
-      width: 100%;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      padding: 20px 0;
-      gap: 1rem;
-      #logo {
-        height: 90px;
-        width: 250px;
-      }
-      h1 {
-        font-family: 'Orbitron';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 16px;
-        line-height: 25px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #fff060;
-        bottom: 0px;
-      }
-      .btn-column {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        #play-now {
-          width: 100%;
-          height: 30px;
-        }
-
-        #buy-icc {
-          width: 100%;
-          height: 30px;
-        }
-
-        #mint-icc {
-          width: 100%;
-          height: 30px;
-        }
-
-        #icc-price {
-          width: 100%;
-          height: 70px;
-        }
-
-        .btn-grid {
-          display: flex;
-          flex-direction: column;
-          grid-area: 1rem;
-          align-items: center;
-          gap: 1rem;
-          div {
-            display: flex;
-            gap: 1rem;
-            width: 100%;
-          }
-          button {
-            width: 180px;
-            height: 40px;
-            font-family: 'Orbitron';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 12.5px;
-            line-height: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #0bfff0;
-            background-color: transparent;
-            border-radius: 25px;
-            padding: 10px;
-            border-color: #0bfff0;
-            border-bottom-width: 3px;
-            border-top: none;
-          }
-        }
-
-        .community-btn {
-          background: url(/assets/bgc.png) no-repeat center !important;
-          border-radius: 35px;
-          height: auto;
-          width: auto;
-          padding: 10px;
-          background-clip: text;
-          -webkit-background-clip: text;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          p {
-            font-size: 16px;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 900;
-            color: #fff060;
-            text-align: center;
-            letter-spacing: -0.05em;
-            text-transform: capitalize;
-          }
-          .communitybuttons {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            a {
-              img {
-                flex-shrink: 0;
-                height: 30px;
-                width: 30px;
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

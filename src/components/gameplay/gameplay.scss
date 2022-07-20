@@ -1,133 +1,163 @@
-.bgb{
-  background: url(/assets/bggameplay.jpg) no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-}
-
-.upper-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  height: 62vh;
-  width: 100%;
-  left: 0;
-  margin-bottom: -100px;
-  // float:left;
-  #running-man-img {
-    background-image: url(/assets/runningman.png);
-    background-repeat: no-repeat;
-    background-position: left;
-    float: 0;
-    left: 0;
+section#game-play {
+  background-image: url(/assets/bggameplay.jpg);
+  .upper-row {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-size: contain;
-    height: 630px;
-    width: 966px;
-    transition-delay: none;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/runningman2.png);
-    }
-  }
+    #running-man-img {
+      position: relative;
 
-  #blueman-img {
-    background-image: url(/assets/bueman.png);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    height: 250px;
-    width: 430px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    // margin-right: 250px;
-    transition: all 400ms ease-in-out;
-    &.active {
-      background-image: url(/assets/blueman2.png);
-    }
-  }
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/runningman.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/runningman2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
 
-  .blueman {
-    margin-right: 250px;
-    .freeplay {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #0bfff0;
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 30px;
-      line-height: 24px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      letter-spacing: -0.02em;
-      margin-top: 30px;
+      &.active {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
+      }
     }
-    .words {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 15px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #0bfff0;
-      padding: 10px 0;
+
+    #blueman-img {
+      position: relative;
+
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/bueman.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/blueman2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &.active {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      // &.active {
+      //   background-image: url(/assets/blueman2.png);
+      // }
     }
-    .watchButton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    #watch-button {
       cursor: pointer;
-      img {
-        height: 70px;
-        width: 330px;
+      background-image: url(/assets/playnow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      transition: all 450ms ease-in-out;
+      position: relative;
+
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-image: url(/assets/playnowhover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        //
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    div.delay {
+      transition: all 550ms ease-in-out;
+    }
+
+    .blueman {
+      display: flex;
+      flex-direction: column;
+      .freeplay {
+        div {
+          position: absolute;
+          width: 100%;
+          transition: all 550ms ease-in-out;
+        }
+      }
+
+      .watchButton {
+        cursor: pointer;
+        background-image: url(/assets/watch.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 60px;
+        width: 220px;
+        background-color: red;
       }
     }
   }
-}
 
-#watch-button-mobile {
-  display: none;
-}
-
-.bgb {
-  background: url(/assets/bggameplay.jpg) no-repeat center center;
-  background-size: cover;  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  padding-top: 210px;
-  position: relative;
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 80px;
-    font-size: 64px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    color: #fff060;
-    text-align: center;
-    // letter-spacing: -0.05em;
-  }
-  .wording {
-    font-family: 'Orbitron', sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    padding-bottom: 15px;
+  #watch-button-mobile {
+    display: none;
   }
 
   .sectionB {
@@ -135,29 +165,94 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 
     #nft-next-button-desktop {
-      height: 50px;
-      width: 255px;
-      background-image: url(/assets/next.svg);
-      transition: all 500ms ease-in-out;
-    }
+      cursor: pointer;
+      position: relative;
 
-    #nft-next-button-desktop {
-      &:hover {
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/next.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/hovernext.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
     #nft-previous-button-desktop {
-      height: 50px;
-      width: 255px;
-      background-image: url(/assets/previous.svg);
-      transition: all 500ms ease-in-out;
-    }
+      cursor: pointer;
+      position: relative;
 
-    #nft-previous-button-desktop {
-      &:hover {
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/previous.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/previoushover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
     .middlebuttons {
@@ -166,8 +261,6 @@
       justify-content: space-between;
       transition: 3s;
       img {
-        height: 26px;
-        width: 150px;
         padding-right: 20px;
         transition: all ease-in-out 550ms;
       }
@@ -183,23 +276,75 @@
   }
 }
 
+@media screen and (min-width: 1020px) {
+  section#game-play {
+    div.container {
+      width: 100%;
+    }
+    .upper-row {
+      .blueman {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10rem;
+        .freeplay {
+          font-size: 1.45rem;
+          line-height: 24px;
+          letter-spacing: -0.02em;
+          margin: 20px 0;
+
+          div {
+            width: 100%;
+          }
+        }
+        .words {
+          margin-top: 15px;
+          font-size: 0.9rem;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: -0.02em;
+        }
+      }
+    }
+
+    #watch-button-mobile {
+      display: none;
+    }
+
+    .sectionB {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .middlebuttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 3s;
+        img {
+          height: 26px;
+          width: 150px;
+          padding-right: 20px;
+          transition: all ease-in-out 550ms;
+        }
+
+        .pink-rectangle-translate {
+          transform: translateX(150px);
+        }
+
+        .blue-rectangle-translate {
+          transform: translateX(-150px);
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 480px) {
-  .bgb {
+  section#game-play {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    padding-top: 0;
-    .title {
-      font-size: 24px;
-      line-height: 36px;
-    }
-    .wording {
-      padding: 0 15px;
-      font-size: 18px;
-      line-height: 22px;
-      white-space: normal;
-      letter-spacing: 0.035em;
-    }
 
     .upper-row {
       display: flex;
@@ -213,8 +358,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 260px;
-        width: 100%;
+        height: 300px;
+        width: 80vw;
         transition: all 400ms ease-in-out;
         &.active {
           background-image: url(/assets/runningman2.png);
@@ -243,10 +388,7 @@
       }
     }
     .sectionB {
-      margin-top: 240px;
       overflow: hidden;
-      width: 95%;
-      // margin: 0 auto;
 
       .middlebuttons {
         img {
@@ -284,7 +426,8 @@
       justify-content: center;
       margin-top: 1rem;
       img {
-        width: 50%;
+        width: 250px;
+        height: 40px;
       }
     }
   }

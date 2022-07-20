@@ -1,122 +1,95 @@
-import React, { useState, useEffect } from "react"
-import "./navbar.scss"
-import logo from "../../assets/logo.png"
-import { navItems } from "../../data/navItems"
+import React, { useState } from 'react';
+import './navbar.scss';
+import logo from '../../assets/logo.png';
+import { navItems } from '../../data/navItems';
+import { motion, AnimatePresence } from 'framer-motion';
+import NavBarPlayButton from './components/NavBarPlayButton';
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false)
+  const [clickedMenuItem, setClickedMenuItem] = useState('1');
 
-  const [clickedMenuItem, setClickedMenuItem] = useState()
-
-  useEffect(() => {
-    if (dropdown) {
-      setTimeout(() => {
-        setDropdown(false)
-      }, [60])
-    }
-  }, [dropdown])
+  React.useEffect(() => {}, []);
 
   return (
     <>
-      <div className='navbar'>
-        <div className='navcontainer'>
-          <div className='logo'>
-            <img src={logo} alt='logo' />
+      <div className="navbar">
+        <div className="navcontainer">
+          <div className="logo">
+            <img src={logo} alt="logo" />
           </div>
-          <div className='navlinks'>
+          <div className="navlinks">
             <ul>
               {navItems.map((item, index) => (
                 <div
                   id={index}
                   onClick={() => {
                     if (item.subMenu) {
-                      setClickedMenuItem(item.title)
+                      setClickedMenuItem(item.title);
                     }
                   }}
-                  className={`dropdown ${dropdown && "active"}`}
+                  className="dropdown"
                   key={Math.random() * index}
                 >
-                  <button
-                    // onClick={() => setDropdown(true)}
-                    // onMouseLeave={() => setDropdown(false)}
-                    className={`${dropdown ? "active" : "button"}`}
-                  >
-                    {item.title}
+                  <button>
+                    <span>{item.title}</span>
                   </button>
-                  {item.title === "Earn" ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        "dropdown-content-visible"
-                      }`}
-                      visible={clickedMenuItem === item.title}
-                    >
-                      <a href={item.path}>pools</a>
-                      <a href={item.path}>farms</a>
-                    </div>
-                  ) : item.title === "Trade" ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        "dropdown-content-visible"
-                      }`}
-                    >
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
+                  <AnimatePresence>
+                    {clickedMenuItem === item.title && (
+                      <motion.div
+                        key={item.title}
+                        initial={{
+                          opacity: 0,
+                          y: '-15px',
+                          pointerEvents: 'none',
+                        }}
+                        animate={{
+                          pointerEvents: 'all',
+                          y: '0px',
+                          opacity: 1,
+                        }}
+                        exit={{
+                          pointerEvents: 'none',
+                          y: '-15px',
+                          opacity: 0,
+                        }}
+                        transition={{ duration: 0.3 }}
                       >
-                        Liquidity
-                      </a>
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
-                      >
-                        Exchange
-                      </a>
-                    </div>
-                  ) : item.title === "More" ? (
-                    <div
-                      className={`dropdown-content ${
-                        clickedMenuItem === item.title &&
-                        "dropdown-content-visible"
-                      }`}
-                    >
-                      <a
-                        href={item.path}
-                        key={Math.floor(Math.random() * index)}
-                      >
-                        WhitePaper
-                      </a>
-                      <br />
-                    </div>
-                  ) : null}
+                        <div className="dropdown-content">
+                          {item?.subMenu?.map((subMenuItem, index) => {
+                            return (
+                              <a href={subMenuItem.path} key={index}>
+                                {subMenuItem.subtitle}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </ul>
-            <div className='playButton'>
-              <div id='play-button-desktop'></div>
-            </div>
+            <NavBarPlayButton />
           </div>
         </div>
       </div>
       <div
-        id='back-drop'
         style={{
-          position: "fixed",
-          height: "100%",
-          width: "100%",
+          position: 'absolute',
           top: 0,
           left: 0,
+          height: '100%',
+          width: '100%',
           opacity: 0,
-          pointerEvents: clickedMenuItem ? "all" : "none",
+          pointerEvents: clickedMenuItem ? 'all' : 'none',
           zIndex: 0,
         }}
-        onClick={() => {
-          setClickedMenuItem()
+        onMouseOver={() => {
+          setClickedMenuItem();
         }}
       />
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

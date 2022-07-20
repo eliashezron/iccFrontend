@@ -1,97 +1,77 @@
-.mainsection {
-  display: flex;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  width: 100vw;
-  background: url(/assets/bgnft.jpg) no-repeat center center;
-  background-size: cover;
-  background-image: url(/assets/bgsvg.svg) no-repeat;
-  position: relative;
-  flex-direction: column;
-  // margin-top: 5%;s
-  .relativediv {
-    position: relative;
-    margin-top: 150px;
-    padding-bottom: 35px;
-    .title {
-      font-size: 64px;
-      line-height: 80px;
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      color: #fff060;
-      text-align: center;
-      letter-spacing: -0.05em;
-    }
-    .wording {
-      font-family: 'Orbitron', sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 24px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #ffffff;
-    }
-  }
-  .mint {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: flex-end;
-    margin-top: -60px;
+section#nft-genesis {
+  background-image: url(/assets/bgnft.jpg);
+
+  #mint-button-desktop {
+    background-image: url(/assets/mintnowthover.png);
+    transition: all 500ms ease-in;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     cursor: pointer;
-    #mint-button-desktop {
-      height: 70px;
-      width: 338px;
-      background-image: url(/assets/mintnowthover.png);
-      transition: all 500ms ease-in;
-    }
-    #mint-button-desktop {
-      &:hover {
-        background-image: url(/assets/mintnowt.png);
-      }
+
+    &:hover {
+      background-image: url(/assets/mintnowt.png);
     }
   }
-  .sectionA {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    // margin: 0% 0% 0% 0% !important;
-    padding-bottom: 25px;
-    // padding: 0px -200px 0 200px;
+  .desktop-carousel {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  .nft-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  #nft-mint-button {
     position: relative;
-    height: 80vh;
-    .nft {
+    cursor: pointer;
+
+    &::after {
+      content: ' ';
       position: absolute;
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 2px;
-      left: 50%;
-      transition: all 550ms ease-in-out;
-      transform: translateX(-50%);
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      background-image: url(/assets/nft-mint-button.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+    }
+    &::before {
+      content: ' ';
       opacity: 0;
-      &.active{
+      background-image: url(/assets/nft-mint-button-hover.png);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: all 450ms ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0;
+      }
+      &::before {
         opacity: 1;
       }
-      .item {
-        justify-content: center;
-        align-items: center;
-        img {
-          height: 305px;
-          width: 305px;
-        }
-      }
     }
   }
-  .sectionB {
+
+  .lower-row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 90px;
-    flex: 1;
+    width: 100%;
 
     .directionbuttonL,
     .directionbuttonR {
@@ -99,34 +79,92 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      img {
-        height: 50px;
-        width: 250px;
-      }
-    }
-    // ================================================================  button fade
-    #nft-next-button-desktop {
-      height: 50px;
-      width: 255px;
-      background-image: url(/assets/next.svg);
-      transition: all 500ms ease-in-out;
     }
 
     #nft-next-button-desktop {
-      &:hover {
+      position: relative;
+
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/next.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/hovernext.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
     #nft-previous-button-desktop {
-      height: 50px;
-      width: 255px;
-      background-image: url(/assets/previous.svg);
-      transition: all 500ms ease-in-out;
-    }
+      position: relative;
 
-    #nft-previous-button-desktop {
-      &:hover {
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background-image: url(/assets/previous.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
         background-image: url(/assets/previoushover.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transition: all 450ms ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          opacity: 0;
+        }
+        &::before {
+          opacity: 1;
+        }
       }
     }
 
@@ -153,102 +191,170 @@
   }
 }
 
+#mint-button-mobile {
+  display: none;
+}
+
 @media screen and (min-width: 480px) {
-  #nft-mobile {
+  #mobile-carousel {
     display: none;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .mainsection {
-    gap: 10px;
-    justify-content: center;
-    .relativediv {
-      margin-top: 0px;
-      .title {
-        padding-top: 5%;
-        font-size: 18px;
-        line-height: 28px;
+@media screen and (min-width: 1020px) {
+  //============================================ min 1020
+  section#nft-genesis {
+    div.container {
+      width: 100%;
+    }
+    #mint-button-desktop {
+      margin-left: auto;
+      height: 30px;
+      width: 250px;
+      margin-top: -40px;
+      margin-right: 75px;
+    }
+    .desktop-carousel {
+      width: 80%;
+      margin: 2rem 0;
+    }
+
+    .nft-grid {
+      display: grid;
+      .grid-item {
+        img {
+          width: 220px;
+          height: 200px;
+        }
       }
-      .wording {
-        font-size: 13px;
-        line-height: 20px;
-        padding-top: 5px;
-        width: 90%;
-        margin: 0 auto;
-        white-space: normal;
-        overflow-wrap: break-word;
+    }
+    .lower-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .directionbuttonL,
+      .directionbuttonR {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img {
+          height: 40px;
+          width: 200px;
+        }
       }
 
-      .mint {
-        display: flex;
-        justify-content: center;
+      #nft-next-button-desktop {
+        height: 55px;
+        width: 265px;
+      }
+
+      #nft-previous-button-desktop {
+        height: 55px;
+        width: 265px;
+      }
+    }
+
+    .middlebuttons {
+      img {
+        height: 26px;
+        width: 150px;
+        padding-right: 20px;
+        transition: all ease-in-out 550ms;
+      }
+
+      .pink-rectangle-translate {
+        transform: translateX(150px);
+      }
+
+      .blue-rectangle-translate {
+        transform: translateX(-150px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#nft-genesis {
+    div.container {
+      #mint-button-mobile {
+        display: block;
+        height: 40px;
+        margin: 0.5rem 0;
+        width: 300px;
+        background-image: url(/assets/mintnowthover.png);
+        transition: all 500ms ease-in;
+        background-repeat: no-repeat;
+        margin-bottom: 1rem;
+        background-position: center;
+        background-size: contain;
+        cursor: pointer;
+
+        &:hover {
+          background-image: url(/assets/mintnowt.png);
+        }
+      }
+
+      #mint-button-desktop {
+        display: none;
+      }
+      .desktop-carousel {
+        display: none;
+      }
+      .lower-row {
+        margin-top: 0px;
+        overflow: hidden;
+        width: 95%;
+        margin: 0 auto;
+        display: none;
+
+        .middlebuttons {
+          img {
+            height: 20px;
+            width: 50px;
+            padding-right: 10px;
+          }
+
+          .pink-rectangle-translate {
+            transform: translateX(50px);
+          }
+
+          .blue-rectangle-translate {
+            transform: translateX(-50px);
+          }
+        }
+
+        .directionbuttonL {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        .directionbuttonR {
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      #mobile-carousel {
         width: 80%;
         margin: 0 auto;
-        justify-content: center;
-        margin-top: 0px;
-
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        div {
+          height: 200px;
+          width: 200px;
+        }
         img {
-          height: 35px;
-          margin: 10px 0;
+          height: 200px;
+          aspect-ratio: 1/1;
         }
-      }
-    }
-    .sectionA {
-      display: none;
-      padding-top: 2px;
-      .nft {
-        img {
-          height: 350px;
-        }
-      }
-    }
-    .sectionB {
-      display: none;
-      margin-top: 0px;
-      overflow: hidden;
-      width: 95%;
-      margin: 0 auto;
-
-      .middlebuttons {
-        img {
-          height: 20px;
-          width: 50px;
-          padding-right: 10px;
-        }
-
-        .pink-rectangle-translate {
-          transform: translateX(50px);
-        }
-
-        .blue-rectangle-translate {
-          transform: translateX(-50px);
-        }
-      }
-
-      .directionbuttonL {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-      .directionbuttonR {
-        img {
-          width: 30px;
-          height: 30px;
-        }
-      }
-    }
-    #nft-mobile {
-      width: 80%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-rows: auto auto;
-      grid-auto-flow: column;
-      overflow-x: scroll;
-      img {
-        height: 200px;
-        aspect-ratio: 1/1;
       }
     }
   }
