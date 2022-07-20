@@ -2,7 +2,7 @@ section#nft-genesis {
   background-image: url(/assets/bgnft.jpg);
 
   #mint-button-desktop {
-    background-image: url(/assets/mintnowthover.png);
+    background-image: url(/assets/nft-mint-button.png);
     transition: all 450ms ease-in;
     background-repeat: no-repeat;
     background-position: center;
@@ -10,7 +10,7 @@ section#nft-genesis {
     cursor: pointer;
 
     &:hover {
-      background-image: url(/assets/mintnowt.png);
+      background-image: url(/assets/nft-mint-button-hover.png);
     }
   }
   .desktop-carousel {
