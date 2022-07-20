@@ -29,23 +29,23 @@ export default function Hero() {
   return (
     <section id="hero">
       <NavBar />
-      <div id="hero">
-        <div className="tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[66vh] 2xl:tw-h-[59.5vh] 3xl:tw-h-[644px] tw-gap-[35px] 3xl:tw-ml-[150px]">
-          <div className="tw-flex tw-flex-col 3xl:tw-w-[672px] tw-justify-start tw-text-justify tw-items-center md:tw-items-start">
+      <div id="hero" className="">
+        <div className="tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[480px] 2xl:tw-h-[550px] 3xl:tw-h-[644px] 2xl:tw-gap-[35px] tw-gap-[22px] 3xl:tw-ml-[150px] 2xl:tw-ml-[120px] tw-ml-[93px]">
+          <div className="tw-flex tw-flex-col 3xl:tw-w-[672px] 2xl:tw-w-[550px] xl:tw-w-[480px] tw-justify-start tw-text-justify tw-items-center md:tw-items-start">
             <img
               src={logo}
               onMouseOver={(e) => (e.currentTarget.src = footerlogoicon)}
               onMouseOut={(e) => (e.currentTarget.src = logo)}
               alt=""
-              className="tw-h-[190px] md:tw-h-[270px] xl:tw-h-[230px] 3xl:tw-h-[255px] 3xl:tw-w-[672.56px] tw-bg-contain xl:tw-bg-cover tw-mb-2 tw-w-full"
+              className="tw-h-[190px] xl:tw-h-[180px] 2xl:tw-h-[230px] 3xl:tw-h-[255px] tw-bg-contain xl:tw-bg-cover tw-w-full"
             />
-            <div className="tw-text-white tw-mt-[48px] tw-font-[900] tw-tracking-[-0.01em] tw-text-[18px] tw-leading-[20px]">
+            <div className="tw-text-white 3xl:tw-mt-[48px] tw-mt-[30px] tw-font-[900] tw-tracking-[-0.01em] 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-leading-[20px]">
               Intergalactic Cockroach Space Race is an esport game based on
               blockchain technology.
               <br /> You can gather your friends, form a team, battle with
               others and earn crypto with just your skills
             </div>
-            <div className="tw-text-[#00FFE0] tw-text-[18px] tw-my-2 tw-font-[800] tw-mt-[13px] tw-mb-[48px] tw-tracking-wider">
+            <div className="tw-text-[#00FFE0] 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-my-2 tw-font-[800] tw-mt-[13px] 3xl:tw-mb-[48px] tw-mb-[30px] tw-tracking-wider">
               #IntergalacticCockroach #ICC #SpaceRace # P2E #NFT
             </div>
             <iframe
@@ -53,7 +53,7 @@ export default function Hero() {
               title="icc video"
               src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0"
             ></iframe>
-            <div className="tw-flex tw-text-[18px] tw-font-[800] tw-leading-[20px] tw-text-white tw-w-full tw-mb-[5px]">
+            <div className="tw-flex 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-font-[800] tw-leading-[20px] tw-text-white tw-w-full tw-mb-[5px]">
               <span>$ICC Contract Address</span>
               {copied && <span className="tw-ml-auto ">Copied</span>}
             </div>
@@ -74,23 +74,34 @@ export default function Hero() {
               </CopyToClipboard>
             </div>
 
-            <div className="hero-play-button" />
+            <div className="hero-play-button tw-mt-[15px] tw-relative tw-min-w-full 3xl:tw-h-[75px] 2xl:tw-h-[70px] xl:tw-h-[60px]" />
           </div>
           <iframe
-            className="3xl:tw-rounded-[50px] 2xl:tw-rounded-[40px] 3xl:tw-w-[936px] 3xl:tw-h-[644px] tw-hidden md:tw-block tw-h-full tw-w-full tw-border-[10px] tw-border-[#fbc4e6]"
+            className="3xl:tw-rounded-[50px] 2xl:tw-rounded-[40px] xl:tw-rounded-[30px] lg:tw-rounded-[20px] 3xl:tw-w-[936px] 2xl:tw-w-[780px] xl:tw-w-[680px] tw-hidden md:tw-block tw-min-h-full tw-w-full 3xl:tw-border-[10px] tw-border-[8px] tw-border-[#fbc4e6]"
             title="icc video"
             src="https://www.youtube.com/embed/HhIl_XJ-OGA?autoplay=1&mute=1&loop=1&controls=0"
           ></iframe>
         </div>
-        <div className="social-icons">
-          <div className="container">
-            <a href="#home">
+        {/*  height: 242px;
+      width: 100px; */}
+        <div className="social-icons 3xl:tw-w-[90px] tw:tw-h-[318px] tw-w-[75px] tw-h-[280px]">
+          <div className="container 3xl:tw-w-[90px] tw:tw-h-[242px] tw-w-[75px] tw-h-[260px] 3xl:tw-gap-[35px] tw-gap-[20px]">
+            <a
+              href="#home"
+              className="3xl:tw-w-auto 3xl:tw-h-auto xl:tw-w-[40px] xl:tw-h-[40px]"
+            >
               <img src={opensea} alt="opensea" />
             </a>
-            <a href="#home">
+            <a
+              href="#home"
+              className="3xl:tw-w-auto 3xl:tw-h-auto xl:tw-w-[40px] xl:tw-h-[40px]"
+            >
               <img src={twitter} alt="discord" />
             </a>
-            <a href="#home">
+            <a
+              href="#home"
+              className="3xl:tw-w-auto 3xl:tw-h-auto xl:tw-w-[40px] xl:tw-h-[40px]"
+            >
               <img src={discord} alt="twitter" />
             </a>
           </div>

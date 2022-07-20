@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 163px;
+  // height: 130px;
   // position: absolute;
 
   scroll-snap-align: start;
@@ -129,6 +129,16 @@
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .navbar {
+    height: 163px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .navbar {
+    height: 130px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .navbar {
     .navcontainer {
