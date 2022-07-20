@@ -31,6 +31,8 @@ export default function Hero() {
       <div className='hero'>
         <div className='heroContainer'>
           <div className='theorySection'>
+
+          
             <div className='logoImage'>
               <div id='heroImage'></div>
             </div>
