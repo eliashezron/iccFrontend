@@ -16,8 +16,8 @@ import Button from '../../shared/Button';
 
 export default function Footer() {
   return (
-    <section id="footer">
-      <div className="container">
+    <section id="footer" className="tw-h-auto">
+      <div className="container 3xl:tw-ml-[110px] 3xl:tw-w-[1752px] 3xl:tw-h-[421px] 3xl:tw-mt-[74px] 3xl:tw-mb-[67px]">
         <div id="mobile-view">
           <img src={logo} alt="logo" id="logo" />
           <h1>2022@ INTERGALACTIC COCKROACH GAME. ALL RIGHTS RESERVED.</h1>
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
         {/* ==================================================== */}
-        <div className="md:tw-flex tw-w-full tw-flex-row tw-gap-10 tw-mb-6 tw-hidden">
+        <div className="md:tw-flex tw-w-full tw-flex-row tw-gap-[84px] 3xl:tw-mb-[74px] tw-hidden">
           <img
             className="tw-w-[600px] tw-h-[150px] 3xl:tw-w-[468px] 3xl:tw-h-[188px]"
             src={logo}
@@ -89,43 +89,43 @@ export default function Footer() {
           />
           <div className="tw-flex tw-w-[70%] tw-flex-row">
             <div className="tw-grid tw-grid-cols-3 tw-gap-1 3xl:tw-gap-4 tw-w-[65%]">
-              <Button className="3xl:tw-w-[212px]">Home</Button>
-              <Button className="3xl:tw-w-[212px]">Earn</Button>
-              <Button className="3xl:tw-w-[212px]">Trade</Button>
-              <Button className="3xl:tw-w-[212px]">WhitePaper</Button>
-              <Button className="3xl:tw-w-[212px]">Farms</Button>
-              <Button className="3xl:tw-w-[212px]">Exchange</Button>
-              <Button className="3xl:tw-w-[212px]">Nfts</Button>
-              <Button className="3xl:tw-w-[212px]">Pools</Button>
-              <Button className="3xl:tw-w-[212px]">Liquidity</Button>
+              <Button className="3xl:tw-w-[182px]">Home</Button>
+              <Button className="3xl:tw-w-[182px]">Earn</Button>
+              <Button className="3xl:tw-w-[182px]">Trade</Button>
+              <Button className="3xl:tw-w-[182px]">WhitePaper</Button>
+              <Button className="3xl:tw-w-[182px]">Farms</Button>
+              <Button className="3xl:tw-w-[182px]">Exchange</Button>
+              <Button className="3xl:tw-w-[182px]">Nfts</Button>
+              <Button className="3xl:tw-w-[182px]">Pools</Button>
+              <Button className="3xl:tw-w-[182px]">Liquidity</Button>
             </div>
-            <div className="tw-border-l-[1.5px] tw-mx-4 tw-border-[#0bfff0]" />
+            <div className="tw-border-l-[1.5px] tw-mx-[56px] tw-border-[#0bfff0]" />
 
             <div className="tw-flex tw-flex-col tw-items-center tw-w-[40%] tw-gap-4">
               <div
-                className="tw-bg-no-repeat tw-h-[83px] 3xl:tw-h-[134px] tw-w-[400px] tw-rounded-[30px] tw-p-1 tw-bg-cover tw-bg-center tw-flex tw-flex-col tw-items-center tw-overflow-hidden tw-gap-1"
+                className="tw-bg-no-repeat tw-h-[83px] 3xl:tw-h-[134px] tw-w-[400px] tw-rounded-[20px] tw-p-[12px] tw-bg-cover tw-bg-center tw-flex tw-flex-col tw-items-center tw-overflow-hidden"
                 style={{
                   backgroundImage: `url(${bgc})`,
                 }}
               >
-                <div className="tw-font-semibold 3xl:tw-text-[1.4rem] tw-text-[#fff060]">
+                <div className="tw-font-black 3xl:tw-text-[24px] tw-leading-[30px] tw-text-[#fff060] tw-mb-[6.1px]">
                   Join our community
                 </div>
                 <div className="tw-flex tw-gap-[3rem]">
                   <img
-                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[60px] 3xl:tw-h-[60px]"
+                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[72px] 3xl:tw-h-[69px]"
                     src={opensea}
                     alt="opensea"
                   />
 
                   <img
-                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[60px] 3xl:tw-h-[60px]"
+                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[79.54px] 3xl:tw-h-[66px]"
                     src={discord}
                     alt="discord"
                   />
 
                   <img
-                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[60px] 3xl:tw-h-[60px]"
+                    className="tw-h-[40px] tw-w-[40px] 3xl:tw-w-[79.5px] 3xl:tw-h-[60.6px]"
                     src={twitter}
                     alt="twitter"
                   />
@@ -139,7 +139,7 @@ export default function Footer() {
           <div className="tw-flex tw-flex-col tw-text-start tw-items-start tw-w-[60%]">
             <div
               id="footer-play-button"
-              className="tw-h-[80px] tw-w-[500px] 3xl:tw-w-[730px]"
+              className="tw-h-[80px] tw-w-[500px] 3xl:tw-w-[730px] 3xl:tw-mb-[18px]"
             />
             <div className="tw-text-[#fff060] tw-uppercase tw-text-base 3xl:tw-text-[1.4rem] tw-font-extrabold">
               2022@ INTERGALACTIC COCKROACH GAME. ALL RIGHTS RESERVED.
@@ -147,19 +147,19 @@ export default function Footer() {
           </div>
           <div className="tw-flex tw-flex-row tw-gap-2 tw-items-end tw-w-[40%]">
             <img
-              className="tw-h-[70px] tw-w-[280px] 3xl:tw-w-[362px] 3xl:tw-h-[98px]"
+              className="tw-h-[70px] tw-w-[280px] 3xl:tw-w-[362px] 3xl:tw-h-[93px]"
               src={iccprice}
               alt=""
             />
             <div className="tw-flex tw-flex-col">
               <div
                 id="footer-mint-now-button"
-                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px] tw-mb-1"
+                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266.7px] 3xl:tw-h-[55px] tw-mb-[13px]"
               />
 
               <div
                 id="footer-buy-icc-button"
-                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266px] 3xl:tw-h-[55px]"
+                className="tw-h-[50px] tw-w-[200px] 3xl:tw-w-[266.7px] 3xl:tw-h-[55px]"
               />
             </div>
           </div>
