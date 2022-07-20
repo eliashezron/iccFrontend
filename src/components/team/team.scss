@@ -42,9 +42,8 @@
 @media screen and (max-width: 480px) {
   section#core-team {
     .team {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      // gap: 10px;
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
 
       div {
         display: flex;

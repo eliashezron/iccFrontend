@@ -2,6 +2,7 @@
   height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -55,7 +56,7 @@ section div.container p {
 }
 @media only screen and (min-width: 1366px) {
   .App {
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
   }
 }
 
