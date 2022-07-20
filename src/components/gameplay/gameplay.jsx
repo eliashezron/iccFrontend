@@ -92,7 +92,6 @@ export default function GamePlay() {
               {mobile ? (
                 <img src={iprevious} alt="playnow" onClick={prevSlide} />
               ) : (
-                //    height: 55px;
                 <div
                   id="nft-previous-button-desktop"
                   className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
@@ -101,7 +100,7 @@ export default function GamePlay() {
               )}
             </div>
             <div
-              className={`tw-flex tw-gap-[40px] tw-transition tw-delay-150 tw-ease-in-out ${
+              className={` tw-flex tw-gap-[40px] tw-transition tw-delay-150 tw-ease-in-out ${
                 slideIndex === 0 ? 'tw-flex' : 'tw-flex-row-reverse'
               }`}
             >
@@ -120,7 +119,6 @@ export default function GamePlay() {
               {mobile ? (
                 <img src={inext} alt="playnow" onClick={nextSlide} />
               ) : (
-                //       width: 265px;
                 <div
                   id="nft-next-button-desktop"
                   className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
