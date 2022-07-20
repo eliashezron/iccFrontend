@@ -47,21 +47,21 @@ export default function GamePlay() {
           your personal skills.<br></br>Challenge yourself with our modes: Play
           To Earn & Free Play to win rewards.
         </p>
-        <div className="upper-row tw-relative tw-flex 3xl:tw-h-auto 3xl:tw-w-full 3xl:tw-mt-[40.4px] 2xl:tw-w-[95%] xl:tw-w-[95%] tw-overflow-hidden">
+        <div className="upper-row tw-relative tw-flex 3xl:tw-h-auto tw-min-w-full 3xl:tw-mt-[40.4px] 2xl:tw-w-[95%] xl:tw-w-[95%] tw-overflow-hidden">
           <div
             id="running-man-img"
-            className={`xl:tw-w-[1600px] xl:tw-h-[580px] 2xl:tw-w-[1600px] 2xl:tw-h-[600px]  3xl:tw-w-[966px] 3xl:tw-h-[630px] 3xl:tw-mr-[259px] ${
+            className={`3xl:tw-w-[966px] 3xl:tw-h-[630px] 2xl:tw-w-[800px] 2xl:tw-h-[600px] xl:tw-w-[700px] xl:tw-h-[500px] 3xl:tw-mr-[259px] 2xl:tw-mr-[120px] xl:tw-mr-[100px] ${
               slideIndex === 1 ? 'active' : ''
             }`}
           />
-          <div className="tw-hidden md:tw-flex tw-flex-col tw-items-center 3xl:tw-mt-[21px]">
+          <div className="tw-hidden md:tw-flex tw-flex-col tw-items-center tw-mt-[21px]">
             <div
               id="blueman-img"
-              className={`xl:tw-w-[550px] xl:tw-h-[200px] 2xl:tw-w-[600px] 2xl:tw-h-[250px] 3xl:tw-h-[254x] 3xl:tw-w-[426px]
+              className={`3xl:tw-h-[254x] 3xl:tw-w-[426px] 2xl:tw-w-[400px] 2xl:tw-h-[220px] xl:tw-w-[380px] xl:tw-h-[200px]
               ${slideIndex === 1 ? 'active' : ''}`}
             />
 
-            <div className="tw-text-[#0bfff0] tw-w-full tw-relative xl:tw-text-[1.2rem] 3xl:tw-text-[36px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] tw-mb-5 tw-text-center">
+            <div className="tw-text-[#0bfff0] tw-w-full tw-relative 3xl:tw-text-[36px] 2xl:tw-text-[30px] xl:tw-text-[23px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] 2xl:tw-mt-[16px] tw-mt-[14px] tw-mb-5 tw-text-center">
               <div
                 className={`tw-absolute tw-w-full delay ${
                   slideIndex === 0 ? 'tw-opacity-100' : 'tw-opacity-0'
@@ -78,18 +78,26 @@ export default function GamePlay() {
                 PLAY 2 EARN
               </div>
             </div>
-            <div className="tw-text-[#0bfff0] xl:tw-text-[14px] 3xl:tw-text-[18px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
+            <div className="tw-text-[#0bfff0] 3xl:tw-text-[18px] xl:tw-text-[15px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
               Win the race and be the last Cockroach standing.<br></br>Show your
               skills, win 3 rounds and win prizes.
             </div>
-            <div id="watch-button" />
+            <div
+              id="watch-button"
+              className="3xl:tw-w-[338px] 3xl:tw-h-[69px] 2xl:tw-w-[300px] 2xl:tw-h-[60px]"
+            />
           </div>
-          <div className="sectionB tw-absolute 3xl:tw-top-[522px]">
+          <div className="sectionB tw-absolute 3xl:tw-top-[522px] 2xl:tw-top-[460px] tw-top-[400px]">
             <div className="directionbuttonL">
               {mobile ? (
                 <img src={iprevious} alt="playnow" onClick={prevSlide} />
               ) : (
-                <div id="nft-previous-button-desktop" onClick={prevSlide} />
+                //    height: 55px;
+                <div
+                  id="nft-previous-button-desktop"
+                  className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
+                  onClick={prevSlide}
+                />
               )}
             </div>
             <div
@@ -97,14 +105,27 @@ export default function GamePlay() {
                 slideIndex === 0 ? 'tw-flex' : 'tw-flex-row-reverse'
               }`}
             >
-              <img src={pinkrrectangle} alt="playnow" />
-              <img src={bluerectangle} alt="playnow" />
+              <img
+                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]"
+                src={pinkrrectangle}
+                alt="playnow"
+              />
+              <img
+                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]"
+                src={bluerectangle}
+                alt="playnow"
+              />
             </div>
             <div className="directionbuttonR">
               {mobile ? (
                 <img src={inext} alt="playnow" onClick={nextSlide} />
               ) : (
-                <div id="nft-next-button-desktop" onClick={nextSlide} />
+                //       width: 265px;
+                <div
+                  id="nft-next-button-desktop"
+                  className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
+                  onClick={nextSlide}
+                />
               )}
             </div>
           </div>
