@@ -39,17 +39,17 @@ export default function Nft() {
   return (
     <section id="nft-genesis">
       <div className="container">
-        <h1 className="tw-text-[2rem] tw-mt-[55px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
+        <h1 className="tw-text-center tw-text-[30px] tw-mt-[55px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] xl:tw-leading-[80px] tw-leading-[38px]">
           NFT GENESIS SERIES
         </h1>
-        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
+        <p className="tw-text-[18px] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center tw-mt-[20px] md:tw-mt-0">
           Play, Stake, Hold or just brag with our NFT Genesis series !
         </p>
         <div
           id="nft-mint-button"
-          className="3xl:tw-ml-[1330px] 2xl:tw-ml-[1010px] xl:tw-ml-[850px] 3xl:-tw-mt-[80px] 2xl:-tw-mt-[55px] xl:-tw-mt-[45px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px]"
+          className="3xl:tw-ml-[1330px] tw-mt-[20px] md:tw-mt-0 tw-mb-[38px] md:tw-mb-0 2xl:tw-ml-[1010px] xl:tw-ml-[850px] 3xl:-tw-mt-[80px] 2xl:-tw-mt-[55px] xl:-tw-mt-[45px] 3xl:tw-w-[338px] 2xl:tw-w-[220px] xl:tw-w-[190px] 3xl:tw-h-[69px] 2xl:tw-h-[50px] xl:tw-h-[50px] tw-w-[385px] tw-h-[56px]"
         />
-        <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] 2xl:tw-w-[1300px] xl:tw-w-[1100px] tw-w-[80%] xl:tw-mb-10  xl:tw-mt-[60px]">
+        <div className="tw-hidden md:tw-block 3xl:tw-w-[1700px] 2xl:tw-w-[1300px] xl:tw-w-[1100px] tw-w-[80%] xl:tw-mb-10 xl:tw-mt-[60px]">
           <SwipeableViews enableMouseEvents index={slideIndex}>
             <div className="tw-grid tw-grid-cols-5 tw-gap-y-[18px]">
               {nftItems.map((item) => {

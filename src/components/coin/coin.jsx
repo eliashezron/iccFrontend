@@ -7,7 +7,7 @@ export default function Coin() {
   return (
     <section id="icc-coin">
       <div className="container">
-        <h1 className="tw-text-[2rem] tw-mb-[7px] tw-mt-[52px] xl:tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] xl:tw-leading-[80px] tw-leading-[38px]">
+        <h1 className="tw-text-[30px] tw-mb-[7px] tw-mt-[52px] xl:tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] xl:tw-leading-[80px] tw-leading-[38px]">
           What's ICC Coin?
         </h1>
         <p className="tw-text-[18px] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] 2x:tw-mb-[82px] tw-mb-[40px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
