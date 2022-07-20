@@ -13,68 +13,98 @@ import buyicca from '../../assets/buyicca.svg';
 import bgc from '../../assets/bgc.png';
 import buyiccahover from '../../assets/buyiccahover.svg';
 import Button from '../../shared/Button';
+import mintNowFooterMobile from '../../assets/buy-icc-now-footer-mobile.png';
+import buyIccFooterMobile from '../../assets/mint-now-footer-mobile.png';
+import playNowFooterMobile from '../../assets/play-now-footer-mobile.png';
 
 export default function Footer() {
   return (
     <section id="footer" className="tw-h-auto">
       <div className="container 3xl:tw-ml-[110px] 2xl:tw-ml-[90px] xl:tw-ml-[70px] 3xl:tw-w-[1752px] 2xl:tw-w-[1552px] xl:tw-w-[1352px] 3xl:tw-h-[421px] 2xl:tw-h-[400px] xl:tw-h-[380px] 3xl:tw-mt-[74px] 2xl:tw-mt-[64px] xl:tw-mt-[58px] 3xl:tw-mb-[67px] 2xl:tw-mb-[57px] xl:tw-mb-[48px]">
-        <div id="mobile-view">
-          <img src={logo} alt="logo" id="logo" />
-          <h1>2022@ INTERGALACTIC COCKROACH GAME. ALL RIGHTS RESERVED.</h1>
-          <div className="btn-column">
+        <div className="tw-flex tw-flex-col tw-items-center">
+          <img
+            src={logo}
+            alt="logo"
+            className="tw-w-[330px] tw-h-[132.56px] tw-mb-[17px] tw-mt-[50px]"
+          />
+          <div className="tw-font-black tw-text-[14px] tw-leading-[15px] tw-text-[#FFF060] tw-text-center tw-mb-[11px]">
+            2022@ INTERGALACTIC COCKROACH GAME. ALL RIGHTS RESERVED.
+          </div>
+          <div className="tw-flex tw-flex-col tw-w-full tw-items-center">
             <img
-              id="play-now"
-              src={playnow}
+              className="tw-w-[330px] tw-h-[41px] tw-mb-[7px]"
+              src={playNowFooterMobile}
               alt="playnow"
-              onMouseOver={(e) => (e.currentTarget.src = playnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = playnow)}
             />
             <img
-              id="buy-icc"
-              src={buyicca}
+              className="tw-w-[330px] tw-h-[41px] tw-mb-[7px]"
+              src={buyIccFooterMobile}
               alt="buyicca"
-              onMouseOver={(e) => (e.currentTarget.src = buyiccahover)}
-              onMouseOut={(e) => (e.currentTarget.src = buyicca)}
             />
             <img
-              id="mint-icc"
-              src={mintnow}
+              className="tw-w-[330px] tw-h-[41px]"
+              src={mintNowFooterMobile}
               alt="playnow"
-              onMouseOver={(e) => (e.currentTarget.src = mintnowhover)}
-              onMouseOut={(e) => (e.currentTarget.src = mintnow)}
             />
-            <div className="btn-grid">
-              <div>
-                <button>Home</button>
-                <button>Earn</button>
+            <div className="tw-flex tw-flex-col tw-items-center tw-gap-[8px] tw-mt-[17px] tw-w-[330px] tw-h-[271px] tw-mb-[4px]">
+              <div className="tw-flex tw-gap-[23px]">
+                <Button className="tw-w-[153px] tw-h-[38.56px]">Home</Button>
+                <Button className="tw-w-[153px] tw-h-[38.56px]">NFT</Button>
               </div>
-              <button>WhitePaper</button>
-              <div>
-                <button>Trade</button>
-                <button>Earn</button>
+              <Button className="tw-w-[228px] tw-h-[39px]">WhitePaper</Button>
+              <div className="tw-flex tw-gap-[23px]">
+                <Button className="tw-w-[153px] tw-h-[38.56px]">Trade</Button>
+                <Button className="tw-w-[153px] tw-h-[38.56px]">Earn</Button>
               </div>
-              <div>
-                <button>Exchange</button>
-                <button>Farms</button>
+              <div className="tw-flex tw-gap-[23px]">
+                <Button className="tw-w-[153px] tw-h-[38.56px]">
+                  Exchange
+                </Button>
+                <Button className="tw-w-[153px] tw-h-[38.56px]">Farms</Button>
               </div>
-              <div>
-                <button>Liquidity</button>
-                <button>Pools</button>
+              <div className="tw-flex tw-gap-[23px]">
+                <Button className="tw-w-[153px] tw-h-[38.56px]">
+                  Liquidity
+                </Button>
+                <Button className="tw-w-[153px] tw-h-[38.56px]">Pools</Button>
               </div>
-              <button>Contact</button>
+              <Button className="tw-w-[228px] tw-h-[39px]">Contact</Button>
             </div>
-            <img id="icc-price" src={iccprice} alt="icc price" />
-            <div className="community-btn">
-              <p>Join our community</p>
-              <div className="communitybuttons">
+            <img
+              className="tw-w-[266px] tw-h-[54px] tw-mb-[17px]"
+              src={iccprice}
+              alt="icc price"
+            />
+            <div
+              className="tw-w-[92%] tw-h-[67px] tw-rounded-[20px] tw-bg-no-repeat tw-gap-[10px] tw-justify-center tw-bg-center tw-bg-cover tw-flex tw-items-center"
+              style={{
+                backgroundImage: `url(${bgc})`,
+              }}
+            >
+              <div className="tw-text-[#FFE856] tw-text-center tw-w-[120px] tw-text-[18px] tw-leading-[19px] tw-font-black">
+                Join our community
+              </div>
+              <div className="tw-flex tw-w-[180px] tw-h-[46.94px] tw-justify-between tw-items-center tw-gap-[4px]">
                 <a href="#home">
-                  <img src={opensea} alt="opensea" />
+                  <img
+                    className="tw-w-[43px] tw-h-[40px]"
+                    src={opensea}
+                    alt="opensea"
+                  />
                 </a>
                 <a href="#home">
-                  <img src={discord} alt="discord" />
+                  <img
+                    className="tw-w-[42px] tw-h-[40px]"
+                    src={discord}
+                    alt="discord"
+                  />
                 </a>
                 <a href="#home">
-                  <img src={twitter} alt="twitter" />
+                  <img
+                    className="tw-w-[50px] tw-h-[35px]"
+                    src={twitter}
+                    alt="twitter"
+                  />
                 </a>
               </div>
             </div>
