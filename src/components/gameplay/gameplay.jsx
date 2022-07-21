@@ -39,29 +39,29 @@ export default function GamePlay() {
   return (
     <section id="game-play">
       <div className="container tw-relative">
-        <h1 className="tw-text-[2rem] tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] tw-leading-[80px]">
+        <h1 className="tw-text-[30px] tw-mb-[7px] tw-mt-[52px] xl:tw-mt-[110px] xl:tw-text-[2.3rem] 2xl:tw-text-[58px] 3xl:tw-text-[64px] xl:tw-leading-[80px] tw-leading-[38px]">
           GAMEPLAY
         </h1>
-        <p className="tw-text-[0.8rem] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
+        <p className="tw-text-[18px] xl:tw-text-[0.85rem] 2xl:tw-text-[17px] 3xl:tw-text-[18px] 2x:tw-mb-[82px] tw-mb-[40px] tw-leading-[20px] 2xl:tw-leading-8 tw-tracking-wider tw-text-center">
           Intergalactic Cockroach Space Race’s gameplay is designed to challenge
           your personal skills.<br></br>Challenge yourself with our modes: Play
           To Earn & Free Play to win rewards.
         </p>
-        <div className="upper-row tw-relative tw-flex 3xl:tw-h-auto tw-min-w-full 3xl:tw-mt-[40.4px] 2xl:tw-w-[95%] xl:tw-w-[95%] tw-overflow-hidden">
+        <div className="upper-row tw-relative tw-flex tw-flex-col md:tw-flex-row 3xl:tw-h-auto tw-min-w-full 3xl:tw-mt-[40.4px] 2xl:tw-w-[95%] xl:tw-w-[95%] tw-overflow-hidden">
           <div
             id="running-man-img"
             className={`3xl:tw-w-[966px] 3xl:tw-h-[630px] 2xl:tw-w-[800px] 2xl:tw-h-[600px] xl:tw-w-[700px] xl:tw-h-[500px] 3xl:tw-mr-[259px] 2xl:tw-mr-[120px] xl:tw-mr-[100px] ${
               slideIndex === 1 ? 'active' : ''
             }`}
           />
-          <div className="tw-hidden md:tw-flex tw-flex-col tw-items-center tw-mt-[21px]">
+          <div className="tw-flex-col tw-items-center -tw-mt-[60px] md:tw-mt-[21px]">
             <div
               id="blueman-img"
-              className={`3xl:tw-h-[254x] 3xl:tw-w-[426px] 2xl:tw-w-[400px] 2xl:tw-h-[220px] xl:tw-w-[380px] xl:tw-h-[200px]
+              className={`3xl:tw-h-[254x] tw-hidden md:tw-block 3xl:tw-w-[426px] 2xl:tw-w-[400px] 2xl:tw-h-[220px] xl:tw-w-[380px] xl:tw-h-[200px]
               ${slideIndex === 1 ? 'active' : ''}`}
             />
 
-            <div className="tw-text-[#0bfff0] tw-w-full tw-relative 3xl:tw-text-[36px] 2xl:tw-text-[30px] xl:tw-text-[23px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] 2xl:tw-mt-[16px] tw-mt-[14px] tw-mb-5 tw-text-center">
+            <div className="tw-text-[#0bfff0] tw-w-full tw-relative 3xl:tw-text-[36px] 2xl:tw-text-[30px] xl:tw-text-[23px] tw-text-[23px] tw-font-[900] tw-tracking-wider tw-leading-[24px] 3xl:tw-mt-[24px] 2xl:tw-mt-[16px] tw-mt-[14px] tw-mb-5 tw-text-center">
               <div
                 className={`tw-absolute tw-w-full delay ${
                   slideIndex === 0 ? 'tw-opacity-100' : 'tw-opacity-0'
@@ -78,7 +78,7 @@ export default function GamePlay() {
                 PLAY 2 EARN
               </div>
             </div>
-            <div className="tw-text-[#0bfff0] 3xl:tw-text-[18px] xl:tw-text-[15px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
+            <div className="tw-text-[#0bfff0] tw-mt-[40px] md:tw-mt-[45px] 3xl:tw-text-[18px] xl:tw-text-[15px] tw-font-[800] tw-tracking-tight tw-leading-[24px] tw-my-2 3xl:tw-mb-[32px] tw-text-center">
               Win the race and be the last Cockroach standing.<br></br>Show your
               skills, win 3 rounds and win prizes.
             </div>
@@ -87,14 +87,19 @@ export default function GamePlay() {
               className="3xl:tw-w-[338px] 3xl:tw-h-[69px] 2xl:tw-w-[300px] 2xl:tw-h-[60px]"
             />
           </div>
-          <div className="sectionB tw-absolute 3xl:tw-top-[522px] 2xl:tw-top-[460px] tw-top-[400px]">
+          <div className="sectionB md:tw-absolute 3xl:tw-top-[522px] 2xl:tw-top-[460px] tw-top-[400px]">
             <div className="directionbuttonL">
               {mobile ? (
-                <img src={iprevious} alt="playnow" onClick={prevSlide} />
+                <img
+                  src={iprevious}
+                  className="tw-mr-10"
+                  alt="playnow"
+                  onClick={prevSlide}
+                />
               ) : (
                 <div
                   id="nft-previous-button-desktop"
-                  className="3xl:tw-w-[265px] 3xl:tw-h-[55px] tw-w-[200px] tw-h-[50px]"
+                  className="3xl:tw-w-[265px] 3xl:tw-h-[55px] md:tw-w-[200px] md:tw-h-[50px]"
                   onClick={prevSlide}
                 />
               )}
@@ -105,19 +110,24 @@ export default function GamePlay() {
               }`}
             >
               <img
-                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]"
+                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[70px] tw-h-[55px]"
                 src={pinkrrectangle}
                 alt="playnow"
               />
               <img
-                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[120px] tw-h-[22px]"
+                className="3xl:tw-w-[150px] 3xl:tw-h-[26px] tw-w-[70px] tw-h-[55px]"
                 src={bluerectangle}
                 alt="playnow"
               />
             </div>
             <div className="directionbuttonR">
               {mobile ? (
-                <img src={inext} alt="playnow" onClick={nextSlide} />
+                <img
+                  src={inext}
+                  alt="playnow"
+                  onClick={nextSlide}
+                  className="tw-ml-10"
+                />
               ) : (
                 <div
                   id="nft-next-button-desktop"

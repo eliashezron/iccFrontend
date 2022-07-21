@@ -30,32 +30,32 @@ export default function Hero() {
     <section id='hero'>
       <NavBar />
       <div id='hero' className=''>
-        <div className='tw-flex lg:tw-flex-row tw-w-full tw-h-[62vh] xl:tw-h-[480px] 2xl:tw-h-[550px] 3xl:tw-h-[644px] 2xl:tw-gap-[35px] tw-gap-[22px] 3xl:tw-ml-[150px] 2xl:tw-ml-[120px] tw-ml-[93px]'>
-          <div className='tw-flex tw-flex-col 3xl:tw-w-[672px] 2xl:tw-w-[550px] xl:tw-w-[480px] tw-justify-start tw-text-justify tw-items-center md:tw-items-start'>
+        <div className='tw-flex lg:tw-flex-row tw-w-full xl:tw-h-[480px] 2xl:tw-h-[550px] 3xl:tw-h-[644px] 2xl:tw-gap-[35px] tw-gap-[22px] 3xl:tw-ml-[150px] 2xl:tw-ml-[120px] xl:tw-ml-[93px]'>
+          <div className='tw-flex tw-flex-col tw-mt-[75px] xl:tw-mt-0 3xl:tw-w-[672px] 2xl:tw-w-[550px] xl:tw-w-[480px] tw-justify-start tw-text-justify tw-items-center md:tw-items-start'>
             <img
               src={logo}
               onMouseOver={(e) => (e.currentTarget.src = footerlogoicon)}
               onMouseOut={(e) => (e.currentTarget.src = logo)}
               alt=''
-              className='tw-h-[190px] xl:tw-h-[180px] 2xl:tw-h-[230px] 3xl:tw-h-[255px] tw-bg-contain xl:tw-bg-cover tw-w-full'
+              className='tw-h-[132px] tw-w-[330px] xl:tw-h-[180px] 2xl:tw-h-[230px] 3xl:tw-h-[255px] tw-bg-contain xl:tw-bg-cover xl:tw-w-full'
             />
-            <div className='tw-text-white 3xl:tw-mt-[48px] tw-mt-[30px] tw-font-[900] tw-tracking-[-0.01em] 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-leading-[20px]'>
+            <div className='tw-text-white tw-text-center tw-w-[330px] xl:tw-w-full 3xl:tw-mt-[48px] tw-mt-[15px] xl:tw-mt-[30px] tw-font-[900] tw-tracking-[-0.01em] 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-text-[18px] tw-leading-[20px]'>
               Intergalactic Cockroach Space Race is an esport game based on
               blockchain technology.
               <br /> You can gather your friends, form a team, battle with
               others and earn crypto with just your skills
             </div>
-            <div className='tw-text-[#00FFE0] 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-my-2 tw-font-[800] tw-mt-[13px] 3xl:tw-mb-[48px] tw-mb-[30px] tw-tracking-wider'>
+            <div className='tw-text-[#00FFE0] tw-text-center 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] xl:tw-my-2 tw-font-[800] tw-mt-[13px] 3xl:tw-mb-[48px] tw-mb-[24px] xl:tw-mb-[30px] tw-tracking-wider'>
               #IntergalacticCockroach #ICC #SpaceRace # P2E #NFT
             </div>
             <iframe
-              className='mobile-iframe'
+              className='mobile-iframe tw-mb-[22px]'
               title='icc video'
               src='https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&loop=1&controls=0'
             ></iframe>
-            <div className='tw-flex 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-font-[800] tw-leading-[20px] tw-text-white tw-w-full tw-mb-[5px]'>
-              <span>$ICC Contract Address</span>
-              {copied && <span className='tw-ml-auto '>Copied</span>}
+            <div className='tw-flex tw-text-[18px] tw-justify-center 3xl:tw-text-[18px] 2xl:tw-text-[16px] xl:tw-text-[14px] tw-font-[800] tw-leading-[23px] tw-text-white tw-w-full tw-mb-[5px]'>
+              <div>$ICC Contract Address</div>
+              {copied && <span className='tw-ml-auto tw-text-sm'>Copied</span>}
             </div>
             <div className='md:tw-hidden'>
               <CopyToClipboard

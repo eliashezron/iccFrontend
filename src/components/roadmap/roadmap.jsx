@@ -6,7 +6,9 @@ export default function RoadMap() {
   return (
     <section id="road-map">
       <div className="container">
-        <h1 className="tw-text-[14px] md:tw-hidden">ROAD MAP</h1>
+        <h1 className="tw-text-[30px] tw-leading-[38px] md:tw-hidden tw-mt-[120px]">
+          ROAD MAP
+        </h1>
         <div
           id="road-map-img-desktop"
           style={{
@@ -15,6 +17,7 @@ export default function RoadMap() {
         />
         <div
           id="road-map-img-mobile"
+          className="tw-w-[377px] tw-h-[630px] tw-mr-[50px]"
           style={{
             backgroundImage: `url(${mrmp})`,
           }}

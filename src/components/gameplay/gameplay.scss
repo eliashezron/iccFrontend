@@ -151,7 +151,6 @@ section#game-play {
         background-size: contain;
         height: 60px;
         width: 220px;
-        background-color: red;
       }
     }
   }
@@ -163,9 +162,10 @@ section#game-play {
   .sectionB {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    margin: 0 auto;
     align-items: center;
     width: 100%;
+    justify-content: center;
 
     #nft-next-button-desktop {
       cursor: pointer;
@@ -342,7 +342,6 @@ section#game-play {
 }
 @media screen and (max-width: 480px) {
   section#game-play {
-    justify-content: center;
     display: flex;
     flex-direction: column;
 
@@ -359,31 +358,10 @@ section#game-play {
         background-position: center;
         background-size: contain;
         height: 300px;
-        width: 80vw;
+        width: 100vw;
         transition: all 400ms ease-in-out;
         &.active {
           background-image: url(/assets/runningman2.png);
-        }
-      }
-
-      .blueman {
-        display: none;
-
-        .freeplay {
-          display: none;
-        }
-        .words {
-          display: none;
-        }
-        .watchButton {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          img {
-            height: 70px;
-            width: 330px;
-          }
         }
       }
     }
@@ -426,8 +404,8 @@ section#game-play {
       justify-content: center;
       margin-top: 1rem;
       img {
-        width: 250px;
-        height: 40px;
+        width: 350px;
+        height: 60px;
       }
     }
   }
